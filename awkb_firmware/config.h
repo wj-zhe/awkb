@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 /* Serial communication settings */
-#define SOFT_SERIAL_PIN GP1
+#define SERIAL_USART_TX_PIN GP1
 
 /* Split side setting */
 #define EE_HANDS
