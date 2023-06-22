@@ -17,26 +17,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
-
 /* Serial communication settings */
-#define USE_SERIAL
-#define SOFT_SERIAL_PIN GP1
-
-/* //#define SPLIT_LAYER_STATE_ENABLE */
-/* //#define SPLIT_USB_DETECT */
-/* #define SERIAL_USE_MULTI_TRANSACTION */
-/* /1* communication between sides *1/ */
-/* #define SERIAL_PIO_USE_PIO1 */
+#define SERIAL_USART_TX_PIN GP1
 
 /* Split side setting */
 #define EE_HANDS
-
-/* Top left key on left half */
-#define BOOTMAGIC_LITE_ROW 0
-#define BOOTMAGIC_LITE_COLUMN 0
-/* Top right key on right half */
-#define BOOTMAGIC_LITE_ROW_RIGHT 4
-#define BOOTMAGIC_LITE_COLUMN_RIGHT 4
-
