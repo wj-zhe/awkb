@@ -53,6 +53,7 @@ const uint16_t PROGMEM up_right_combo[] = {KC_UP, KC_RIGHT, COMBO_END};
 /* for layer 3 */
 const uint16_t PROGMEM th_fvsx_combo[] = {KC_P5, KC_P6, COMBO_END};
 const uint16_t PROGMEM th_eini_combo[] = {KC_P8, KC_P9, COMBO_END};
+const uint16_t PROGMEM qk_boot_combo[] = {KC_END, KC_PPLS, COMBO_END};
 
 /* assign combo task/function */
 combo_t key_combos[] = {
@@ -70,6 +71,7 @@ combo_t key_combos[] = {
   /* Commands on layer 3 */
   COMBO(th_eini_combo, KC_ESC),
   COMBO(th_fvsx_combo, KC_ENT),
+  COMBO(qk_boot_combo, QK_BOOT),
 
   /* Symbols */
   COMBO(qw_combo, KC_EQL),
