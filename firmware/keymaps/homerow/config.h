@@ -1,5 +1,5 @@
 /*
-Copyright 2023 Jz_Wong <@wj-zhe>
+Copyright 2020 Jz_Wong <@wj-zhe>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,18 +15,17 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#pragma once
+/* Split side setting */
+#define MASTER_RIGHT
 
-/* Serial communication settings */
-#define SERIAL_USART_TX_PIN GP1
+/* tap-hold option */
+/* #define TAPPING_TERM 175 */
+#define TAPPING_TERM_PER_KEY
+#define PERMISSIVE_HOLD_PER_KEY
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+/* #define RETRO_TAPPING_PER_KEY */
 
-/* Indicator light */
-#define SPLIT_LED_STATE_ENABLE
-
-/* RGB light */
-#ifdef RGBLIGHT_ENABLE
-#    define RGBLIGHT_DISABLE_KEYCODES // disable keycodes for RGB Light controls, only status LED is supported
-#    define PICA40_RGBLIGHT_TIMEOUT 5 // turn RGB off after N minutes
-#    define RGBLIGHT_LIMIT_VAL 128
-#endif
+/* #define COMBO_TERM 40 */
+/* #define COMBO_STRICT_TIMER */
+/* #define COMBO_ONLY_FROM_LAYER 0 */
 

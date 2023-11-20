@@ -1,10 +1,6 @@
 
 #include QMK_KEYBOARD_H
 
-#ifdef CONSOLE_ENABLE
-#   include "print.h"
-#endif
-
 #ifdef COMBO_ENABLE
 #   include "g/keymap_combo.h"
 #endif
@@ -14,36 +10,37 @@
 #endif
 
 // A 'transparent' key code (that falls back to the layers below it).
-#define ___ KC_TRANSPARENT
+#define __T KC_TRANSPARENT
+#define ___ KC_NO
 
 /* keymaps */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x5_2(
             LGUI_T(KC_Q), KC_W, KC_E, KC_R, KC_T,          KC_Y, KC_U, KC_I, KC_O, LGUI_T(KC_P),
-            LCTL_T(KC_A), KC_S, KC_D, KC_F, KC_G,          KC_H, KC_J, KC_K, KC_L, LCTL_T(KC_SCLN),
+            KC_A, KC_S, KC_D, LCTL_T(KC_F), KC_G,          KC_H, LCTL_T(KC_J), KC_K, KC_L, KC_SCLN,
             LSFT_T(KC_Z), KC_X, KC_C, KC_V, LT(3,KC_B),    KC_N, KC_M, KC_COMM, KC_DOT, RSFT_T(KC_SLSH),
                          LT(2,KC_TAB), LALT_T(KC_BSPC),    LALT_T(KC_SPC), TD(TD_L1)
             ),
 
     [1] = LAYOUT_split_3x5_2(
             KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,    KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
-            LCTL_T(KC_1), KC_2, KC_3, KC_4, KC_5,        KC_6, KC_7, KC_8, KC_9, LCTL_T(KC_0),
-            KC_LSFT, KC_NO, KC_NO, KC_EQL, KC_PLUS,      KC_UNDS, KC_MINS, ___, ___, ___,
-                                            ___, ___,    ___, ___
+            KC_1, KC_2, KC_3, LCTL_T(KC_4), KC_5,        KC_6, LCTL_T(KC_7), KC_8, KC_9, KC_0,
+            KC_LSFT, ___, ___, KC_LBRC, KC_RBRC,         KC_EQL, KC_MINS, __T, __T, __T,
+                                            __T, __T,    __T, __T
             ),
 
     [2] = LAYOUT_split_3x5_2(
             LGUI_T(KC_F9), KC_F10, KC_F11, KC_F12, KC_BTN2,    KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_LGUI,
-            LCTL_T(KC_F5), KC_F6, KC_F7, KC_F8, KC_BTN1,       KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_LCTL,
-            LSFT_T(KC_F1), KC_F2, KC_F3, KC_F4, TO(3),         KC_MUTE, KC_VOLD, KC_VOLU, KC_NO, KC_RSFT,
+            KC_F5, KC_F6, KC_F7, LCTL_T(KC_F8), KC_BTN1,       KC_LEFT, LCTL_T(KC_DOWN), KC_UP, KC_RGHT, KC_CAPS,
+            LSFT_T(KC_F1), KC_F2, KC_F3, KC_F4, TO(3),         KC_MUTE, KC_VOLD, KC_VOLU, KC_WBAK, RSFT_T(KC_WFWD),
                                     TG(2), LALT_T(KC_PSCR),    LALT_T(KC_MPLY), TD(TD_MD_NX_PR)
             ),
 
     [3] = LAYOUT_split_3x5_2(
-            KC_NO, KC_HOME, KC_UP, KC_PGUP, KC_NUM,        KC_PSLS, KC_P7, KC_P8, KC_P9, KC_PMNS,
+            ___, KC_HOME, KC_UP, KC_PGUP, ___,             KC_PSLS, KC_P7, KC_P8, KC_P9, KC_PMNS,
             KC_END, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,    KC_PAST, KC_P4, KC_P5, KC_P6, KC_PPLS,
-            KC_NO, KC_NO, KC_NO, KC_NO, TG(3),             KC_P0, KC_P1, KC_P2, KC_P3, KC_DOT,
-                                            ___, ___,      KC_BSPC, KC_ESC
+            ___, ___, ___, ___, TG(3),                     KC_P0, KC_P1, KC_P2, KC_P3, KC_DOT,
+                                            __T, __T,      KC_BSPC, KC_ESC
             ),
 
 };
@@ -56,8 +53,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return 115;
         case LALT_T(KC_SPC):
             return 135;
-        case LCTL_T(KC_SCLN):
-            return 150;
+        /* case LCTL_T(KC_F): case LCTL_T(KC_J): */
+        /*     return 150; */
         default:
             return TAPPING_TERM;
     }
@@ -151,28 +148,35 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 };
 
-
 /* lights */
  #if defined(RGBLIGHT_ENABLE) && defined(RGBLIGHT_LAYERS)
 
-/* const rgblight_segment_t PROGMEM game_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 1, HSV_ORANGE}); */
-/* const rgblight_segment_t PROGMEM capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 1, HSV_PURPLE}); */
-/* const rgblight_segment_t PROGMEM capslockword_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 1, HSV_MAGENTA}); */
-const rgblight_segment_t PROGMEM capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 1, HSV_ORANGE});
-const rgblight_segment_t* const PROGMEM rgb_layers[] = RGBLIGHT_LAYERS_LIST(capslock_layer);
+// Light LEDs 0 when keyboard layer X is active;
+// for more color options, see: https://github.com/qmk/qmk_firmware/blob/master/quantum/color.h
+const rgblight_segment_t PROGMEM layer_1[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_YELLOW} );
+const rgblight_segment_t PROGMEM layer_2[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_PURPLE} );
+const rgblight_segment_t PROGMEM layer_3[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_CYAN} );
 
-bool led_update_user(led_t led_state) {
-    rgblight_set_layer_state(1, led_state.caps_lock);
-    return true;
-}
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-    rgblight_set_layer_state(0, layer_state_cmp(state, 3));
-    return state;
-}
+const rgblight_segment_t* const PROGMEM rgb_layers[] = RGBLIGHT_LAYERS_LIST(
+        layer_1,
+        layer_2,
+        layer_3
+        );
 
 void keyboard_post_init_user(void) {
     rgblight_layers = rgb_layers;
+}
+
+/* bool led_update_user(led_t led_state) { */
+/*     rgblight_set_layer_state(0, led_state.caps_lock); */
+/*     return true; */
+/* } */
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    rgblight_set_layer_state(0, layer_state_cmp(state, 1));
+    rgblight_set_layer_state(1, layer_state_cmp(state, 2));
+    rgblight_set_layer_state(2, layer_state_cmp(state, 3));
+    return state;
 }
 
 #endif // defined(RGBLIGHT_ENABLE) && defined(RGBLIGHT_LAYERS)

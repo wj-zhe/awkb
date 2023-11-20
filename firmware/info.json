@@ -8,31 +8,42 @@
         "pid": "0x0001",
         "device_version": "0.0.1"
     },
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "diode_direction": "COL2ROW",
+    "matrix_pins": {
+        "cols": ["GP26", "GP6", "GP7", "GP3", "GP4"],
+        "rows": ["GP29", "GP28", "GP27", "GP2"]
+    },
+    "split":{
+        "enabled": true,
+    },
     "features": {
-        "bootmagic": true,
+        "bootmagic": false,
         "command": false,
         "console": false,
         "extrakey": true,
         "mousekey": true,
         "nkro": false
     },
-    "processor": "RP2040",
-    "bootloader": "rp2040",
-    "diode_direction": "COL2ROW",
-    "split":{
-        "enabled": true,
-        "bootmagic": {
-            "matrix": [4, 4]
+    "indicators": {
+        "caps_lock": "GP25",
+        "num_lock": "GP16",
+        "scroll_lock": "GP17",
+        "on_state": 0
+    },
+    "rgblight": {
+        "led_count": 1,
+        "split": true,
+        "layers": {
+            "enabled": true,
+            "max": 4
         }
     },
-    "bootmagic":{
-        "matrix": [0, 0]
+    "ws2812": {
+        "pin": "GP12",
+        "driver": "vendor"
     },
-    "matrix_pins": {
-        "cols": ["GP26", "GP6", "GP7", "GP3", "GP4"],
-        "rows": ["GP29", "GP28", "GP27", "GP2"]
-    },
-    "community_layouts": ["split_3x5_2"],
     "layouts":{
         "LAYOUT_split_3x5_2": {
             "layout": [

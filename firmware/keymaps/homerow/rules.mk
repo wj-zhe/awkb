@@ -9,5 +9,4 @@ VPATH += keyboards/gboards
 MOUSEKEY_ENABLE = yes
 
 # RGBLIGHT
-RGBLIGHT_ENABLE = yes       # keyboard RGB underglow
-
+RGBLIGHT_ENABLE = no       # keyboard RGB underglow
