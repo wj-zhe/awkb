@@ -1,0 +1,54 @@
+/* // Alternate reference layers by layer */
+/* //               Layer     Reference layer */
+/* COMBO_REF_LAYER(_DVORAK, _QWERTY)  // reference the qwerty layer for dvorak. */
+/* COMBO_REF_LAYER(_NAV, _NAV) // explicit reference to self instead of the default. */
+
+/* //   name     result    chord keys */
+/* COMB(AB_ESC,   KC_ESC,   KC_A, KC_B) */
+/* COMB(JK_TAB,   KC_TAB,   KC_J, KC_K) */
+/* COMB(JKL_SPC,  KC_SPC,   KC_J, KC_K, KC_L) */
+/* COMB(BSSL_CLR, KC_NO,    KC_BSPC, KC_LSFT) // using KC_NO as the resulting keycode is the same as COMBO_ACTION before. */
+/* COMB(QW_UNDO,  C(KC_Z),  KC_Q, KC_W) */
+/* SUBS(TH_THE,   "the",    KC_T, KC_H) // SUBS uses SEND_STRING to output the given string. */
+/* ... */
+
+
+/* Layer 0 */
+COMB(eql_combo, KC_EQL, LGUI_T(KC_Q), KC_W)
+COMB(quot_combo, KC_QUOT, KC_I, KC_O)
+COMB(mins_combo, KC_MINS, KC_O, LGUI_T(KC_P))
+COMB(plus_combo, KC_PLUS, KC_W, KC_D)
+COMB(lbrc_combo, KC_LBRC, KC_E, LCTL_T(KC_F))
+COMB(lcbr_combo, KC_LCBR, KC_R, KC_G)
+COMB(rcbr_combo, KC_RCBR, KC_U, KC_H)
+COMB(rbrc_combo, KC_RBRC, KC_I, LCTL_T(KC_J))
+COMB(unds_combo, KC_UNDS, KC_O, KC_K)
+COMB(caps_combo, KC_CAPS, KC_S, KC_D)
+COMB(dquo_combo, KC_DQUO, KC_L, KC_SCLN)
+COMB(tild_combo, KC_TILD, LSFT_T(KC_Z), KC_X)
+COMB(grv_combo, KC_GRV, KC_X, KC_C)
+COMB(bsls_combo, KC_BSLS, KC_COMM, KC_DOT)
+COMB(pipe_combo, KC_PIPE, KC_DOT, RSFT_T(KC_SLSH))
+
+/* Layer 3 */
+COMB(qk_boot_combo, QK_BOOT, KC_END, KC_PPLS)
+
+/* Layer 0 + 2 */
+COMB(tg2_combo_l0, TG(2), LCTL_T(KC_J), KC_K, KC_L)
+COMB(tg2_combo_l2, TG(2), LCTL_T(KC_DOWN), KC_UP, KC_RIGHT)
+
+/* Layer 0 + 3 */
+COMB(tg3_combo_l0, TG(3), KC_M, KC_COMM, KC_DOT)
+COMB(tg3_combo_l3, TG(3), KC_P1, KC_P2, KC_P3)
+
+/* Layer 0 + 1 + 2 + 3 */
+COMB(ent_combo_l0, KC_ENT, KC_K, KC_L)
+COMB(ent_combo_l1, KC_ENT, KC_8, KC_9)
+COMB(ent_combo_l2, KC_ENT, KC_UP, KC_RIGHT)
+COMB(ent_combo_l3, KC_ENT, KC_P5, KC_P6)
+COMB(esc_combo_l0, KC_ESC, KC_W, KC_E)
+COMB(esc_combo_l1, KC_ESC, KC_AT, KC_HASH)
+COMB(esc_combo_l2, KC_ESC, KC_F10, KC_F11)
+COMB(esc_combo_l3, KC_ESC, KC_P8, KC_P9)
+COMB(esc_combo_l3_2, KC_ESC, KC_HOME, KC_UP)
+
