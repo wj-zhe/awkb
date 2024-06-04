@@ -20,5 +20,5 @@ VPATH += keyboards/gboards
 MOUSEKEY_ENABLE = yes
 
 # Auto Shift
-AUTO_SHIFT_ENABLE = yes
+AUTO_SHIFT_ENABLE = no
 

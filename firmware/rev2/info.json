@@ -6,7 +6,7 @@
         "command": false,
         "console": false,
         "nkro": false,
-        "extrakey": true,
+        "extrakey": true
     },
     "indicators": {
         "caps_lock": "GP25",
@@ -34,7 +34,7 @@
         "soft_serial_pin": "GP0",
         "transport": {
             "protocol": "serial_usart"
-        },
+        }
     },
     "matrix_pins": {
         "cols": ["GP29", "GP6", "GP7", "GP29", "GP6", "GP7" ],

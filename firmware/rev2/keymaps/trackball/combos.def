@@ -31,7 +31,7 @@ COMB(dquo_combo, KC_DQUO, KC_L, LCTL_T(KC_SCLN))
 COMB(tild_combo, KC_TILD, LSFT_T(KC_Z), KC_X)
 COMB(grv_combo, KC_GRV, KC_X, KC_C)
 COMB(bsls_combo, KC_BSLS, KC_COMM, KC_DOT)
-COMB(pipe_combo, KC_PIPE, KC_DOT, RSFT_T(KC_SLSH))
+COMB(pipe_combo, KC_PIPE, KC_DOT, LSFT_T(KC_SLSH))
 COMB(td_md_ult_combo, TD(TD_MD_ULT), LALT_T(KC_SPC), TD(TD_L1))
 
 /* Layer 3 */

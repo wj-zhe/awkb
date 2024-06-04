@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Pointing Device */
 #ifdef POINTING_DEVICE_ENABLE
-#   define PMW33XX_CPI 1000
+#   define PMW33XX_CPI 800
 #   define SPLIT_POINTING_ENABLE
 #   define POINTING_DEVICE_RIGHT
 #   define SPI_SCK_PIN GP2
@@ -49,13 +49,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #   define ENCODERS_PAD_B { GP2 }
 #   define ENCODER_RESOLUTIONS { 2 }
 
-#   define ENCODERS_PAD_A_RIGHT { }
-#   define ENCODERS_PAD_B_RIGHT { }
-#   define ENCODER_RESOLUTIONS_RIGHT { }
+// #   define ENCODERS_PAD_A_RIGHT { }
+// #   define ENCODERS_PAD_B_RIGHT { }
+// #   define ENCODER_RESOLUTIONS_RIGHT { }
 
-/* For 4x encoders you also can assign default position if encoder skips pulses when it changes */
-/* direction. For example, if your encoder send high level on both pins by default, define this: */
-/* #   define ENCODER_DEFAULT_POS 0x3 */
+/* For 4x encoders you also can assign default position if encoder skips pulses
+   when it changes direction. For example, if your encoder send high level on
+   both pins by default, define this: */
+// #   define ENCODER_DEFAULT_POS 0x3
 
 #endif
 
