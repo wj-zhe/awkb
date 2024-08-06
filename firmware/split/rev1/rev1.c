@@ -1,4 +1,4 @@
-#include "34.h"
+#include "rev1.h"
 
 #ifdef PICA40_RGBLIGHT_TIMEOUT
 uint16_t check_rgblight_timer = 0;

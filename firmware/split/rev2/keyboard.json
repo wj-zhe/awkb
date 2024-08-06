@@ -1,6 +1,11 @@
 {
     "processor": "RP2040",
     "bootloader": "rp2040",
+    "usb": {
+        "vid": "0X9F3F",
+        "pid": "0XB34A",
+        "device_version": "2.0.0"
+    },
     "features": {
         "bootmagic": true,
         "command": false,
@@ -33,7 +38,7 @@
         },
         "soft_serial_pin": "GP0",
         "transport": {
-            "protocol": "serial_usart"
+            "protocol": "serial"
         }
     },
     "matrix_pins": {

@@ -26,6 +26,7 @@ COMB(rcbr_combo, KC_RCBR, KC_U, KC_H)
 COMB(rbrc_combo, KC_RBRC, KC_I, KC_J)
 COMB(unds_combo, KC_UNDS, KC_O, KC_K)
 COMB(caps_combo, KC_CAPS, KC_S, KC_D)
+COMB(alt_shft_combo, A(KC_LSFT), KC_S, KC_D, KC_F)
 // COMB(dquo_combo, KC_DQUO, KC_L, KC_SCLN) */
 COMB(dquo_combo, KC_DQUO, KC_L, LCTL_T(KC_SCLN))
 COMB(tild_combo, KC_TILD, LSFT_T(KC_Z), KC_X)

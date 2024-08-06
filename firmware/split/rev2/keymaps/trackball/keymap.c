@@ -64,8 +64,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Tapping-term per key */
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        // case LCTL_T(KC_A): case LCTL_T(KC_SCLN):
-        //     return 175;
+        case LCTL_T(KC_A): case LCTL_T(KC_SCLN):
+            return 165;
         case LALT_T(KC_BSPC): case LALT_T(KC_SPC):
             return 145;
         case LSFT_T(KC_Z): case LSFT_T(KC_F1):
@@ -217,7 +217,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             if (scrolling_mode) {  // Disable scrolling mode
                 scrolling_mode = false;
             };
-            pointing_device_set_cpi(800);
+            pointing_device_set_cpi(700);
             break;
     }
 
@@ -242,12 +242,12 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
     if (scrolling_mode) {
 
         // set h/v movements only on consecutive x/y movements
-        if (abs(x_sum) >=4 || abs(y_sum) >=4) {
+        if (abs(x_sum) >=5 || abs(y_sum) >=5) {
 
-            if ( abs(x_sum) - abs(y_sum) >1 ) {
+            if ( abs(x_sum) / abs(y_sum) >2 ) {
                 mouse_report.h = mouse_report.x;
                 mouse_report.v = 0;
-            } else if ( abs(y_sum) - abs(x_sum) >1 ) {
+            } else if ( abs(y_sum) / abs(x_sum) >2 ) {
                 mouse_report.v = mouse_report.y;
                 mouse_report.h = 0;
             } else {

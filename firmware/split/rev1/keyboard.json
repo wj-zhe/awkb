@@ -1,12 +1,17 @@
 {
     "processor": "RP2040",
     "bootloader": "rp2040",
+    "usb": {
+        "vid": "0xA9DF",
+        "pid": "0X0DD5",
+        "device_version": "1.0.0"
+    },
     "features": {
         "bootmagic": true,
         "command": false,
         "console": false,
         "nkro": false,
-        "extrakey": true,
+        "extrakey": true
     },
     "indicators": {
         "caps_lock": "GP25",
@@ -33,8 +38,8 @@
         },
         "soft_serial_pin": "GP1",
         "transport": {
-            "protocol": "serial_usart"
-        },
+            "protocol": "serial"
+        }
     },
     "diode_direction": "COL2ROW",
     "matrix_pins": {
