@@ -1,0 +1,36 @@
+/* Copyright 2024 @jw */
+
+#pragma once
+
+/* Cirque trackpad config */
+#ifdef POINTING_DEVICE_ENABLE
+#   if POINTING_DEVICE_DRIVER == cirque_pinnacle_spi
+#      define POINTING_DEVICE_CS_PIN D2
+#      define CIRQUE_PINNACLE_DIAMETER_MM 35
+// #      define CIRQUE_PINNACLE_CURVED_OVERLAY
+
+#      define CIRQUE_PINNACLE_ATTENUATION EXTREG__TRACK_ADCCONFIG__ADC_ATTENUATE_2X
+
+// #      define CIRQUE_PINNACLE_POSITION_MODE CIRQUE_PINNACLE_ABSOLUTE_MODE
+#      define CIRQUE_PINNACLE_TAP_ENABLE
+#      define CIRQUE_PINNACLE_SECONDARY_TAP_ENABLE
+#      define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
+#      define POINTING_DEVICE_GESTURES_CURSOR_GLIDE_ENABLE
+
+#   endif
+#endif
+
+/* OLED config */
+#ifdef OLED_ENABLE
+#   define OLED_BRIGHTNESS 128
+#   define OLED_TIMEOUT 8000
+#endif
+
+/* RGB underglow options */
+#ifdef RGBLIGHT_ENABLE
+#   define RGBLIGHT_SLEEP
+/* #define RGBLIGHT_LIMIT_VAL 120 */
+/* #define RGBLIGHT_HUE_STEP 10 */
+/* #define RGBLIGHT_SAT_STEP 17 */
+/* #define RGBLIGHT_VAL_STEP 17 */
+#endif
