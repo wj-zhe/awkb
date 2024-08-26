@@ -1,4 +1,8 @@
 {
+    "manufacturer":"jw",
+    "maintainer":"jw",
+    "keyboard_name":"AWKB",
+    "url": "https://github.com/wj-zhe/awkb/tree/main/hardware/monosplit",
     "usb": {
         "vid": "0x8E51",
         "pid": "0xDF9E",

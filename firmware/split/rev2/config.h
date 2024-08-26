@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Pointing Device */
 #ifdef POINTING_DEVICE_ENABLE
-#   define PMW33XX_CPI 700
+#   define PMW33XX_CPI 800
 #   define SPLIT_POINTING_ENABLE
 #   define POINTING_DEVICE_RIGHT
 #   define SPI_SCK_PIN GP2
@@ -40,7 +40,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #   define PMW33XX_CS_PIN GP1
 #   define POINTING_DEVICE_ROTATION_90
 #   define POINTING_DEVICE_INVERT_X
-
 #endif
 
 /* Encoder config */

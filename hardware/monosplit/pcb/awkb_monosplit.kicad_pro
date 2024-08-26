@@ -49,7 +49,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.508
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -534,7 +534,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "JLCPCB/",
       "pos_files": "",
       "specctra_dsn": "nnkb.dsn",
       "step": "",
@@ -544,7 +544,7 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
-    "annotate_start_num": 3,
+    "annotate_start_num": 0,
     "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
@@ -655,7 +655,7 @@
   "sheets": [
     [
       "5820cf35-8ecb-4164-aafa-5da4f7c67a93",
-      "Root"
+      "根目录"
     ]
   ],
   "text_variables": {}

@@ -37,7 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 #ifdef MATRIX_ROW_PINS
-static SPLIT_MUTABLE_ROW pin_t row_pins[ROWS_PER_HAND] = MATRIX_ROW_PINS;
+static SPLIT_MUTABLE_ROW pin_t row_pins[MATRIX_ROWS] = MATRIX_ROW_PINS;
 #endif // MATRIX_ROW_PINS
 #ifdef MATRIX_COL_PINS
 static SPLIT_MUTABLE_COL pin_t col_pins[MATRIX_COLS]   = MATRIX_COL_PINS;
@@ -106,7 +106,7 @@ static void unselect_row(uint8_t row) {
 }
 
 static void unselect_rows(void) {
-    for (uint8_t x = 0; x < ROWS_PER_HAND; x++) {
+    for (uint8_t x = 0; x < MATRIX_ROWS; x++) {
         unselect_row(x);
     }
 }
@@ -175,7 +175,7 @@ __attribute__((weak)) void matrix_read_rows_on_col(matrix_row_t current_matrix[]
     matrix_output_select_delay();
 
     // For each row...
-    for (uint8_t row_index = 0; row_index < ROWS_PER_HAND; row_index++) {
+    for (uint8_t row_index = 0; row_index < MATRIX_ROWS; row_index++) {
         // Check row pin state
         if (readMatrixPin(row_pins[row_index]) == 0) {
             // Pin LO, set col bit
@@ -203,7 +203,7 @@ __attribute__((weak)) void matrix_init_pins(void) {
     }
 
     unselect_cols();
-    for (uint8_t x = 0; x < ROWS_PER_HAND; x++) {
+    for (uint8_t x = 0; x < MATRIX_ROWS; x++) {
         if (row_pins[x] != NO_PIN) {
             setPinInputHigh_atomic(row_pins[x]);
         }
@@ -214,8 +214,8 @@ __attribute__((weak)) void matrix_init_pins(void) {
 void matrix_init_custom(void) {
 
     // // For split keyboard
-    // thisHand = isLeftHand ? 0 : (ROWS_PER_HAND);
-    // thatHand = ROWS_PER_HAND - thisHand;
+    // thisHand = isLeftHand ? 0 : (MATRIX_ROWS);
+    // thatHand = MATRIX_ROWS - thisHand;
 
     // initialize key pins
     matrix_init_pins();
@@ -224,7 +224,7 @@ void matrix_init_custom(void) {
     memset(matrix, 0, sizeof(matrix));
     memset(raw_matrix, 0, sizeof(raw_matrix));
 
-    debounce_init(ROWS_PER_HAND);
+    debounce_init(MATRIX_ROWS);
 
     matrix_init_kb();
 }
@@ -243,7 +243,7 @@ uint8_t matrix_scan_custom(void) {
     matrix_row_t row_shifter = MATRIX_ROW_SHIFTER;
 
     // Set row, read cols
-    for (uint8_t current_row = 0; current_row < ROWS_PER_HAND; current_row++) {
+    for (uint8_t current_row = 0; current_row < MATRIX_ROWS; current_row++) {
         matrix_read_cols_on_row(curr_matrix, current_row, row_shifter);
     }
 
@@ -256,7 +256,7 @@ uint8_t matrix_scan_custom(void) {
     bool changed = memcmp(raw_matrix, curr_matrix, sizeof(curr_matrix)) != 0;
     if (changed) memcpy(raw_matrix, curr_matrix, sizeof(curr_matrix));
 
-    changed = debounce(raw_matrix, matrix, ROWS_PER_HAND, changed) | matrix_scan();
+    changed = debounce(raw_matrix, matrix, MATRIX_ROWS, changed) | matrix_scan();
 
     return (uint8_t)changed;
 }

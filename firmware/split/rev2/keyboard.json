@@ -2,8 +2,8 @@
     "processor": "RP2040",
     "bootloader": "rp2040",
     "usb": {
-        "vid": "0X9F3F",
-        "pid": "0XB34A",
+        "vid": "0x9F3F",
+        "pid": "0xB34A",
         "device_version": "2.0.0"
     },
     "features": {

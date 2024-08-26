@@ -27,7 +27,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT_split_3x5_3(
             LGUI_T(KC_Q), KC_W, KC_E, KC_R, KC_T,          KC_Y, KC_U, KC_I, KC_O, LGUI_T(KC_P),
-            /* KC_A, KC_S, KC_D, LCTL_T(KC_F), KC_G,          KC_H, LCTL_T(KC_J), KC_K, KC_L, KC_SCLN, */
             LCTL_T(KC_A), KC_S, KC_D, KC_F, KC_G,          KC_H, KC_J, KC_K, KC_L, LCTL_T(KC_SCLN),
             LSFT_T(KC_Z), KC_X, KC_C, KC_V, LT(3,KC_B),    LSG_T(KC_N), KC_M, KC_COMM, KC_DOT, LSFT_T(KC_SLSH),
                 LT(2,KC_TAB), LALT_T(KC_BSPC), KC_MUTE,    KC_BTN1, LALT_T(KC_SPC), TD(TD_L1)
@@ -36,7 +35,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT_split_3x5_3(
             KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
-            /* KC_1, KC_2, KC_3, LCTL_T(KC_4), KC_5,       KC_6, LCTL_T(KC_7), KC_8, KC_9, KC_0, */
             LCTL_T(KC_1), KC_2, KC_3, KC_4, KC_5,          KC_6, KC_7, KC_8, KC_9, LCTL_T(KC_0),
             KC_LSFT, KC_GRV, KC_BSLS, KC_LBRC, KC_RBRC,    KC_EQL, KC_MINS, ___, ___, ___,
                                        ___, ___, ___,      KC_BTN2, ___, TG(1)
@@ -44,7 +42,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT_split_3x5_3(
             LGUI_T(KC_F9), KC_F10, KC_F11, KC_F12, KC_PSCR,    KC_HOME, KC_PGDN, KC_PGUP, KC_END, LGUI_T(KC_WBAK),
-            /* KC_F5, KC_F6, KC_F7, LCTL_T(KC_F8), KC_CAPS,    KC_LEFT, LCTL_T(KC_DOWN), KC_UP, KC_RGHT, KC_CAPS, */
             LCTL_T(KC_F5), KC_F6, KC_F7, KC_F8, KC_INS,        KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, LCTL_T(KC_WFWD),
             LSFT_T(KC_F1), KC_F2, KC_F3, KC_F4, TO(3),         TD(TD_MD_ULT), KC_VOLD, KC_VOLU, KC_MUTE, KC_LSFT,
                                         TG(2), ___, ___,       KC_BTN2, ___, none
@@ -174,7 +171,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // Light LEDs 0 when keyboard layer X is active;
 // for more color options, see: https://github.com/qmk/qmk_firmware/blob/master/quantum/color.h
 const rgblight_segment_t PROGMEM layer_1[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_GOLD} );
-const rgblight_segment_t PROGMEM layer_2[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_PURPLE} );
+const rgblight_segment_t PROGMEM layer_2[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_MAGENTA} );
 const rgblight_segment_t PROGMEM layer_3[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_CYAN} );
 
 const rgblight_segment_t* const PROGMEM rgb_layers[] = RGBLIGHT_LAYERS_LIST(
