@@ -534,7 +534,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "JLCPCB/",
+      "plot": "gerber",
       "pos_files": "",
       "specctra_dsn": "nnkb.dsn",
       "step": "",
@@ -655,7 +655,7 @@
   "sheets": [
     [
       "5820cf35-8ecb-4164-aafa-5da4f7c67a93",
-      "根目录"
+      "Root"
     ]
   ],
   "text_variables": {}
