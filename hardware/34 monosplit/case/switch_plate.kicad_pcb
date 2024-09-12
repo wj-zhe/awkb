@@ -1,0 +1,6618 @@
+(kicad_pcb
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(general
+		(thickness 1.6)
+		(legacy_teardrops no)
+	)
+	(paper "A4")
+	(layers
+		(0 "F.Cu" signal)
+		(31 "B.Cu" signal)
+		(32 "B.Adhes" user "B.Adhesive")
+		(33 "F.Adhes" user "F.Adhesive")
+		(34 "B.Paste" user)
+		(35 "F.Paste" user)
+		(36 "B.SilkS" user "B.Silkscreen")
+		(37 "F.SilkS" user "F.Silkscreen")
+		(38 "B.Mask" user)
+		(39 "F.Mask" user)
+		(40 "Dwgs.User" user "User.Drawings")
+		(41 "Cmts.User" user "User.Comments")
+		(42 "Eco1.User" user "User.Eco1")
+		(43 "Eco2.User" user "User.Eco2")
+		(44 "Edge.Cuts" user)
+		(45 "Margin" user)
+		(46 "B.CrtYd" user "B.Courtyard")
+		(47 "F.CrtYd" user "F.Courtyard")
+		(48 "B.Fab" user)
+		(49 "F.Fab" user)
+		(50 "User.1" user)
+		(51 "User.2" user)
+		(52 "User.3" user)
+		(53 "User.4" user)
+		(54 "User.5" user)
+		(55 "User.6" user)
+		(56 "User.7" user)
+		(57 "User.8" user)
+		(58 "User.9" user)
+	)
+	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
+		(pad_to_mask_clearance 0.2)
+		(allow_soldermask_bridges_in_footprints no)
+		(grid_origin 283.836 13.1428)
+		(pcbplotparams
+			(layerselection 0x0001000_7ffffffe)
+			(plot_on_all_layers_selection 0x0000000_00000000)
+			(disableapertmacros no)
+			(usegerberextensions no)
+			(usegerberattributes no)
+			(usegerberadvancedattributes no)
+			(creategerberjobfile no)
+			(dashed_line_dash_ratio 12.000000)
+			(dashed_line_gap_ratio 3.000000)
+			(svgprecision 6)
+			(plotframeref no)
+			(viasonmask no)
+			(mode 1)
+			(useauxorigin no)
+			(hpglpennumber 1)
+			(hpglpenspeed 20)
+			(hpglpendiameter 15.000000)
+			(pdf_front_fp_property_popups yes)
+			(pdf_back_fp_property_popups yes)
+			(dxfpolygonmode no)
+			(dxfimperialunits no)
+			(dxfusepcbnewfont yes)
+			(psnegative no)
+			(psa4output no)
+			(plotreference yes)
+			(plotvalue yes)
+			(plotfptext yes)
+			(plotinvisibletext no)
+			(sketchpadsonfab no)
+			(subtractmaskfromsilk no)
+			(outputformat 3)
+			(mirror no)
+			(drillshape 0)
+			(scaleselection 1)
+			(outputdirectory "")
+		)
+	)
+	(net 0 "")
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "09b0a3d0-78a0-4186-a462-622eefb915df")
+		(at 115.346806 121.920781 -27.5)
+		(property "Reference" "SW32"
+			(at 7 8.1 -27.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9731531f-c229-4905-a8e7-4bcdb22c8dee")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW32"
+			(at -5.841999 2.032 -27.5)
+			(layer "F.Fab")
+			(uuid "391e1494-2b5a-4cc6-9eeb-da0a74482c82")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8fb5a545-617f-485e-ab5c-9407ec38108e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b06537d7-9e96-4bab-9e80-5ec1369ebfb7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0379af8e-81af-4921-9f54-b7bc16eb4e27")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/6947b53e-2762-4c56-9e37-613be58686a8")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "5c933629-2147-4230-adb0-09cb1ba2a9fb")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "77e4f91c-b05a-4ff9-8707-77527b1f2956")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "1609f98f-c0ef-4f2d-9a27-8f9d20995770")
+		(at 255.092167 58.682972 11)
+		(property "Reference" "SW20"
+			(at 7 8.1 11)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "2d5e071d-cc0c-4954-8cec-7dfde0119902")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW20"
+			(at -5.842 2.032 11)
+			(layer "F.Fab")
+			(uuid "6e93a9ae-4a54-4940-af62-ad5d02f4b6e8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e0cee97c-28be-48e2-8217-88193a13d363")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8b2622df-ab83-43cc-a60c-f12f6e6d082f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6b4ad079-8c92-4462-89c7-25ed1676a8d1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/cb7e4f76-3b7b-4487-9830-a823bd596e26")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "4d5d372f-b0af-441f-a53f-462b56438bc2")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "ab5f7602-e820-4259-924f-2e19be40b909")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "1c7ec8e3-159a-4268-9dc9-cda449cff3d7")
+		(at 203.29311 88.173093 15)
+		(property "Reference" "SW27"
+			(at 7 8.1 15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "2086fa68-a265-4083-9086-3dc6a23071a8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW27"
+			(at -5.842 2.032 15)
+			(layer "F.Fab")
+			(uuid "f80bde6f-a253-4843-8ec2-bd162f01be35")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "874dc908-70c3-4521-87fe-e88370656aad")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3f408cbd-2751-4590-a3ec-c05b1bb849d3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6f00d9f0-b456-473a-b0a5-8d6b84908c9a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/aeeb1495-97a8-43d3-846b-662c38d1c918")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "fa455607-515a-4c82-9c15-d257fe625301")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "3b1e1503-bd4a-4248-96a1-ae637a3248cb")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "33ef4288-4ff3-49b7-a910-e46230736a8a")
+		(at 176.759887 58.98642 15)
+		(property "Reference" "SW6"
+			(at 7 8.1 15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5234931b-d2b5-4a05-b4bc-a678b6b9f560")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW6"
+			(at -5.842 2.032 15)
+			(layer "F.Fab")
+			(uuid "bdd99908-962f-4954-aff7-c28f2e4a40ea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d6b75e46-56a9-4afe-9308-30316282897e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "69e3bdff-35c2-4ca8-bd88-fcc6bd607de0")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "99419980-1fd1-43d1-a111-4b80ac265083")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/70775a4a-eb13-4463-8191-58953af916f2")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "70cc3091-a423-42a6-9b14-9387b8a837d2")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "a5e39948-2a3c-463b-b937-22eea9c03049")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "36e2f2ba-a93e-47b7-8c2d-905989298fe6")
+		(at 118.828399 77.456683 -15)
+		(property "Reference" "SW15"
+			(at 7.000001 8.1 -15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "dd3c60f8-1bc4-4c2c-982f-d9a7f09303a2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW15"
+			(at -5.842 2.032 -15)
+			(layer "F.Fab")
+			(uuid "ee89e7cc-98c3-4ee4-a288-9bedf7cae863")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1fe4f7b4-5bf9-4e3c-9b60-edd4cf3fdc34")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "399cd63b-da72-4f2d-be73-9e76bc2d3fb1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c93863a2-239e-4235-8a23-92a773f242f8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/4cf63c41-c2af-4018-91f2-8ccdc720130f")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "ab4837ba-aa3e-4899-add3-7b5423a7cea2")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "4c7f36e9-06ce-47a7-aa30-38c074f4154d")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "36fac12b-7f3d-4d29-b60c-c6255f00a8ce")
+		(at 83.02485 62.32582 -12.5)
+		(property "Reference" "SW13"
+			(at 7 8.1 -12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ead0009b-f914-423a-96ea-008ba06d1cfc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW13"
+			(at -5.842 2.032 -12.5)
+			(layer "F.Fab")
+			(uuid "681b3d0a-03f2-44b6-9bb0-c14f30836c14")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "260f2ebd-9e04-4613-8053-da08e97461e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "18118901-d43a-4425-a597-d2bf45542166")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "657f2f98-ad9e-4b94-abb7-fc1475f514d9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/8c1419ef-cce4-4647-926c-d2e0b2d601ba")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "e4e563f6-af89-459c-813a-0402a0bc2740")
+		)
+		(fp_poly
+			(pts
+				(xy -9.000002 -9) (xy 9 -9.000002) (xy 9.000002 9) (xy -9 9.000002)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "7a341a68-08fc-4517-b0fe-5f3fc26f97bf")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+		(layer "F.Cu")
+		(uuid "3819005b-4391-4601-af1b-251e7ee1084d")
+		(at 138.000124 90.162334)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "TRH5"
+			(at 0 -3.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "efeea888-c5d8-4f24-82dc-a8cb8b4c5ace")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Trackpad"
+			(at 0 3.2 0)
+			(layer "F.Fab")
+			(uuid "257a27b3-923b-46a1-8d73-7a3e4284f349")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "67d83f3d-5828-42a5-92b7-ec53105917d3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "791a99cb-3f8d-4db7-bc3a-78700659dbeb")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b4d15529-b32e-4845-9c3d-f36f91d754df")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/9e5729a5-a70a-4a41-b558-e749f5a4fd67")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.1 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "18d9e2e0-4887-4bf5-a98d-37de4dcbe564")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "36b6c8a2-a32b-4606-9ae8-9a69d4e02a1a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+		(layer "F.Cu")
+		(uuid "381dca01-db61-4d2f-b814-fb5c7bf62d36")
+		(at 128.250066 48.815518)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "TH2"
+			(at 0 -3.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "acc93903-4a42-4b4d-abf4-b760fb5c197f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Spacing plate"
+			(at 0 3.2 0)
+			(layer "F.Fab")
+			(uuid "f77303ab-5fe6-45be-9865-5d6f60737443")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2ad0a710-d9fa-4469-ac98-f2fc217d812d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aec4118f-0ac4-43fb-80ea-b4468d9eed4d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "42fcf4d6-3ed8-411e-adec-29ebc3b61d2c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/74ef820f-8759-4059-8a74-71f3b909a06e")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.1 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "3c28fe4a-78f7-42fc-beeb-25aab54bdaed")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "0f41ff36-2903-4b06-9055-d6ab38769ded")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "39f42e4a-d9ca-492e-aa6f-a50e0a1caef0")
+		(at 114.326735 95.912768 -15)
+		(property "Reference" "SW25"
+			(at 7.000001 8.1 -15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "c77f23af-4654-4e75-aa53-5193f3c59b1a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW25"
+			(at -5.842 2.032 -15)
+			(layer "F.Fab")
+			(uuid "0f400f4a-fcd3-4ee8-bdcc-6a35d8a31c43")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d49697df-4391-4be0-b893-fd4bc20b7aac")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "161c93e1-94b7-406b-9b8a-73e68a7d357c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0e26d9c2-3dd7-4c2b-b96f-0c86cff88f45")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/6149ddc7-1677-46bc-856e-c5504cb5e3e1")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "18475752-ed9a-45d0-b93a-d7f3cff89c65")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "68f973da-cbe3-4ac0-a940-aa326c88bc22")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+		(layer "F.Cu")
+		(uuid "39fa1cee-07ef-4a14-8a29-efdd373b102b")
+		(at 120.249066 110.410518)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "TH7"
+			(at 0 -3.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "92df6163-2d1d-47ec-8c3f-84ce3fe818e7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Spacing plate"
+			(at 0 3.2 0)
+			(layer "F.Fab")
+			(uuid "4b58aa6d-15aa-443b-9c31-32cd242896af")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2ceddb33-63c1-49c4-8b46-e5e3842b4cc6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b6ad3e5f-6dcf-42d1-8a73-9f3dba41e84a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3fab7451-0fc3-4852-a0f9-62d50bb811b4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/b1d92a18-f841-43cc-9d4d-fc2a96fe7f91")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.1 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "c3c38a75-1a37-4f32-b710-83f3712fbab8")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "b730268c-af13-4b54-a870-92cd666a53cb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "4475775f-1c18-47b0-8486-df1e2275c3c1")
+		(at 194.335582 51.170618 15)
+		(property "Reference" "SW7"
+			(at 7 8.1 15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "bbe91e39-cbab-4f08-9c43-3917b11a0613")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW7"
+			(at -5.842 2.032 15)
+			(layer "F.Fab")
+			(uuid "f86186e5-bf52-4f7e-a03f-ac9c8cbae36d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f1e2b703-4e9a-490c-afab-e1f04a152d4f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a2001a7b-0e2f-4d66-8d13-25b284cd95ab")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ce7a6963-46b6-46e6-b8ed-e70f52afef61")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/80ee7ad1-d977-48b5-9398-f34999373c14")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "b0032f28-929b-4096-9ece-2cef7bf2e21d")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "52b960e7-8b4b-4f32-8a28-a1a5b0ee2b4d")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "494ad99a-34cd-4ac4-97cc-bf1f5e6bd728")
+		(at 96.70689 88.173093 -15)
+		(property "Reference" "SW24"
+			(at 7.000001 8.1 -15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d054a5f7-1597-4c0c-a698-f2984b80f6f0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW24"
+			(at -5.842 2.032 -15)
+			(layer "F.Fab")
+			(uuid "214e2e74-326f-4e28-a379-9d25e7db68fa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "70a0530e-d9ea-46f5-a6e5-a65f644c849f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f4deb4ba-e5b7-43c5-8dfa-b3945d972e42")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "013d6a32-3eab-4fb9-af75-aef4b61d3eda")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/d9d02e57-076f-4238-9111-2790f7c76a84")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "d5fd145f-c727-406c-a6d2-54d6072d5b21")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "d203b348-9a1f-460b-b0fd-3d856eb58462")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "4cd4345d-e5a6-4030-905c-4800b92d1108")
+		(at 231.90982 41.910236 12.5)
+		(property "Reference" "SW9"
+			(at 7 8.1 12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7ee54cf3-bd10-4314-ba41-b3113c9c40f3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW9"
+			(at -5.842 2.032 12.5)
+			(layer "F.Fab")
+			(uuid "460b42a2-4929-4cd6-9d9d-6524be57f7df")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "13c19a60-0c78-430d-99f7-3bc5b842a33d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d0217e15-f7be-4547-9054-49803043e356")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "93731a8f-9862-41d9-8516-b076ba197244")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/607e9593-f660-43c7-bcbf-4af54847133a")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "4534db47-a9b4-415f-b88a-c27e2aa4cefe")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9.000002) (xy 9.000002 -9) (xy 9 9.000002) (xy -9.000002 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "b76907ce-c486-4694-b0f5-e332c553be91")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "4d443271-821a-44f0-baf1-752d27189d94")
+		(at 184.653194 121.920781 27.5)
+		(property "Reference" "SW33"
+			(at 7.000001 8.1 27.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a38c66f9-5b8d-437a-9abb-973fba2c1af8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW33"
+			(at -5.842 2.032 27.5)
+			(layer "F.Fab")
+			(uuid "29476c8f-304f-41ac-bdc4-c99c73c58d58")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "12fb8f8c-0d4e-4e9d-97ae-4ad4f9028b60")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "09e955fc-9741-479b-8046-4ef967d6e948")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f798967b-c564-49f8-a59f-d9ee13db223b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/60c92f81-c80e-4bd3-8e40-d9f7afa5d60c")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "f83ff511-3d6b-4108-8b24-4df78133e340")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "45074873-c0d5-4310-8b3a-c160a45036aa")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "5525c613-3115-490c-8770-f5bf3473ad7f")
+		(at 216.97515 62.32582 12.5)
+		(property "Reference" "SW18"
+			(at 7 8.1 12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ae8147e4-0b31-4cb0-b42a-641df3affad1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW18"
+			(at -5.842 2.032 12.5)
+			(layer "F.Fab")
+			(uuid "77f77fc3-991d-4a71-bc5f-aeca22cf6f9e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "93b70a1a-11ea-4c04-b3ae-03d746692547")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e2a4c392-41a0-47ff-b9e2-1f405512d1b4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "947e2733-7308-496b-a6e8-506f77f48e0b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/32dbbf14-cdcd-4bee-8003-5d4b1e0a93fe")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "7c99fab9-c042-45eb-aa1e-f8a20b07cb59")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9.000002) (xy 9.000002 -9) (xy 9 9.000002) (xy -9.000002 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "06f33939-6c2a-410c-a041-9cbcdb9da792")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "59d1188c-b4c2-4bcf-aea6-8b5c8e1a67be")
+		(at 185.673265 95.912768 15)
+		(property "Reference" "SW26"
+			(at 7 8.1 15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "cbd4c6a9-de0b-4a77-a0bc-6156c5529455")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW26"
+			(at -5.842 2.032 15)
+			(layer "F.Fab")
+			(uuid "bec24bdd-78d4-4f54-9e8e-db5d6bb66fc6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "365d09a8-b6ec-4831-beab-c5aa76be2936")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "135f4f47-17a3-4212-a337-710f8db334af")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "68724b60-599f-44de-8420-97e216a03ec8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/d6de76e6-290c-417e-aed8-6892e8dfb3b5")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "8d506170-e02a-48e9-9e8d-8d3b31663781")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "4a805b6f-a143-4683-9203-c8195342a6fc")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "5c587cec-6bac-4501-9915-b484cea8a75e")
+		(at 87.137194 43.776236 -12.5)
+		(property "Reference" "SW3"
+			(at 7 8.1 -12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "fb9fa646-9637-4aeb-9bd6-2f3738861d51")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW3"
+			(at -5.842 2.032 -12.5)
+			(layer "F.Fab")
+			(uuid "59cf1c8c-ce19-4fab-aa02-44592c7306af")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cea9ec21-241c-4bc6-b311-65a56796025f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0d38deeb-1d4d-4b85-9f8b-bfa0eebcce9f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6c6fc621-e84b-45fa-b85b-01e4fdf0e672")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/93e43d3b-b8db-4ef0-8a3c-f440fd66c570")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "ea83dec0-2daf-4d0d-be97-137da2afa368")
+		)
+		(fp_poly
+			(pts
+				(xy -9.000002 -9) (xy 9 -9.000002) (xy 9.000002 9) (xy -9 9.000002)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "4235ed39-1d96-4aef-9c40-caf675a70f39")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+		(layer "F.Cu")
+		(uuid "6617cad4-3e44-4621-9c9c-9f5c95c6736d")
+		(at 161.999961 90.135622)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "TRH6"
+			(at 0 -3.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "2796902c-427a-403c-9671-306ba1562010")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Trackpad"
+			(at 0 3.2 0)
+			(layer "F.Fab")
+			(uuid "9ae2d288-c796-4fa9-b391-b8849f18945e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b9c1f2f6-be50-435d-93be-87811737611a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "015b9c4e-9f0a-4ca2-a14c-aa38a5b20939")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8339969b-9f29-4571-81b1-7e05fb876e97")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/31471790-5815-4293-8c77-be07f60332b9")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.1 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "1281c07e-0c6e-4913-b953-e7be4ca37f82")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "3c459a67-9976-4a9d-98d8-cc5eb25280ac")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "681dfa45-b596-4f5a-9c53-d5876bd63e1b")
+		(at 240.134352 79.008703 12.5)
+		(property "Reference" "SW29"
+			(at 7 8.1 12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "3d2671ca-fcf4-4698-bc75-38636e3b4571")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW29"
+			(at -5.842 2.032 12.5)
+			(layer "F.Fab")
+			(uuid "28e8a142-497b-47f9-ba9c-fdd3e427700b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e76f280d-a82a-4b7c-8cc7-7b10999eb54d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a933054e-17db-4906-905d-a12938fe9c83")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "22bf6346-6e36-4155-8103-9c7f97a6a865")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/cb826cad-c204-4b7e-a355-4d5e85800f8e")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "3b96ce52-a5d6-4f93-84f4-679a5f923217")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9.000002) (xy 9.000002 -9) (xy 9 9.000002) (xy -9.000002 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "06214208-f931-4fc0-897c-1832117b57dc")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+		(layer "F.Cu")
+		(uuid "68bd236c-7996-49ef-9be2-038e8061185e")
+		(at 179.750934 110.410518)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "TH6"
+			(at 0 -3.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b38d58fa-0530-4850-b1d1-338baa4d1cd5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Spacing plate"
+			(at 0 3.2 0)
+			(layer "F.Fab")
+			(uuid "c8489e07-963f-4d29-8013-ce94d2b6bd9f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d092cfd6-b835-4adc-b2bf-49ad6ce9d482")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "42485423-2680-4c94-80ec-77cd3867b599")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e59022e6-6fea-4750-b3b3-a762963f9aee")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/287466ba-8b26-4011-928d-37672825a7d8")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.1 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "6f093fe6-f982-471c-a6e7-00595d86643d")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "6a6df696-ae06-4b49-bb96-5017be8d3dd5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "69cef9a9-e47e-4882-98fa-13124b49b15b")
+		(at 44.907833 58.682972 -11)
+		(property "Reference" "SW11"
+			(at 7 8.1 -11)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "4e3e6866-37d0-4465-947e-ae0919bc7be9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW11"
+			(at -5.842 2.032 -11)
+			(layer "F.Fab")
+			(uuid "c8f75513-f558-43b7-b43d-1849574ad177")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3908cf1e-a832-49e8-92a9-4930a466ba65")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "89440b1d-fe4b-405d-bc91-5995e382cad7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d6d74e5a-711e-4191-ba6c-16c27b4136b2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/3be77d83-e74d-496d-9142-54e1c9f15ffb")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "a46639e5-448b-4a7f-8263-d68a4f75e2a5")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "e97b9cdb-692d-418c-927d-929630331e30")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "6e66291b-9c72-4b06-a7de-ce3440b7e2c0")
+		(at 250.936256 39.983518 12.5)
+		(property "Reference" "SW10"
+			(at 7 8.1 12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7b0edcb6-c5fc-44f5-bcbf-d97ebde3be16")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW10"
+			(at -5.842 2.032 12.5)
+			(layer "F.Fab")
+			(uuid "8929994a-79d5-40b2-89b3-fcd77bd1555b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "688c9ad5-520b-4fcf-898a-d2e7bd6d7a31")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8218d256-55a7-4804-9309-2bd661f16dc0")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "50b41b6a-0203-4f1d-b813-8786dfc48e31")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/e4ab2869-b5bf-48b9-a6c8-6dd44dd0e5b7")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "bf9ec636-83d5-4473-83d7-a2d2042990ab")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9.000002) (xy 9.000002 -9) (xy 9 9.000002) (xy -9.000002 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "6750209f-bda9-413b-80f5-c54dea8a8131")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+		(layer "F.Cu")
+		(uuid "73dbd418-0909-44d1-a471-e3a8fe3eb90b")
+		(at 49.838167 87.750857)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "TH8"
+			(at 0 -3.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "50555657-a99c-4425-b358-3be73c59bfc9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Spacing plate"
+			(at 0 3.2 0)
+			(layer "F.Fab")
+			(uuid "b8395792-b2b4-4a12-bc55-1422156b67c1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "47e6cf33-dd48-4fb6-b8be-ae28974ded2b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "59382299-d7c5-4dd9-8a78-81260b943081")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "219138f6-6064-4557-9115-c9f523fbd91e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/64738f8b-ac4c-4774-abd7-1571c5654c1b")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.1 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "06b3c2c4-4aca-4b73-9bad-eff736c667a5")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "d64f9f28-f95e-49c3-ba06-8c6bb06df4d5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "744f73f9-6926-499e-bfea-33077bf5c9e1")
+		(at 123.240113 58.98642 -15)
+		(property "Reference" "SW5"
+			(at 7.000001 8.1 -15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "dc1d070c-bc4c-42f8-ba42-3b3eae6611ea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW5"
+			(at -5.842 2.032 -15)
+			(layer "F.Fab")
+			(uuid "e576761b-d182-4dbd-a5a6-b229c2142c38")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5051e29a-4a78-418d-b0f1-11fc762d456c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d83b30a9-8f56-4d01-acd5-5aa224cb78c4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7287cf57-a991-4168-ab2f-9b322682d967")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/8b34ada5-e1e5-4c45-8929-e61463ad66e4")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "77ccfe16-9ca9-4739-b069-c30a793510a6")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "ee594e53-f099-4329-82be-2c2704ba4bf8")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "82cebb7b-a826-46e4-b734-95f45ade2009")
+		(at 40.901273 77.142234 -11)
+		(property "Reference" "SW21"
+			(at 7 8.1 -11)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a1a45ab7-2847-4915-977c-51c43860b0e3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW21"
+			(at -5.842 2.032 -11)
+			(layer "F.Fab")
+			(uuid "10fce8c5-0b8e-405f-a2a5-f484255c7fd3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a96be8a1-b925-4e26-9a66-5747b3b16699")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8a2fe11c-62e3-44cf-99f6-22b4e2164fca")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "43ef6735-cbbb-4229-82d7-9bbb24da224e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/5f1a6923-3573-4cd8-8e82-999c1c483385")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "8059e5e5-2fac-45a3-b3cb-120cb6d08dba")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "fafa804c-510a-4a2c-a6e3-4507928907e6")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "872ffa43-1daa-41ee-8315-3c7aa25630d2")
+		(at 221.087546 80.87564 12.5)
+		(property "Reference" "SW28"
+			(at 7 8.1 12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "46a2cf71-9ca9-43f5-ba40-e4f15f931f70")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW28"
+			(at -5.842 2.032 12.5)
+			(layer "F.Fab")
+			(uuid "fba2be76-c291-45a0-afc6-9f710322337b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "732e9f95-1858-44fd-9f67-d51ecf635070")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8e0feaeb-5ecc-435e-b032-67b279d0ba1e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b1921183-db9b-4ed6-a5d6-f07aee459058")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/834228ce-7a4c-4396-811e-b49c7db69d55")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "fc057cad-89b2-4504-b081-f977075ffc9c")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9.000002) (xy 9.000002 -9) (xy 9 9.000002) (xy -9.000002 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "745f3964-6363-4f4f-b1b8-66a6213e2de2")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+		(layer "F.Cu")
+		(uuid "8fb7246f-cc88-452b-881d-8b31a68d332b")
+		(at 171.749934 48.815518)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "TH3"
+			(at 0 -3.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ddf55a9c-69ee-4daf-ab30-ce37d26aec93")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Spacing plate"
+			(at 0 3.2 0)
+			(layer "F.Fab")
+			(uuid "bf6983bd-85f5-4b27-b009-eeaec56ce452")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "84e61279-814a-4d47-bf86-05cfb847696c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "849a009f-3436-4701-89cd-c36ad0a959e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "80a3bc08-bd93-4d92-8e36-077711cb8d53")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/e5f5eaaa-9722-4919-887b-44659a0ee1d2")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.1 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "5374800a-20af-47c8-9c07-28121538c2c8")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "dfa863ec-9314-40dd-a8f8-b00f43709f29")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "910db199-69f9-4dcd-9e8e-41404a19507d")
+		(at 105.664418 51.170618 -15)
+		(property "Reference" "SW4"
+			(at 7.000001 8.1 -15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ce5e52fc-f765-489e-94dd-17b8d56426f0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW4"
+			(at -5.842 2.032 -15)
+			(layer "F.Fab")
+			(uuid "bf815e1d-f665-4976-92be-19760508dfe1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f338eab1-bc4e-4723-a152-f22aad53ce23")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "75be4a58-92a5-4006-8761-76925e67f926")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5be7a2c4-015a-480f-aee7-c0e96c85094d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/6abdfb68-85ff-4e2b-afe6-4d800ad2398e")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "b60fe171-dcff-4a8a-ae1a-f613cd419012")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "8ea2ee26-2006-4e69-95dd-6ab5cb0a87ee")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "9538139a-f579-4ae8-ae8f-93bb2a65b4d4")
+		(at 212.862806 43.776236 12.5)
+		(property "Reference" "SW8"
+			(at 7 8.1 12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "326f903a-58eb-4347-ba18-10c9b1fbec8f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW8"
+			(at -5.842 2.032 12.5)
+			(layer "F.Fab")
+			(uuid "536c429f-ca12-406c-b2a2-0a69cab29664")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fc0c2b57-3605-4161-890a-4992aae7e9dd")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3d40dd62-999e-4c04-9e9d-bbe9f9bc2b30")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ab62b40f-021f-45f7-b7a1-65d32bdb6d87")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/29a1d90a-d7b4-40b3-bd79-a990fae17770")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "d0090c56-d99f-4dd5-9b4c-4bdf03a2e698")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9.000002) (xy 9.000002 -9) (xy 9 9.000002) (xy -9.000002 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "237d6896-fd99-43b6-ac43-46f9b5ec71b3")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "99ac4be5-6997-4283-bdec-a0b520ccc23f")
+		(at 236.022085 60.459471 12.5)
+		(property "Reference" "SW19"
+			(at 7 8.1 12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ea3690d1-224a-4cc1-9727-38ce26d27c36")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW19"
+			(at -5.842 2.032 12.5)
+			(layer "F.Fab")
+			(uuid "6eb6da80-32c3-4dc1-b78e-df89cb060de2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "65799cf0-4d4b-4bf2-85bb-18402d35cce8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d560c586-bebd-4bf9-82b5-b6c2a149fcd4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f7360ea0-f7dc-430f-b142-f853dbf85c23")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/fc81c8af-f3dc-4cac-9a35-a9b053ce30bc")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "741de201-3eeb-43a9-b59d-b5e871ea5792")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9.000002) (xy 9.000002 -9) (xy 9 9.000002) (xy -9.000002 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "8da1df6c-b724-4966-8b48-13a3098bc5b2")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "a712bfa8-ed88-4ea2-97d7-c3d26e050b91")
+		(at 201.430147 111.847994 27.5)
+		(property "Reference" "SW34"
+			(at 7.000001 8.1 27.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f89398ba-9d33-4016-af4e-7a7aba6e9e19")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW34"
+			(at -5.842 2.032 27.5)
+			(layer "F.Fab")
+			(uuid "8be877b5-b5b1-4098-ba2a-d3aaa600c966")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f4ad1521-b2a1-43b9-a6b2-8d13bdcd3ed7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d96768c8-573e-4074-a219-d6df16a20cae")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d9a6e4a4-b36a-411f-9693-6779e2268125")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/1e4262dc-c16c-4a78-9939-f2c55a567d95")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "8513ebd0-c152-40ef-bc69-ab670a293062")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "c6c782f8-c663-4b2d-99a0-a732bfecd231")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "a9399b7c-ca3f-4308-b571-2d95172c9fc4")
+		(at 198.99108 69.651679 15)
+		(property "Reference" "SW17"
+			(at 7 8.1 15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "690e72bf-6b38-4c98-b943-866d94eb8b2b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW17"
+			(at -5.842 2.032 15)
+			(layer "F.Fab")
+			(uuid "0987dca9-9b61-4bc6-b677-324862a1eb92")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fe8b1ef9-95ef-4c1b-be94-74093bcd7a5f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c68ad170-e398-4343-a002-256e7fee0184")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2327fe49-2fa6-4b0b-9717-f02ad5f30a82")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/baf51ab5-5235-4c8f-a160-bafdb5fcb3df")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "1fa6d393-e1c3-4317-9a6c-3e782b7ab79e")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "4ae96eef-c07d-4856-8d16-aeb30775128c")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+		(layer "F.Cu")
+		(uuid "aa8418b5-62b1-4b5a-89ca-b52eb570c154")
+		(at 250.161833 87.750857)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "TH5"
+			(at 0 -3.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d541dc06-c2fb-46ec-bf8a-b80c648866d5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Spacing plate"
+			(at 0 3.2 0)
+			(layer "F.Fab")
+			(uuid "b6a50e37-9fe2-4d01-8e95-450556f04ece")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c4cb9fc7-80a8-4bbf-a162-7f38e6039cb0")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7a5c17c3-9432-4ae0-a495-7822bd2a99c7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fb8cb6cb-08c5-4520-a78f-2631d0512f4a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/abf99fbe-358a-40bc-9745-843519ec5f32")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.1 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "04ae5c75-f9f8-499f-88a3-11394f5b9bce")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "0732eec4-2f27-4ecc-baea-244e11aa47e8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "bb0fc7a7-46c2-4797-baaa-f71aa03a5634")
+		(at 68.09018 41.910236 -12.5)
+		(property "Reference" "SW2"
+			(at 7 8.1 -12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "fedade10-89ee-442f-a45c-e22b886fd312")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW2"
+			(at -5.842 2.032 -12.5)
+			(layer "F.Fab")
+			(uuid "e28038b1-8583-4789-a807-ab59090ec4b7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8d46dfe8-7a00-49b5-8027-c42cfc918793")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6ed57498-7f4b-47fa-b6cf-a044d4de52ec")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fdfe5e24-7e83-4e1f-ac8a-2f1afbdaeeab")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/ef0b2568-0070-47e3-9441-0a97fb2d043e")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "fb5c3d2f-14db-4e3e-9788-5d0a123a9a50")
+		)
+		(fp_poly
+			(pts
+				(xy -9.000002 -9) (xy 9 -9.000002) (xy 9.000002 9) (xy -9 9.000002)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "748172a4-a083-4e5b-a60a-410f75f12955")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "c01286fb-9743-469c-8533-dc7f29ab21c0")
+		(at 59.865648 79.008703 -12.5)
+		(property "Reference" "SW22"
+			(at 7 8.1 -12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9ebb1130-e5ab-4de5-a714-b74d3f94d5c2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW22"
+			(at -5.842 2.032 -12.5)
+			(layer "F.Fab")
+			(uuid "663a7e0d-8404-467a-a873-3bf7a744c8de")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eb618590-70e5-4c1a-abcb-8fb774b8c3bb")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6db46ed5-6dd4-4deb-bf81-0f7dd0978a4f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "492d5bac-0fb8-4603-a0f7-54fea0359612")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/016fd231-9a1e-48d6-9320-37a3beea89d1")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "0532a401-578f-47c4-b3cd-2596ec87916d")
+		)
+		(fp_poly
+			(pts
+				(xy -9.000002 -9) (xy 9 -9.000002) (xy 9.000002 9) (xy -9 9.000002)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "9537aac8-eaa0-4cfb-a3dc-a2be8f1555ff")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "c23913a7-9d31-487e-b334-a987412b71ae")
+		(at 49.063744 39.983518 -12.5)
+		(property "Reference" "SW1"
+			(at 7 8.1 -12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "acde0cfc-db9f-4a60-9636-d9a574949229")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW1"
+			(at -5.842 2.032 -12.5)
+			(layer "F.Fab")
+			(uuid "baeb3013-61ae-4a09-81da-a4e6865cf48d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ce9c9453-fe42-439d-bcd6-574b6dcc2794")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "831d3fa0-aabd-49b9-8939-c9ea792ce9ad")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f09e76bc-2610-476f-84f0-c8b45e22d988")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/da4a0c97-b6e8-4a07-be46-35c4629c556d")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "171312c1-cae6-422c-a0eb-d99e137ebacf")
+		)
+		(fp_poly
+			(pts
+				(xy -9.000002 -9) (xy 9 -9.000002) (xy 9.000002 9) (xy -9 9.000002)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "a92d24c4-ca2f-4eca-b3ad-ed2f19cfceca")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "e0aacccf-0a0b-44cc-831e-355260647ebc")
+		(at 78.912454 80.87564 -12.5)
+		(property "Reference" "SW23"
+			(at 7 8.1 -12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d7da859f-311c-41ac-a183-e53ca2a029b4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW23"
+			(at -5.842 2.032 -12.5)
+			(layer "F.Fab")
+			(uuid "b8216116-d7bd-48a9-a381-efd10cc2a025")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "67103226-b0e3-436f-a219-6a1b9cefe871")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d0702a60-b7b2-423a-9518-e10d8160a64d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "054ec525-22b3-495c-a417-70d5907bba5b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/35b5b791-ec34-4136-8fd1-e923ea13efb6")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "3e7e7708-18e9-453b-967f-9eb2d7c73586")
+		)
+		(fp_poly
+			(pts
+				(xy -9.000002 -9) (xy 9 -9.000002) (xy 9.000002 9) (xy -9 9.000002)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "23a1f5b6-b909-4485-8736-831e1797147b")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+		(layer "F.Cu")
+		(uuid "e1775655-e916-4922-aa89-c9c7ba8546d0")
+		(at 59.525928 31.292947)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "TH1"
+			(at 0 -3.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "811f9442-23ac-4347-8add-1217eb1df204")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Spacing plate"
+			(at 0 3.2 0)
+			(layer "F.Fab")
+			(uuid "5666d1a6-ca72-4fbb-9f4f-3b799a83a331")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0cc4de97-c1a1-47cc-a8e5-5b824fc1fed1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "396a89a6-3f1e-4ca9-ac64-17b4b2a99e4f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "41e1f69f-4e1d-4d5d-bb59-e1c07334c1ce")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/1e49f0f6-280f-4936-81e2-ddf747ecd7b1")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.1 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "bd86bce8-9b35-4ecc-9f7a-327fdd6caf57")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "a0d7d1d4-528f-4a2d-9363-bc19d6e52c03")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "f115d4e7-9b60-4751-bedf-4e128428c37a")
+		(at 101.00892 69.651679 -15)
+		(property "Reference" "SW14"
+			(at 7.000001 8.1 -15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ba18ff16-b4a0-464d-a2d5-e08b99e5385d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW14"
+			(at -5.842 2.032 -15)
+			(layer "F.Fab")
+			(uuid "f9b8b2e0-90bc-4065-b7e4-ed50928dd950")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3d62a32c-7eab-4baa-b240-adb26fd400bd")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "93687170-672d-4083-9b8c-85141c83fe40")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e07787a6-75ad-4da8-8bfc-aa40ee8dad15")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/1a5f3b13-fb32-425c-80fe-ebaa455c2c89")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "86e57ffc-a20d-445a-a0f1-b73cd8300fc8")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "d94f5a7e-b2b3-4bc1-b5c8-897261ca3aa0")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "f2786253-cc48-43d2-9053-552fd29bd81a")
+		(at 98.569853 111.847994 -27.5)
+		(property "Reference" "SW31"
+			(at 7 8.1 -27.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5bcefc8d-8c77-4a29-9865-a276a0a18fcf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW31"
+			(at -5.841999 2.032 -27.5)
+			(layer "F.Fab")
+			(uuid "00a54892-4b58-4dff-889a-c659a9c755a9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c0ad87cf-f103-41a9-b021-e5600b3d23c9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dbca9dc4-e8f1-44e0-9415-a5a5e4c25dbc")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -27.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "429d592d-59a7-4e5b-ad0e-a8ee47681c84")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/e1aa83b3-262b-41fa-8cf2-364be56d7c05")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "679adbca-51db-449c-9930-c80b4bba5d76")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "9d909d0c-d216-4943-8845-410d5fc7ef29")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "f3bb9c97-8061-4d94-830a-d0b203c9e71d")
+		(at 259.098727 77.142234 11)
+		(property "Reference" "SW30"
+			(at 7 8.1 11)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0f830249-d204-4667-a64e-b7decb780a1a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW30"
+			(at -5.842 2.032 11)
+			(layer "F.Fab")
+			(uuid "d558a1e2-ea6b-4fb2-bbc8-9f8dd14ce211")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d52ff524-68d2-4b4b-9c9a-429a4d0c66fd")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f2de23ca-0368-4697-95b8-dd2e26cbaffd")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 11)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8ab4de41-c42c-4253-a71e-1442fd6e100f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/0b202d01-7683-499c-bc73-945dde88680b")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "3a4607a8-02f2-42d7-8732-49b7bdddba4c")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "d8e12f0c-b8d7-4606-bbe0-77215131d8f4")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "f46628ca-e472-4e8e-bbe8-1b594006553a")
+		(at 181.171601 77.456683 15)
+		(property "Reference" "SW16"
+			(at 7 8.1 15)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ae6e5c2a-65e0-4448-977b-1878794da95e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW16"
+			(at -5.842 2.032 15)
+			(layer "F.Fab")
+			(uuid "b85277e4-4eab-43c5-a008-4b53fc727535")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "786da99d-2305-4ce1-8ac5-ac2fe5bdadf2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a87b01a1-5d6d-4a4c-9188-890d84c174c8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 15)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3c0637a3-f583-43aa-8c6b-b166bdddd73f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/1fcdbc3d-95f1-457a-a276-76ebf7a1b2c4")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "76aea568-366e-4791-bf15-bb499f176ad0")
+		)
+		(fp_poly
+			(pts
+				(xy -9 -9) (xy 9 -9) (xy 9 9) (xy -9 9)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "7147bfdc-18a7-4598-879f-728e3c612984")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+		(layer "F.Cu")
+		(uuid "f5b6629a-b912-4d38-8dc7-2bdd92c734cf")
+		(at 240.474072 31.292947)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "TH4"
+			(at 0 -3.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ad207084-09b2-4054-bec6-41370f41ded3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Spacing plate"
+			(at 0 3.2 0)
+			(layer "F.Fab")
+			(uuid "6de5d9ea-ac0a-441e-b8f8-6880bc8eb94c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:MountingHole_2.2mm_M2_cutout"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7786235c-34fd-4710-9bfe-b9495aac01b7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e30866f2-63eb-4f56-ad7b-03f882994d57")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "41e63183-164e-441c-b56c-dfc131d7ec53")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/3832b511-8497-4418-a49e-db55f04d5a3e")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.1 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "6e100ac2-5759-466e-b9a0-fa929cca2913")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "0dae875e-b6f9-4b7d-ac6e-f78a410c7f15")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(footprint "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+		(layer "F.Cu")
+		(uuid "fc5b2b4f-a96d-4580-a2ee-95de264d4179")
+		(at 63.977915 60.459471 -12.5)
+		(property "Reference" "SW12"
+			(at 7 8.1 -12.5)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "94253829-2a21-46d1-8dd6-234422d58fcf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SW12"
+			(at -5.842 2.032 -12.5)
+			(layer "F.Fab")
+			(uuid "a5cacf95-b483-4aee-97a2-714e6ce37725")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "jw_custom_footprints:CherryMX_Hotswap_cutout_14x14mm"
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a2f27f4f-8991-4fa5-b32f-848af5dd79d4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6202aa1d-3067-463f-b38a-fcb6ce8f0ace")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 -12.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "072da611-8e01-4984-8659-4f54c669856b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/95877813-3c00-4dc9-afe7-feb3a5dc59ed")
+		(sheetname "根目录")
+		(sheetfile "34_monosplit.kicad_sch")
+		(attr through_hole)
+		(fp_poly
+			(pts
+				(xy -7 -7) (xy 7 -7) (xy 7 7) (xy -7 7)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "Edge.Cuts")
+			(uuid "114f8fab-9cb6-4c1f-ad65-d40028fe9a07")
+		)
+		(fp_poly
+			(pts
+				(xy -9.000002 -9) (xy 9 -9.000002) (xy 9.000002 9) (xy -9 9.000002)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "a71d9a78-2902-4514-8753-73248bae156a")
+		)
+		(model "/home/josef/projekty/keyboards/3d/cherry_mx_v28_cp.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "/home/josef/projekty/keyboards/3d/socket_cp.wrl"
+			(offset
+				(xyz -1 7.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 180)
+			)
+		)
+	)
+	(gr_circle
+		(center 137.999961 90.162241)
+		(end 140.149961 90.162241)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Dwgs.User")
+		(uuid "0929ba93-eab2-4484-b19e-e540c92a329e")
+	)
+	(gr_line
+		(start 167.592136 30.052228)
+		(end 207.533688 19.349924)
+		(stroke
+			(width 0.1)
+			(type dot)
+		)
+		(layer "Dwgs.User")
+		(uuid "0f554092-ef13-45ed-b8af-aa903b13de4a")
+	)
+	(gr_arc
+		(start 166.177923 31.466441)
+		(mid 166.695562 30.56987)
+		(end 167.592136 30.052228)
+		(stroke
+			(width 0.1)
+			(type dot)
+		)
+		(layer "Dwgs.User")
+		(uuid "21c0f0f6-e668-4407-bf1f-6c02292a3fb6")
+	)
+	(gr_line
+		(start 161.3004 49.669603)
+		(end 166.177923 31.466441)
+		(stroke
+			(width 0.1)
+			(type dot)
+		)
+		(layer "Dwgs.User")
+		(uuid "29424a14-4c91-4e66-868e-97193c4e93ca")
+	)
+	(gr_circle
+		(center 137.999961 64.189057)
+		(end 140.149961 64.189057)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Dwgs.User")
+		(uuid "2d9e4168-03ac-4206-9370-f0ffb2221dd9")
+	)
+	(gr_circle
+		(center 116.933001 66.4778)
+		(end 117.933001 66.4778)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill none)
+		(layer "Dwgs.User")
+		(uuid "4e6d44c5-1176-43e8-b623-65d4f1db76f0")
+	)
+	(gr_line
+		(start 213.67374 34.118474)
+		(end 211.255027 21.675275)
+		(stroke
+			(width 0.1)
+			(type dot)
+		)
+		(layer "Dwgs.User")
+		(uuid "9839e136-f88f-443e-a615-df0f68f0eeb9")
+	)
+	(gr_circle
+		(center 161.999961 90.135622)
+		(end 164.149961 90.135622)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Dwgs.User")
+		(uuid "9d47d5d2-aa82-4914-8e5e-4dc6a7d96cdf")
+	)
+	(gr_arc
+		(start 207.533688 19.349924)
+		(mid 209.899901 19.703555)
+		(end 211.255027 21.675275)
+		(stroke
+			(width 0.1)
+			(type dot)
+		)
+		(layer "Dwgs.User")
+		(uuid "9dd4c48a-e423-4e18-a491-022bb75af34c")
+	)
+	(gr_circle
+		(center 161.999961 64.215297)
+		(end 164.149961 64.215297)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Dwgs.User")
+		(uuid "dcb27052-4577-4e7b-aa35-94f458ca5773")
+	)
+	(gr_line
+		(start 132.674866 85.715862)
+		(end 134.136327 91.170107)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "05dd98fd-5c87-46e6-baed-02edd25a813a")
+	)
+	(gr_circle
+		(center 161.999961 64.215297)
+		(end 164.249961 64.215297)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "07cdf9c9-7829-4df2-89c6-4f268a606de5")
+	)
+	(gr_arc
+		(start 161.999836 60.214831)
+		(mid 164.434857 61.041434)
+		(end 165.863539 63.179555)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "0e3fdbe7-2002-4fe4-97fa-1771483005e7")
+	)
+	(gr_circle
+		(center 137.999961 64.189057)
+		(end 134.949961 64.189057)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "1046dbe8-8c9e-4bac-ad81-37f620b900c7")
+	)
+	(gr_line
+		(start 165.863539 91.170107)
+		(end 167.325 85.715862)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "13f2a1cf-77b9-45ea-965c-022b9e9e6e25")
+	)
+	(gr_circle
+		(center 165.000004 85.02624)
+		(end 168.150004 85.02624)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "1495f3c9-2f52-49b1-9a95-d841bca36d9f")
+	)
+	(gr_circle
+		(center 42.02939 30.431911)
+		(end 45.17939 30.431911)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "14b7a02d-cbba-44bb-af6c-1dcf5e589948")
+	)
+	(gr_arc
+		(start 134.136327 63.179555)
+		(mid 135.56498 61.041414)
+		(end 138.00003 60.214831)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "276bfba5-a733-4607-9639-599fa934beb6")
+	)
+	(gr_circle
+		(center 161.999961 90.135622)
+		(end 163.099962 90.135622)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "2c821aaf-c144-4dc5-9660-f1caba4c2f6f")
+	)
+	(gr_circle
+		(center 257.97061 30.431911)
+		(end 261.12061 30.431911)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "2e5ee20a-3d03-45d6-a9ea-ffb68026ed04")
+	)
+	(gr_circle
+		(center 164.5576 50.8352)
+		(end 167.7076 50.8352)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "306336ea-e1de-441b-8e79-3594c737a7ec")
+	)
+	(gr_circle
+		(center 137.999961 64.189057)
+		(end 140.249961 64.189057)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "3342042f-d1b6-40c0-8227-ab87502cb0f6")
+	)
+	(gr_circle
+		(center 135.434406 50.848998)
+		(end 138.584406 50.848998)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "39ed2cd9-29eb-491d-86cc-4312a96c7fcf")
+	)
+	(gr_line
+		(start 165.863539 63.179555)
+		(end 167.325 68.6338)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "3a893957-174b-427e-ac1c-04b222708d0c")
+	)
+	(gr_circle
+		(center 137.999961 90.162241)
+		(end 134.949961 90.162241)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "4a873ef4-29ae-4656-8b6f-1e784993f5df")
+	)
+	(gr_arc
+		(start 138.00003 94.134831)
+		(mid 135.564962 93.308259)
+		(end 134.136327 91.170107)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "4b8b68cb-52e2-48e4-8742-7af335d0af59")
+	)
+	(gr_line
+		(start 149.999933 94.134831)
+		(end 161.999836 94.134831)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "55b3d64e-1d3d-4e78-8def-6c2b8e49562c")
+	)
+	(gr_arc
+		(start 167.325 68.6338)
+		(mid 168.449447 77.174831)
+		(end 167.325 85.715862)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "55bc281c-93b2-4bed-8625-664819aff451")
+	)
+	(gr_circle
+		(center 161.999961 90.135622)
+		(end 164.249961 90.135622)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "60e4c031-7a00-4398-a07f-2998566c4f4b")
+	)
+	(gr_circle
+		(center 161.999961 90.135622)
+		(end 158.949961 90.135622)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "632cd69b-2ca4-474b-ae34-99b1b647a8b8")
+	)
+	(gr_circle
+		(center 137.999961 64.189057)
+		(end 139.099962 64.189057)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "66776edd-18ae-48d3-8bce-d957932d6d2c")
+	)
+	(gr_circle
+		(center 268.485188 84.229754)
+		(end 271.635188 84.229754)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "78d5d478-b2c9-4748-8385-10f80bcfc89b")
+	)
+	(gr_circle
+		(center 161.999961 64.215297)
+		(end 163.099962 64.215297)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "82701dab-eb13-4c0b-b7fa-3957e8e6bf74")
+	)
+	(gr_line
+		(start 138.00003 94.134831)
+		(end 149.999933 94.134831)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "8bbd477e-23c7-4033-a90f-6664c4b0b24b")
+	)
+	(gr_circle
+		(center 137.999961 90.162241)
+		(end 139.099962 90.162241)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "8d79ebfb-a5c7-4d8e-ae49-e9fbb7a62508")
+	)
+	(gr_line
+		(start 149.999933 60.214831)
+		(end 161.999836 60.214831)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "98b14db7-04f8-4295-8afb-65ede58a0f6d")
+	)
+	(gr_circle
+		(center 135.000004 85.02624)
+		(end 138.150004 85.02624)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "9ec90b01-e177-499f-97fe-03bc6f5d89a3")
+	)
+	(gr_arc
+		(start 132.674866 85.715862)
+		(mid 131.550417 77.174831)
+		(end 132.674866 68.6338)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "a9dcc51a-2abe-4518-8729-99255f727b3f")
+	)
+	(gr_circle
+		(center 31.514812 84.229754)
+		(end 34.664812 84.229754)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "aa79f25c-0fd4-4483-a271-c5d9b4be2903")
+	)
+	(gr_line
+		(start 138.00003 60.214831)
+		(end 149.999933 60.214831)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "b9ab51e9-765f-4d7b-9763-f969c2e21a7c")
+	)
+	(gr_circle
+		(center 181.198305 132.717503)
+		(end 184.348305 132.717503)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "c0bd1819-dfb5-404b-a6ed-cc45b0f8957a")
+	)
+	(gr_circle
+		(center 118.801695 132.717503)
+		(end 121.951695 132.717503)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "c9ce7fc3-c317-43a3-bbc3-3847a0681d6e")
+	)
+	(gr_circle
+		(center 161.999961 64.215297)
+		(end 158.949961 64.215297)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "d7849675-c215-40fd-8705-0cbbd9556174")
+	)
+	(gr_line
+		(start 132.674866 68.6338)
+		(end 134.136327 63.179555)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "d85d4f5b-e72a-4681-bf63-1954b4bda7df")
+	)
+	(gr_circle
+		(center 137.999961 90.162241)
+		(end 140.249961 90.162241)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "ec9abe0d-fe79-476d-b26b-40a5588a812e")
+	)
+	(gr_arc
+		(start 165.863539 91.170107)
+		(mid 164.434892 93.308254)
+		(end 161.999836 94.134831)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Cmts.User")
+		(uuid "f58e1bf7-55bf-4986-9f10-b62fba2ff4af")
+	)
+	(gr_poly
+		(pts
+			(xy 136.317117 71.643972) (xy 139.817117 71.643971) (xy 139.817117 82.643972) (xy 136.317117 82.643972)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(fill none)
+		(layer "Eco1.User")
+		(uuid "0280d046-f325-4f68-94ed-79168827c2b9")
+	)
+	(gr_circle
+		(center 149.999933 88.068012)
+		(end 150.249933 88.068012)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(fill none)
+		(layer "Eco1.User")
+		(uuid "0a4546ab-3e9a-4ca9-9c3d-abd1ad1f5969")
+	)
+	(gr_circle
+		(center 155.093837 77.175707)
+		(end 166.693837 77.175707)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill none)
+		(layer "Eco1.User")
+		(uuid "1e88cf26-ae89-4a13-9d60-f3229fdf3309")
+	)
+	(gr_circle
+		(center 149.999933 66.283402)
+		(end 150.249933 66.283402)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(fill none)
+		(layer "Eco1.User")
+		(uuid "7a29484d-e076-4ff5-bcda-54bd9c6232d5")
+	)
+	(gr_circle
+		(center 167.093837 77.175707)
+		(end 167.343837 77.175707)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(fill none)
+		(layer "Eco1.User")
+		(uuid "881ba13b-a53c-454a-b531-1ac3385d8f4a")
+	)
+	(gr_poly
+		(pts
+			(xy 163.693961 82.675707) (xy 160.193961 82.675708) (xy 160.193961 71.675707) (xy 163.693961 71.675707)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(fill none)
+		(layer "Eco1.User")
+		(uuid "8ed3cf47-323f-4fe1-a4d0-032f35f0f11e")
+	)
+	(gr_circle
+		(center 144.917241 77.143972)
+		(end 156.517241 77.143972)
+		(stroke
+			(width 0.15)
+			(type dot)
+		)
+		(fill none)
+		(layer "Eco1.User")
+		(uuid "b5e19c02-fdd0-44c6-95df-5ea4e1a580f0")
+	)
+	(gr_circle
+		(center 132.917241 77.143972)
+		(end 133.167241 77.143972)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(fill none)
+		(layer "Eco1.User")
+		(uuid "ca8f9fad-f3e4-4d93-ba8c-c39724e56c0f")
+	)
+	(gr_arc
+		(start 248.875544 91.557709)
+		(mid 247.000499 91.176288)
+		(end 245.944454 89.580663)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "022f17ec-01cb-4654-b018-d17620666af3")
+	)
+	(gr_arc
+		(start 131.136116 116.495126)
+		(mid 131.320231 116.298539)
+		(end 131.579621 116.226)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "04ac980d-b82c-424c-8286-0463495f93f5")
+	)
+	(gr_line
+		(start 241.155535 27.33154)
+		(end 199.974037 36.461258)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "07edfe14-3e49-48d1-aa2f-555611e7b372")
+	)
+	(gr_line
+		(start 230.986257 90.868125)
+		(end 231.008121 90.966748)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "0a08732e-11a5-426a-a99a-35ff9d94363d")
+	)
+	(gr_arc
+		(start 69.013743 90.868125)
+		(mid 69.189379 90.617397)
+		(end 69.490838 90.564182)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "0a8a7f34-edd8-45e8-a981-6cb8de89b69c")
+	)
+	(gr_line
+		(start 28.081801 84.02252)
+		(end 38.713665 29.326322)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "0cd0da3d-05ed-4a8c-afd0-7a292d3ae0f6")
+	)
+	(gr_arc
+		(start 54.055546 89.580663)
+		(mid 52.999473 91.176261)
+		(end 51.124456 91.557709)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "0cd3a782-4a8a-42aa-9ba5-e6a534131cd3")
+	)
+	(gr_line
+		(start 161.3004 49.669603)
+		(end 157.559878 63.62941)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "0cda582b-aedc-4113-9d25-4491307f57c0")
+	)
+	(gr_arc
+		(start 169.099934 101.049)
+		(mid 169.382777 101.166157)
+		(end 169.499934 101.449)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "153ebb90-d79f-4b47-b4d1-d528af662ea6")
+	)
+	(gr_line
+		(start 121.660597 134.697428)
+		(end 131.136116 116.495126)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "1697b1e4-06e3-4b7a-8546-22c453fa4e05")
+	)
+	(gr_arc
+		(start 224.77895 110.522531)
+		(mid 224.979091 112.8099)
+		(end 223.503164 114.56881)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "184d7486-6f83-4134-9103-d72aab823482")
+	)
+	(gr_line
+		(start 150 116.226)
+		(end 131.579621 116.226)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "19035c55-245b-4027-9a7a-0a5ee1a24e26")
+	)
+	(gr_arc
+		(start 217.529386 96.59625)
+		(mid 217.394392 96.298319)
+		(end 217.29264 95.987461)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "1ab219c5-92e9-4c28-a69f-e5152f2ecf4d")
+	)
+	(gr_arc
+		(start 84.766147 118.873541)
+		(mid 84.028195 117.994083)
+		(end 84.128254 116.850402)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "1c01fa06-9fbb-47c6-b80e-ebb2dd330f65")
+	)
+	(gr_arc
+		(start 157.559878 63.62941)
+		(mid 157.381296 63.896676)
+		(end 157.076916 64)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "1d5e4c61-a380-49b8-be2a-d7a247525053")
+	)
+	(gr_arc
+		(start 100.608703 37.910267)
+		(mid 100.370258 37.731396)
+		(end 100.321712 37.437321)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "1e71ba91-c1eb-4e82-b432-105c3f9eca71")
+	)
+	(gr_line
+		(start 130.899934 101.049)
+		(end 169.099934 101.049)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "21524166-2ffb-4b2b-8597-da12cfeb0d49")
+	)
+	(gr_circle
+		(center 128.499936 111.049001)
+		(end 130.099936 111.049001)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "251a7564-e1fa-42e8-a104-d33963256f36")
+	)
+	(gr_line
+		(start 83.217607 94.083193)
+		(end 83.229817 94.037625)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "2902b10f-c4f2-4b03-a853-47252610de1c")
+	)
+	(gr_line
+		(start 136.57828 47.548284)
+		(end 100.608703 37.910267)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "2b5fb0b5-73f4-4f3c-b937-6718788e8324")
+	)
+	(gr_line
+		(start 233.155044 92.334491)
+		(end 245.929263 89.502515)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "2c4b0000-4a8e-488d-88e5-96f2321b288a")
+	)
+	(gr_line
+		(start 164.443961 71.175707)
+		(end 158.693961 71.175707)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "3115e059-8fc4-4644-a685-cbc6b0d449cb")
+	)
+	(gr_circle
+		(center 138 64.2148)
+		(end 139.1 64.2148)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "325d8502-6fbb-4f65-8d4d-4c6f30ce0e9c")
+	)
+	(gr_arc
+		(start 233.155044 92.334491)
+		(mid 231.798289 92.095288)
+		(end 231.008121 90.966748)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "3817dbdf-0199-407c-8c46-3d611f3e0d51")
+	)
+	(gr_arc
+		(start 142.923084 64)
+		(mid 142.618704 63.896677)
+		(end 142.440122 63.62941)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "3e3ec64c-3053-4027-a1fa-05f3451bd5a9")
+	)
+	(gr_line
+		(start 224.77895 110.522531)
+		(end 217.529386 96.59625)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "3e8ec159-9b70-403a-a904-3ac2dd711232")
+	)
+	(gr_circle
+		(center 170.679999 92.7972)
+		(end 171.429999 92.7972)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "3fe59611-b38b-4996-a43f-ba314377db3d")
+	)
+	(gr_circle
+		(center 171.499933 104.049002)
+		(end 173.099933 104.049002)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "40a6df74-ada9-49ea-8be8-b79938fbb49d")
+	)
+	(gr_line
+		(start 245.929263 89.502515)
+		(end 245.944454 89.580663)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "40ba446c-bf69-4f49-91a6-39eecd2fedb1")
+	)
+	(gr_arc
+		(start 38.713665 29.326322)
+		(mid 39.980988 27.411663)
+		(end 42.230974 26.953867)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "410438a3-fbf8-4f53-be2d-e5313e5bb55c")
+	)
+	(gr_line
+		(start 169.499934 101.449)
+		(end 169.499935 113.649)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "41394213-3c06-43d7-a027-280eb83b2fd4")
+	)
+	(gr_line
+		(start 138.6996 49.669603)
+		(end 142.440122 63.62941)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "41ec0dbe-d957-4326-8b9e-eed78c3aaee1")
+	)
+	(gr_arc
+		(start 100.025963 36.461258)
+		(mid 100.339399 36.680784)
+		(end 100.40589 37.057628)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "47ef2c4c-e1bf-412c-a6fa-59b0fa4bba52")
+	)
+	(gr_line
+		(start 244.207969 29.58987)
+		(end 244.150701 29.295255)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "48cfa3c7-f9e0-433c-82bb-e2c93b37b402")
+	)
+	(gr_line
+		(start 158.693961 83.175708)
+		(end 164.443961 83.175708)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "492466d0-80ec-4b03-89d8-aa8cfcbb50f0")
+	)
+	(gr_arc
+		(start 135.032 86.0944)
+		(mid 134.678447 85.947953)
+		(end 134.532 85.5944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "494fad27-c58e-4802-bfd5-b30c07608b86")
+	)
+	(gr_line
+		(start 199.678288 37.437321)
+		(end 199.59411 37.057628)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "500c3881-f37d-482e-b906-9511cf0c95f6")
+	)
+	(gr_line
+		(start 182.385682 135.973214)
+		(end 223.503164 114.56881)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "5a05d31c-a653-4923-8e89-87171f4ac8bb")
+	)
+	(gr_line
+		(start 130.499935 113.649)
+		(end 130.499934 101.449)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "5d8d4166-fd5e-4b8b-8819-966453f34938")
+	)
+	(gr_line
+		(start 164.943961 71.675707)
+		(end 164.943961 82.675708)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "5e6ddbd0-8a21-4e7f-90d3-c213a75a860f")
+	)
+	(gr_line
+		(start 54.070737 89.502515)
+		(end 66.844956 92.334491)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "5e86b9d3-7ece-4a2b-92f8-d11e701cff59")
+	)
+	(gr_arc
+		(start 93.201235 98.104156)
+		(mid 93.529481 98.385745)
+		(end 93.515332 98.817993)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "623813f4-730f-48eb-b9ed-605c3ff39024")
+	)
+	(gr_line
+		(start 216.770183 94.037625)
+		(end 217.29264 95.987461)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "6ddca754-5de5-4efb-81f4-5db9050547e5")
+	)
+	(gr_line
+		(start 261.286335 29.326322)
+		(end 271.918199 84.02252)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "7162f08d-8d9b-4a86-b747-495a26ee5722")
+	)
+	(gr_circle
+		(center 138 90.135125)
+		(end 139.1 90.135125)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "71b46d3e-6ea5-4110-91d8-63585e7fb8be")
+	)
+	(gr_arc
+		(start 241.155535 27.33154)
+		(mid 243.067329 27.681625)
+		(end 244.150701 29.295255)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "723f988a-e63d-4296-8cb4-e9cf9430dabc")
+	)
+	(gr_line
+		(start 150 64)
+		(end 142.923084 64)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "7413970f-992d-4349-8586-bb96b226cc23")
+	)
+	(gr_line
+		(start 257.769026 26.953867)
+		(end 244.207969 29.58987)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "75408780-b9f9-4d66-90cd-0681195eeddb")
+	)
+	(gr_arc
+		(start 84.136846 95.675361)
+		(mid 83.347478 95.069658)
+		(end 83.217607 94.083193)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "782251c6-e7e4-489a-b6b6-1719572380b7")
+	)
+	(gr_arc
+		(start 182.385682 135.973214)
+		(mid 180.098302 136.173357)
+		(end 178.339403 134.697428)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "79b56bbc-6939-4487-b9f0-43e53c26f4f3")
+	)
+	(gr_arc
+		(start 216.770183 94.037625)
+		(mid 216.814589 93.726581)
+		(end 217.069976 93.543578)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "7cca91bd-538a-4f75-b344-29efd08b304a")
+	)
+	(gr_circle
+		(center 161.999961 64.215297)
+		(end 163.099961 64.215297)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "80c269f0-19b0-4b16-bbb6-46eb9c80fbad")
+	)
+	(gr_line
+		(start 158.193961 82.675708)
+		(end 158.193961 71.675707)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "82e87e21-a358-4ffc-a790-d5b02c264d20")
+	)
+	(gr_arc
+		(start 68.991879 90.966748)
+		(mid 68.201693 92.09526)
+		(end 66.844956 92.334491)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "8b0ac339-0123-4bf5-b9b1-8b795577bf10")
+	)
+	(gr_arc
+		(start 121.660597 134.697428)
+		(mid 119.90167 136.173334)
+		(end 117.614318 135.973214)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "8c63a794-d93e-48d1-a413-1941546dcce1")
+	)
+	(gr_arc
+		(start 130.899935 114.049)
+		(mid 130.617092 113.931843)
+		(end 130.499935 113.649)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "910890ad-125c-4a68-8bed-5ad9e094af62")
+	)
+	(gr_line
+		(start 55.849299 29.295255)
+		(end 55.792031 29.58987)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "91cf46dc-629d-4188-a76d-9ce25b4456c9")
+	)
+	(gr_line
+		(start 137.632 76.0944)
+		(end 135.032 76.0944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "925c57ef-2d97-42ac-9975-b7871bc85618")
+	)
+	(gr_arc
+		(start 137.632 76.0944)
+		(mid 137.985553 76.240847)
+		(end 138.132 76.5944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "927b1104-38b5-4134-9e5d-41f1d9f93ae5")
+	)
+	(gr_arc
+		(start 55.849299 29.295255)
+		(mid 56.932619 27.681547)
+		(end 58.844465 27.33154)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "92ca70cb-0d37-49b8-87a3-5327226f396d")
+	)
+	(gr_arc
+		(start 164.443961 71.175707)
+		(mid 164.797537 71.32214)
+		(end 164.943961 71.675707)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "94708ec5-1fd8-416c-9ae8-3e82c5db32f6")
+	)
+	(gr_arc
+		(start 30.454256 87.539829)
+		(mid 28.539544 86.272543)
+		(end 28.081801 84.02252)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "9840494a-7a90-4230-a092-b55542a10592")
+	)
+	(gr_line
+		(start 134.532 85.5944)
+		(end 134.532 76.5944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "98cf0569-0d21-4927-9f89-209723677f1f")
+	)
+	(gr_arc
+		(start 158.693961 83.175708)
+		(mid 158.340395 83.029254)
+		(end 158.193961 82.675708)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "9d6a4153-dde2-4b8f-bcbb-ac778884e501")
+	)
+	(gr_arc
+		(start 230.509162 90.564182)
+		(mid 230.810696 90.617313)
+		(end 230.986257 90.868125)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "a2352a90-711e-4728-aa52-7acbb6891bdd")
+	)
+	(gr_arc
+		(start 257.769026 26.953867)
+		(mid 260.01901 27.41166)
+		(end 261.286335 29.326322)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "a570dacd-66a3-44ec-86c7-dabe8e679e25")
+	)
+	(gr_arc
+		(start 136.57828 47.548284)
+		(mid 137.923144 48.324742)
+		(end 138.6996 49.669603)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "a9490d80-eb86-4850-86a1-0ea7aefae110")
+	)
+	(gr_line
+		(start 100.40589 37.057628)
+		(end 100.321712 37.437321)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "aaf686fe-291d-4797-8eb1-24fb9aad2576")
+	)
+	(gr_arc
+		(start 138.132 85.5944)
+		(mid 137.985553 85.947953)
+		(end 137.632 86.0944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "adf8d849-eddd-4f06-9c6e-becb5096549d")
+	)
+	(gr_line
+		(start 68.991879 90.966748)
+		(end 69.013743 90.868125)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "b71122fe-4eae-41a2-bf90-9165e1e18450")
+	)
+	(gr_line
+		(start 55.792031 29.58987)
+		(end 42.230974 26.953867)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "b878dc48-8d43-4c06-9c2d-5c0d7e9a1a47")
+	)
+	(gr_line
+		(start 117.614318 135.973214)
+		(end 84.766147 118.873541)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "bd84326e-bdee-4070-b001-48c02e208a96")
+	)
+	(gr_line
+		(start 54.055546 89.580663)
+		(end 54.070737 89.502515)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "bf3e09ec-2e39-4c1f-9027-70572562ca1e")
+	)
+	(gr_arc
+		(start 168.420379 116.226)
+		(mid 168.679774 116.298536)
+		(end 168.863884 116.495126)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c1dad1f1-beed-4739-9a6b-f0f835e0a9d0")
+	)
+	(gr_line
+		(start 150 64)
+		(end 157.076916 64)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c2ae5025-7c38-4f74-b7db-ad2c388aa699")
+	)
+	(gr_arc
+		(start 199.59411 37.057628)
+		(mid 199.660557 36.680745)
+		(end 199.974037 36.461258)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c4c4ebc0-9946-445a-80c4-540df63947a3")
+	)
+	(gr_line
+		(start 169.099935 114.049)
+		(end 130.899935 114.049)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c66b08d6-9269-480a-9ce4-7ea33be14674")
+	)
+	(gr_arc
+		(start 161.3004 49.669603)
+		(mid 162.076857 48.32474)
+		(end 163.42172 47.548284)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c688a8ba-d8e6-4e3b-b5b4-690a1bf52f17")
+	)
+	(gr_arc
+		(start 158.193961 71.675707)
+		(mid 158.340409 71.322171)
+		(end 158.693961 71.175707)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c9eb8af2-1e34-423e-bb06-537a21b57711")
+	)
+	(gr_arc
+		(start 134.532 76.5944)
+		(mid 134.678447 76.240847)
+		(end 135.032 76.0944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "ca1cec30-9544-4cae-adbf-48b245596e50")
+	)
+	(gr_line
+		(start 178.339403 134.697428)
+		(end 168.863884 116.495126)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "ca7e7339-da8d-49af-ae9c-306db71c120a")
+	)
+	(gr_line
+		(start 199.391297 37.910267)
+		(end 163.42172 47.548284)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "ce5584a9-11f2-4cb7-baa3-2fa2ffbb99b4")
+	)
+	(gr_arc
+		(start 271.918199 84.02252)
+		(mid 271.460453 86.272541)
+		(end 269.545744 87.539829)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "d330f03d-15fa-4564-9d07-0b7c9427252a")
+	)
+	(gr_line
+		(start 135.032 86.0944)
+		(end 137.632 86.0944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "d53fc25d-7988-421d-90b0-54539fab53fb")
+	)
+	(gr_arc
+		(start 169.499935 113.649)
+		(mid 169.38278 113.931855)
+		(end 169.099935 114.049)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "d5f2f2cc-ee01-4338-8a2f-88a7beae5534")
+	)
+	(gr_arc
+		(start 82.930024 93.543578)
+		(mid 83.185448 93.726578)
+		(end 83.229817 94.037625)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "d793289a-03b0-43fa-b29d-a9cf9dca608e")
+	)
+	(gr_arc
+		(start 164.943961 82.675708)
+		(mid 164.797509 83.029242)
+		(end 164.443961 83.175708)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "d9615dc3-09b6-4923-b516-e45774735f57")
+	)
+	(gr_line
+		(start 69.490838 90.564182)
+		(end 82.930024 93.543578)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "ded38d7b-1dfe-4c64-bd0b-16159f7ad4e4")
+	)
+	(gr_line
+		(start 30.454256 87.539829)
+		(end 51.124456 91.557709)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "df719ab5-83bc-4ad9-9165-e3640d91b8a2")
+	)
+	(gr_line
+		(start 93.515332 98.817993)
+		(end 84.128254 116.850402)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "e0663612-7f64-4d64-ae2c-9f7d8eedcf2b")
+	)
+	(gr_line
+		(start 217.069976 93.543578)
+		(end 230.509162 90.564182)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "e23eb1c3-7a52-4d25-a357-f6bda0bba2b1")
+	)
+	(gr_line
+		(start 138.132 76.5944)
+		(end 138.132 85.5944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "e27718ef-a6dd-4420-b6e9-29ac2b3ba01b")
+	)
+	(gr_arc
+		(start 130.499934 101.449)
+		(mid 130.617091 101.166157)
+		(end 130.899934 101.049)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "e4081b74-097f-4db6-962a-dc56a3c26d82")
+	)
+	(gr_line
+		(start 100.025963 36.461258)
+		(end 58.844465 27.33154)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "e4c87b1a-21eb-4f0f-83b8-4acba0018d10")
+	)
+	(gr_line
+		(start 248.875544 91.557709)
+		(end 269.545744 87.539829)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "e9604db2-33cf-440e-988d-4b289862ed9c")
+	)
+	(gr_circle
+		(center 161.999961 90.135622)
+		(end 163.099961 90.135622)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "ec7ff11f-2d46-4fac-80ad-f52dc8284a51")
+	)
+	(gr_line
+		(start 93.201235 98.104156)
+		(end 84.136846 95.675361)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "ee934aaf-479b-47e6-b000-b303ee4ef212")
+	)
+	(gr_line
+		(start 150 116.226)
+		(end 168.420379 116.226)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f192f087-303a-4b43-9ae8-d3537c0d590a")
+	)
+	(gr_arc
+		(start 199.678288 37.437321)
+		(mid 199.629735 37.731402)
+		(end 199.391297 37.910267)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f8059ed4-36ed-48ea-9a42-64ff3d393fc5")
+	)
+	(gr_text "Cirque Trackpad\nTM023023"
+		(at 155.093837 77.201947 0)
+		(layer "Cmts.User")
+		(uuid "58de61a0-e840-4954-b937-c8f37dfbf459")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "Cirque Trackpad\nTM023023"
+		(at 144.917241 77.117732 0)
+		(layer "Cmts.User")
+		(uuid "bb5f0c78-0cc0-4cd0-98dc-95e7355f0c61")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(group ""
+		(uuid "0c4be7c2-65b0-4dfc-b87f-150759402714")
+		(members "07cdf9c9-7829-4df2-89c6-4f268a606de5" "82701dab-eb13-4c0b-b7fa-3957e8e6bf74"
+			"d7849675-c215-40fd-8705-0cbbd9556174" "dcb27052-4577-4e7b-aa35-94f458ca5773"
+		)
+	)
+	(group ""
+		(uuid "48d7513a-d694-4a17-8ae2-32dfd1dab134")
+		(members "1046dbe8-8c9e-4bac-ad81-37f620b900c7" "2d9e4168-03ac-4206-9370-f0ffb2221dd9"
+			"3342042f-d1b6-40c0-8227-ab87502cb0f6" "66776edd-18ae-48d3-8bce-d957932d6d2c"
+		)
+	)
+	(group ""
+		(uuid "53969143-f723-482b-9ca6-848a6fe639f6")
+		(members "2c821aaf-c144-4dc5-9660-f1caba4c2f6f" "60e4c031-7a00-4398-a07f-2998566c4f4b"
+			"632cd69b-2ca4-474b-ae34-99b1b647a8b8" "9d47d5d2-aa82-4914-8e5e-4dc6a7d96cdf"
+		)
+	)
+	(group ""
+		(uuid "709c49fc-028d-4212-b654-aaf2e9bd6ec8")
+		(members "0929ba93-eab2-4484-b19e-e540c92a329e" "4a873ef4-29ae-4656-8b6f-1e784993f5df"
+			"8d79ebfb-a5c7-4d8e-ae49-e9fbb7a62508" "ec9abe0d-fe79-476d-b26b-40a5588a812e"
+		)
+	)
+	(group ""
+		(uuid "e1024cd2-13c8-4659-88e4-cdab4baae93d")
+		(members "05dd98fd-5c87-46e6-baed-02edd25a813a" "0a4546ab-3e9a-4ca9-9c3d-abd1ad1f5969"
+			"0c4be7c2-65b0-4dfc-b87f-150759402714" "0e3fdbe7-2002-4fe4-97fa-1771483005e7"
+			"13f2a1cf-77b9-45ea-965c-022b9e9e6e25" "276bfba5-a733-4607-9639-599fa934beb6"
+			"3a893957-174b-427e-ac1c-04b222708d0c" "48d7513a-d694-4a17-8ae2-32dfd1dab134"
+			"4b8b68cb-52e2-48e4-8742-7af335d0af59" "53969143-f723-482b-9ca6-848a6fe639f6"
+			"55b3d64e-1d3d-4e78-8def-6c2b8e49562c" "55bc281c-93b2-4bed-8625-664819aff451"
+			"709c49fc-028d-4212-b654-aaf2e9bd6ec8" "7a29484d-e076-4ff5-bcda-54bd9c6232d5"
+			"7d9d759d-4520-4bd4-a3b8-ae4b7339c8a8" "881ba13b-a53c-454a-b531-1ac3385d8f4a"
+			"8bbd477e-23c7-4033-a90f-6664c4b0b24b" "98b14db7-04f8-4295-8afb-65ede58a0f6d"
+			"a9dcc51a-2abe-4518-8729-99255f727b3f" "b5bd6b2e-6783-46b7-ab2d-533160206a15"
+			"b9ab51e9-765f-4d7b-9763-f969c2e21a7c" "ca8f9fad-f3e4-4d93-ba8c-c39724e56c0f"
+			"d85d4f5b-e72a-4681-bf63-1954b4bda7df" "f58e1bf7-55bf-4986-9f10-b62fba2ff4af"
+		)
+	)
+	(group ""
+		(uuid "7d9d759d-4520-4bd4-a3b8-ae4b7339c8a8")
+		(members "1e88cf26-ae89-4a13-9d60-f3229fdf3309" "58de61a0-e840-4954-b937-c8f37dfbf459"
+			"8ed3cf47-323f-4fe1-a4d0-032f35f0f11e"
+		)
+	)
+	(group ""
+		(uuid "b5bd6b2e-6783-46b7-ab2d-533160206a15")
+		(members "0280d046-f325-4f68-94ed-79168827c2b9" "b5e19c02-fdd0-44c6-95df-5ea4e1a580f0"
+			"bb5f0c78-0cc0-4cd0-98dc-95e7355f0c61"
+		)
+	)
+)
