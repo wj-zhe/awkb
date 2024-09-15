@@ -2,14 +2,14 @@
     "manufacturer":"jw",
     "maintainer":"jw",
     "keyboard_name":"AWKB",
-    "url": "https://github.com/wj-zhe/awkb/tree/main/hardware/monosplit",
+    "url": "https://github.com/wj-zhe/awkb",
     "usb": {
         "vid": "0x8E51",
         "pid": "0xDF9E",
         "device_version": "3.0.0"
     },
     "processor": "atmega32u4",
-    "bootloader": "atmel-dfu",
+    "bootloader": "caterina",
     "features": {
         "bootmagic": true,
         "command": false,
@@ -39,7 +39,7 @@
         "rows": [ "D4", "C6", "D7", "B5" ]
     },
     "layouts":{
-        "LAYOUT_3x10_4": {
+        "LAYOUT_34": {
             "layout": [
                 { "matrix": [0, 0], "x": 0,  "y": 0 },
                 { "matrix": [0, 5], "x": 1,  "y": 0 },

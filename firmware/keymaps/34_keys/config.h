@@ -1,8 +1,6 @@
-/* Copyright 2021 @wj-zhe */
+/* Copyright 2024 @wj-zhe */
 
 #pragma once
-
-/* tap-hold option */
 
 /* tap-hold option */
 // #define TAPPING_TERM 175
@@ -23,11 +21,4 @@
 #   define NO_AUTO_SHIFT_ALPHA
 #   define NO_AUTO_SHIFT_TAB
 #endif
-
-/* select animation effects */
-/* #undef RGBLIGHT_ANIMATIONS */
-/* #define RGBLIGHT_EFFECT_BREATHING */
-/* #define RGBLIGHT_EFFECT_RAINBOW_MOOD */
-/* #define RGBLIGHT_EFFECT_SNAKE */
-/* #define RGBLIGHT_EFFECT_SNAKE_LENGTH 8 */
 

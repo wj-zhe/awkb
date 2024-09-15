@@ -18,14 +18,36 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Split side setting */
 #define MASTER_RIGHT
 
+/* Pointing Device */
+#ifdef POINTING_DEVICE_ENABLE
+#   define PMW33XX_CPI 700
+#   define SPLIT_POINTING_ENABLE
+#   define POINTING_DEVICE_RIGHT
+#   define SPI_SCK_PIN GP2
+#   define SPI_MOSI_PIN GP3
+#   define SPI_MISO_PIN GP4
+#   define PMW33XX_CS_PIN GP1
+#   define POINTING_DEVICE_ROTATION_90
+#   define POINTING_DEVICE_INVERT_X
+#endif
+
 /* tap-hold option */
 /* #define TAPPING_TERM 175 */
 #define TAPPING_TERM_PER_KEY
 #define PERMISSIVE_HOLD_PER_KEY
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
-/* #define RETRO_TAPPING_PER_KEY */
 
+/* Combo option */
 /* #define COMBO_TERM 40 */
 /* #define COMBO_STRICT_TIMER */
 /* #define COMBO_ONLY_FROM_LAYER 0 */
+
+/* Auto-Shift option */
+#ifdef AUTO_SHIFT_ENABLE
+#   define AUTO_SHIFT_TIMEOUT 165
+/* #   define NO_AUTO_SHIFT_SPECIAL */
+#   define NO_AUTO_SHIFT_NUMERIC
+#   define NO_AUTO_SHIFT_ALPHA
+#   define NO_AUTO_SHIFT_TAB
+#endif
 

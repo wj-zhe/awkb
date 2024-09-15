@@ -24,22 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifdef RGBLIGHT_ENABLE
 #   define RGBLIGHT_SLEEP
 #   define RGBLIGHT_SPLIT
-/* #   define PICA40_RGBLIGHT_TIMEOUT 2 */
 #   define RGBLIGHT_LIMIT_VAL 100
-/* #   define RGBLIGHT_LAYERS */
-#endif
-
-/* Pointing Device */
-#ifdef POINTING_DEVICE_ENABLE
-#   define PMW33XX_CPI 800
-#   define SPLIT_POINTING_ENABLE
-#   define POINTING_DEVICE_RIGHT
-#   define SPI_SCK_PIN GP2
-#   define SPI_MOSI_PIN GP3
-#   define SPI_MISO_PIN GP4
-#   define PMW33XX_CS_PIN GP1
-#   define POINTING_DEVICE_ROTATION_90
-#   define POINTING_DEVICE_INVERT_X
 #endif
 
 /* Encoder config */

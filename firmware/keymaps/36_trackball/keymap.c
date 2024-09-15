@@ -17,6 +17,14 @@
 #   include "g/keymap_combo.h"
 #endif
 
+#ifdef COMBO_ENABLE
+#   include "g/keymap_combo.h"
+#endif
+
+#if defined(POINTING_DEVICE_ENABLE)
+#   include "trackball.c"
+#endif // defined(POINTING_DEVICE_ENABLE)
+
 
 // A 'transparent' key code (that falls back to the layers below it).
 #define ___ KC_TRNS
@@ -62,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LCTL_T(KC_A): case LCTL_T(KC_SCLN):
-            return 165;
+            return 175;
         case LALT_T(KC_BSPC): case LALT_T(KC_SPC):
             return 145;
         case LSFT_T(KC_Z): case LSFT_T(KC_F1):
@@ -191,10 +199,6 @@ void keyboard_post_init_user(void) {
 
 #endif // defined(RGBLIGHT_ENABLE) && defined(RGBLIGHT_LAYERS)
 
-#if defined(POINTING_DEVICE_ENABLE)
-    static bool scrolling_mode = false;
-#endif // defined(POINTING_DEVICE_ENABLE)
-
 layer_state_t layer_state_set_user(layer_state_t state) {
 
 #if defined(RGBLIGHT_ENABLE) && defined(RGBLIGHT_LAYERS)
@@ -205,66 +209,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 #endif // defined(RGBLIGHT_ENABLE) && defined(RGBLIGHT_LAYERS)
 
 #if defined(POINTING_DEVICE_ENABLE)
-    switch (get_highest_layer(state)) {
-        case 1: case 3:  // Enable scrolling mode
-            scrolling_mode = true;
-            pointing_device_set_cpi(100);
-            break;
-        default:
-            if (scrolling_mode) {  // Disable scrolling mode
-                scrolling_mode = false;
-            };
-            pointing_device_set_cpi(700);
-            break;
-    }
+    pointing_device_task_layer(state);
 
 #endif // defined(POINTING_DEVICE_ENABLE)
 
     return state;
 
 }
-
-#if defined(POINTING_DEVICE_ENABLE)
-int x_sum = 0;
-int y_sum = 0;
-
-report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
-    if (scrolling_mode) {
-        // sum x and y movements
-        x_sum += mouse_report.x;
-        y_sum += mouse_report.y;
-
-    };
-
-    if (scrolling_mode) {
-
-        // set h/v movements only on consecutive x/y movements
-        if (abs(x_sum) >=5 || abs(y_sum) >=5) {
-
-            if ( abs(x_sum) / abs(y_sum) >2 ) {
-                mouse_report.h = mouse_report.x;
-                mouse_report.v = 0;
-            } else if ( abs(y_sum) / abs(x_sum) >2 ) {
-                mouse_report.v = mouse_report.y;
-                mouse_report.h = 0;
-            } else {
-                // set h/v to zero to avoid simultaneous scroll movements
-                mouse_report.h = 0;
-                mouse_report.v = 0;
-            };
-
-            // reset x_sum and y_sum
-            x_sum = 0;
-            y_sum = 0;
-        }
-
-        // set x/y to zero to avoid mouse movements
-        mouse_report.x = 0;
-        mouse_report.y = 0;
-
-    }
-    return mouse_report;
-}
-
-#endif // defined(POINTING_DEVICE_ENABLE)
 

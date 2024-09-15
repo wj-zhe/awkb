@@ -1,10 +1,11 @@
-
 # Pointing device
-POINTING_DEVICE_ENABLE = yes
-POINTING_DEVICE_DRIVER = cirque_pinnacle_spi
+POINTING_DEVICE_ENABLE = no
+ifeq ($(strip $(POINTING_DEVICE_ENABLE)), yes)
+	MOUSEKEY_ENABLE = yes
+endif
 
 # OLED
-OLED_ENABLE = yes
+OLED_ENABLE = no
 
 # RGBLIGHT
 RGBLIGHT_ENABLE = no       # keyboard RGB underglow
@@ -15,9 +16,6 @@ TAP_DANCE_ENABLE = yes      # Enable Tap-Dance feature
 # Combo config
 COMBO_ENABLE = yes          # Enable COMBO feature
 VPATH += keyboards/gboards
-
-# Mouse keys and extra keys
-MOUSEKEY_ENABLE = yes
 
 # Auto Shift
 AUTO_SHIFT_ENABLE = no

@@ -6,10 +6,6 @@
 #   include "print.h"
 #endif
 
-/* #ifdef ENCODER_ENABLE */
-/* #   include "encoder_cuz.h" */
-/* #endif */
-
 #ifdef TAP_DANCE_ENABLE
 #   include "tap_dances.h"
 #endif
@@ -17,6 +13,10 @@
 #ifdef COMBO_ENABLE
 #   include "g/keymap_combo.h"
 #endif
+
+// #if defined(POINTING_DEVICE_ENABLE)
+// #   include "trackball.c"
+// #endif // defined(POINTING_DEVICE_ENABLE)
 
 
 // A 'transparent' key code (that falls back to the layers below it).
@@ -26,7 +26,7 @@
 
 /* keymaps */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT_3x10_4(
+    [0] = LAYOUT_34(
             LGUI_T(KC_Q), KC_W, KC_E, KC_R, KC_T,          KC_Y, KC_U, KC_I, KC_O, LGUI_T(KC_P),
             LCTL_T(KC_A), KC_S, KC_D, KC_F, KC_G,          KC_H, KC_J, KC_K, KC_L, LCTL_T(KC_SCLN),
             LSFT_T(KC_Z), KC_X, KC_C, KC_V, LT(3,KC_B),    LSG_T(KC_N), KC_M, KC_COMM, KC_DOT, LSFT_T(KC_SLSH),
@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
             ),
 
-    [1] = LAYOUT_3x10_4(
+    [1] = LAYOUT_34(
             KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
             LCTL_T(KC_1), KC_2, KC_3, KC_4, KC_5,          KC_6, KC_7, KC_8, KC_9, LCTL_T(KC_0),
             KC_LSFT, KC_GRV, KC_BSLS, KC_LBRC, KC_RBRC,    KC_EQL, KC_MINS, ___, ___, ___,
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
             ),
 
-    [2] = LAYOUT_3x10_4(
+    [2] = LAYOUT_34(
             LGUI_T(KC_F9), KC_F10, KC_F11, KC_F12, KC_BTN2,    KC_HOME, KC_PGDN, KC_PGUP, KC_END, LGUI_T(KC_WBAK),
             LCTL_T(KC_F5), KC_F6, KC_F7, KC_F8, KC_BTN1,       KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, LCTL_T(KC_WFWD),
             LSFT_T(KC_F1), KC_F2, KC_F3, KC_F4, TO(3),         TD(TD_MD_ULT), KC_VOLD, KC_VOLU, KC_MUTE, KC_LSFT,
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
             ),
 
-    [3] = LAYOUT_3x10_4(
+    [3] = LAYOUT_34(
             KC_NO, KC_HOME, KC_UP, KC_PGUP, KC_NUM,         KC_PSLS, KC_P7, KC_P8, KC_P9, KC_PMNS,
             KC_END, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN,    KC_PAST, KC_P4, KC_P5, KC_P6, KC_PPLS,
             KC_BRIU, KC_BRIU, KC_VOLU, KC_VOLD, TG(3),      KC_P0, KC_P1, KC_P2, KC_P3, LSFT_T(KC_DOT),
@@ -157,27 +157,58 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return true;
         };
 
-        /* case ENC_TG: { */
-        /*     if (record->event.pressed) { */
-        /*         // Go to the next encoder mode, looping around to the start. */
-        /*         encoder_mode = (encoder_mode + 1) % NUM_ENC_MODES; */
-        /*     } */
-        /*     return false; */
-        /* }; */
-
     };
 
-    /* /1* for debug mode only *1/ */
-    /* #ifdef CONSOLE_ENABLE */
-    /*     dprintf("KL: kc: 0x%04X, col: %u, row: %u," */
-    /*         "pressed: %b, time: %u, interrupt: %b, count: %u\n", */
-    /*         keycode, record->event.key.col, record->event.key.row, */
-    /*         record->event.pressed, record->event.time, */
-    /*         record->tap.interrupted, record->tap.count */
-    /*         ); */
-    /* #endif */
+    // for debug mode only
+    #ifdef CONSOLE_ENABLE
+        dprintf("KL: kc: 0x%04X, col: %u, row: %u,"
+            "pressed: %b, time: %u, interrupt: %b, count: %u\n",
+            keycode, record->event.key.col, record->event.key.row,
+            record->event.pressed, record->event.time,
+            record->tap.interrupted, record->tap.count
+            );
+    #endif
 
     return true;
 };
 
+
+/* lights */
+#if defined(RGBLIGHT_ENABLE) && defined(RGBLIGHT_LAYERS)
+
+// Light LEDs 0 when keyboard layer X is active;
+// for more color options, see: https://github.com/qmk/qmk_firmware/blob/master/quantum/color.h
+const rgblight_segment_t PROGMEM layer_1[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_GOLD} );
+const rgblight_segment_t PROGMEM layer_2[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_MAGENTA} );
+const rgblight_segment_t PROGMEM layer_3[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_CYAN} );
+
+const rgblight_segment_t* const PROGMEM rgb_layers[] = RGBLIGHT_LAYERS_LIST(
+        layer_1,
+        layer_2,
+        layer_3
+        );
+
+void keyboard_post_init_user(void) {
+    rgblight_layers = rgb_layers;
+}
+
+#endif // defined(RGBLIGHT_ENABLE) && defined(RGBLIGHT_LAYERS)
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+
+#if defined(RGBLIGHT_ENABLE) && defined(RGBLIGHT_LAYERS)
+    rgblight_set_layer_state(0, layer_state_cmp(state, 1));
+    rgblight_set_layer_state(1, layer_state_cmp(state, 2));
+    rgblight_set_layer_state(2, layer_state_cmp(state, 3));
+
+#endif // defined(RGBLIGHT_ENABLE) && defined(RGBLIGHT_LAYERS)
+
+#if defined(POINTING_DEVICE_ENABLE)
+
+
+#endif // defined(POINTING_DEVICE_ENABLE)
+
+    return state;
+
+}
 

@@ -1,9 +1,13 @@
 {
+    "manufacturer":"jw",
+    "maintainer":"jw",
+    "keyboard_name":"AWKB",
+    "url": "https://github.com/wj-zhe/awkb",
     "processor": "RP2040",
     "bootloader": "rp2040",
     "usb": {
         "vid": "0xA9DF",
-        "pid": "0X0DD5",
+        "pid": "0x0DD5",
         "device_version": "1.0.0"
     },
     "features": {
@@ -47,7 +51,7 @@
         "rows": ["GP29", "GP28", "GP27", "GP2"]
     },
     "layouts":{
-        "LAYOUT_split_3x5_2": {
+        "LAYOUT_34": {
             "layout": [
                 { "matrix": [0, 0], "x": 0,  "y": 0.375 },
                 { "matrix": [0, 1], "x": 1,  "y": 0.125 },

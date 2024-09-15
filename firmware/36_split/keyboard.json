@@ -1,4 +1,8 @@
 {
+    "manufacturer":"jw",
+    "maintainer":"jw",
+    "keyboard_name":"AWKB",
+    "url": "https://github.com/wj-zhe/awkb",
     "processor": "RP2040",
     "bootloader": "rp2040",
     "usb": {
