@@ -10,8 +10,10 @@
 /* tap-hold option */
 // #define TAPPING_TERM 175
 #define TAPPING_TERM_PER_KEY
-#define PERMISSIVE_HOLD_PER_KEY
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+
+// one-shot key/layer
+#define ONESHOT_TIMEOUT 1000
 
 /* Combo option */
 /* #define COMBO_TERM 40 */

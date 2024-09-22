@@ -49,6 +49,9 @@
         "cols": ["GP29", "GP6", "GP7", "GP29", "GP6", "GP7" ],
         "rows": ["GP26", "GP27", "GP28" ]
     },
+    "layout_aliases": {
+        "LAYOUT_36": "LAYOUT_split_3x5_3"
+    },
     "layouts":{
         "LAYOUT_split_3x5_3": {
             "layout": [
