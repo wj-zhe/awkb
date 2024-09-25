@@ -1,12 +1,6 @@
 // 36-key keymap
 
-#ifdef ENCODER_ENABLE
-#   include "encoder_cuz.h"
-#endif // #ifdef ENCODER_ENABLE
-
-#ifdef POINTING_DEVICE_ENABLE
-#   include "trackball.c"
-#endif // #ifdef POINTING_DEVICE_ENABLE
+#include QMK_KEYBOARD_H
 
 #ifdef CONSOLE_ENABLE
 #   include "print.h"
@@ -51,6 +45,71 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                         KC_NO, ___, ___,    ___, LALT_T(KC_BSPC), KC_ESC
 
             ),
+
+};
+
+/* Custom keycode */
+uint8_t mod_state;
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    mod_state = get_mods();
+    switch (keycode) {
+        case KC_BSPC: case LALT_T(KC_BSPC): case LGUI_T(KC_BSPC): {
+            // Initialize a boolean variable that keeps track
+            // of the delete key status: registered or not?
+            static bool delkey_registered;
+            if (record->event.pressed) {
+                // Detect the activation of either shift keys
+                if (mod_state & MOD_MASK_SHIFT) {
+                    // First temporarily canceling both shifts so that
+                    // shift isn't applied to the KC_DEL keycode
+                    del_mods(MOD_MASK_SHIFT);
+                    register_code(KC_DEL);
+                    // Update the boolean variable to reflect the status of KC_DEL
+                    delkey_registered = true;
+                    // Reapplying modifier state so that the held shift key(s)
+                    // still work even after having tapped the Backspace/Delete key.
+                    set_mods(mod_state);
+                    return false;
+                }
+            } else { // on release of KC_BSPC
+                // In case KC_DEL is still being sent even after the release of KC_BSPC
+                if (delkey_registered) {
+                    unregister_code(KC_DEL);
+                    delkey_registered = false;
+                    return false;
+                }
+            }
+            // Let QMK process the KC_BSPC keycode as usual outside of shift
+            return true;
+        };
+
+        case KC_ESC: case LALT_T(KC_ESC): case LGUI_T(KC_ESC): {
+            // Detect the activation of only SHIFT key
+            if ( (get_mods() & MOD_BIT(KC_LALT)) == MOD_BIT(KC_LALT) ) {
+                if (record->event.pressed) {
+                    tap_code(KC_GRV);
+                }
+                else {
+                    unregister_code(KC_GRV);
+                }
+                // Do not let QMK process the keycode further
+                return false;
+            }
+            // Else, let QMK process the standard keycode as usual
+            return true;
+        };
+
+        /* case ENC_TG: { */
+        /*     if (record->event.pressed) { */
+        /*         // Go to the next encoder mode, looping around to the start. */
+        /*         encoder_mode = (encoder_mode + 1) % NUM_ENC_MODES; */
+        /*     } */
+        /*     return false; */
+        /* }; */
+
+    };
+
+    return true;
 
 };
 

@@ -27,33 +27,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #   include "print.h"
 #endif
 
-#define ROWS_PER_HAND (MATRIX_ROWS)
-
-#define SPLIT_MUTABLE_ROW const
-#define SPLIT_MUTABLE_COL const
-
 #ifndef MATRIX_INPUT_PRESSED_STATE
 #    define MATRIX_INPUT_PRESSED_STATE 0
 #endif
 
 #ifdef MATRIX_ROW_PINS
-static SPLIT_MUTABLE_ROW pin_t row_pins[MATRIX_ROWS] = MATRIX_ROW_PINS;
+static const pin_t row_pins[MATRIX_ROWS] = MATRIX_ROW_PINS;
 #endif // MATRIX_ROW_PINS
 #ifdef MATRIX_COL_PINS
-static SPLIT_MUTABLE_COL pin_t col_pins[MATRIX_COLS]   = MATRIX_COL_PINS;
+static const pin_t col_pins[MATRIX_COLS] = MATRIX_COL_PINS;
 #endif // MATRIX_COL_PINS
 
 /* matrix state(1:on, 0:off) */
 extern matrix_row_t raw_matrix[MATRIX_ROWS]; // raw values
 extern matrix_row_t matrix[MATRIX_ROWS];     // debounced values
 
-// // row offsets for each hand
-// extern uint8_t thisHand, thatHand;
-
 // user-defined overridable functions
-__attribute__((weak)) void matrix_init_pins(void);
-__attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row, matrix_row_t row_shifter);
-__attribute__((weak)) void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col, matrix_row_t row_shifter);
+// void matrix_init_pins(void);
+// void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row, matrix_row_t row_shifter);
+// void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col, matrix_row_t row_shifter);
 
 static inline void setPinOutput_writeLow(pin_t pin) {
     ATOMIC_BLOCK_FORCEON {
@@ -137,7 +129,7 @@ static void unselect_cols(void) {
     }
 }
 
-__attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row, matrix_row_t row_shifter) {
+void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row, matrix_row_t row_shifter) {
     // Start with a clear matrix row
     matrix_row_t current_row_value = 0;
 
@@ -165,7 +157,7 @@ __attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[]
 
 }
 
-__attribute__((weak)) void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col, matrix_row_t row_shifter) {
+void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col, matrix_row_t row_shifter) {
     bool key_pressed = false;
 
     // Select col
@@ -193,7 +185,7 @@ __attribute__((weak)) void matrix_read_rows_on_col(matrix_row_t current_matrix[]
                                                             //
 }
 
-__attribute__((weak)) void matrix_init_pins(void) {
+void matrix_init_pins(void) {
 
     unselect_rows();
     for (uint8_t x = 0; x < MATRIX_COLS / 2; x++) {
@@ -229,14 +221,6 @@ void matrix_init_custom(void) {
     matrix_init_kb();
 }
 
-// #ifdef SPLIT_KEYBOARD
-// // Fallback implementation for keyboards not using the standard split_util.c
-// __attribute__((weak)) bool transport_master_if_connected(matrix_row_t master_matrix[], matrix_row_t slave_matrix[]) {
-//     transport_master(master_matrix, slave_matrix);
-//     return true; // Treat the transport as always connected
-// }
-// #endif
-
 uint8_t matrix_scan_custom(void) {
     // Common variables
     matrix_row_t curr_matrix[MATRIX_ROWS] = {0};
@@ -256,7 +240,8 @@ uint8_t matrix_scan_custom(void) {
     bool changed = memcmp(raw_matrix, curr_matrix, sizeof(curr_matrix)) != 0;
     if (changed) memcpy(raw_matrix, curr_matrix, sizeof(curr_matrix));
 
-    changed = debounce(raw_matrix, matrix, MATRIX_ROWS, changed) | matrix_scan();
+    changed = debounce(raw_matrix, matrix, MATRIX_ROWS, changed);
+    matrix_scan_kb();
 
     return (uint8_t)changed;
 }

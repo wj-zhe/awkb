@@ -17,14 +17,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* Indicator light sync for split keyboard */
-#define SPLIT_LED_STATE_ENABLE
-
-/* RGB light */
-#ifdef RGBLIGHT_ENABLE
-#   define RGBLIGHT_SLEEP
-#   define RGBLIGHT_SPLIT
-#   define RGBLIGHT_LIMIT_VAL 100
+/* Pointing Device */
+#ifdef POINTING_DEVICE_ENABLE
+#   define SPLIT_POINTING_ENABLE
+#   define POINTING_DEVICE_RIGHT
+#   define SPI_SCK_PIN GP2
+#   define SPI_MOSI_PIN GP3
+#   define SPI_MISO_PIN GP4
+#   define PMW33XX_CS_PIN GP1
 #endif
 
 /* Encoder config */
@@ -43,7 +43,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #   define ENCODER_DEFAULT_POS 0x3
 
 #endif
-
-/* One-shot-key option */
-#define ONESHOT_TIMEOUT 1000  /* Time (in ms) before the one shot key is released */
 
