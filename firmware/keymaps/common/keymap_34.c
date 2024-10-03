@@ -6,8 +6,14 @@
 #   include "print.h"
 #endif
 
-#include "tap_dances.h"
-#include "combo.h"
+#ifdef TAP_DANCE_ENABLE
+#   include "tap_dances.h"
+#endif
+
+#ifdef COMBO_ENABLE
+#   include "combo.h"
+#endif
+
 
 // Key code alias
 #define ___ KC_TRNS
@@ -80,22 +86,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             // Let QMK process the KC_BSPC keycode as usual outside of shift
-            return true;
-        };
-
-        case KC_ESC: case LALT_T(KC_ESC): case LGUI_T(KC_ESC): {
-            // Detect the activation of only SHIFT key
-            if ( (get_mods() & MOD_BIT(KC_LALT)) == MOD_BIT(KC_LALT) ) {
-                if (record->event.pressed) {
-                    tap_code(KC_GRV);
-                }
-                else {
-                    unregister_code(KC_GRV);
-                }
-                // Do not let QMK process the keycode further
-                return false;
-            }
-            // Else, let QMK process the standard keycode as usual
             return true;
         };
 

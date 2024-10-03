@@ -1,7 +1,7 @@
 {
     "manufacturer":"jw",
     "maintainer":"jw",
-    "keyboard_name":"AWKB",
+    "keyboard_name":"AWKB Mono",
     "url": "https://github.com/wj-zhe/awkb",
     "usb": {
         "vid": "0x8E51",
@@ -11,10 +11,11 @@
     "processor": "atmega32u4",
     "bootloader": "caterina",
     "features": {
-        "bootmagic": true,
+        "bootmagic": false,
         "command": false,
         "console": false,
         "nkro": false,
+        "mousekey": true,
         "extrakey": true
     },
     "rgblight": {

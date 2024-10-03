@@ -6,8 +6,14 @@
 #   include "print.h"
 #endif
 
-#include "tap_dances.h"
-#include "combo.h"
+#ifdef TAP_DANCE_ENABLE
+#   include "tap_dances.h"
+#endif
+
+#ifdef COMBO_ENABLE
+#   include "combo.h"
+#endif
+
 
 // Key code alias
 #define ___ KC_TRNS

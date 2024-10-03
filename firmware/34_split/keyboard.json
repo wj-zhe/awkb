@@ -1,7 +1,7 @@
 {
     "manufacturer":"jw",
     "maintainer":"jw",
-    "keyboard_name":"AWKB",
+    "keyboard_name":"AWKB Split",
     "url": "https://github.com/wj-zhe/awkb",
     "processor": "RP2040",
     "bootloader": "rp2040",

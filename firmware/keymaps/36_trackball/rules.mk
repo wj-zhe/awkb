@@ -1,6 +1,7 @@
 # Pointing device
-POINTING_DEVICE_ENABLE = no
+POINTING_DEVICE_ENABLE = yes
 ifeq ($(strip $(POINTING_DEVICE_ENABLE)), yes)
+	POINTING_DEVICE_DRIVER = pmw3360
 	MOUSEKEY_ENABLE = yes
 endif
 

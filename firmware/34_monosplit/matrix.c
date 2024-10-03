@@ -43,9 +43,9 @@ extern matrix_row_t raw_matrix[MATRIX_ROWS]; // raw values
 extern matrix_row_t matrix[MATRIX_ROWS];     // debounced values
 
 // user-defined overridable functions
-// void matrix_init_pins(void);
-// void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row, matrix_row_t row_shifter);
-// void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col, matrix_row_t row_shifter);
+__attribute__((weak)) void matrix_init_pins(void);
+__attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row, matrix_row_t row_shifter);
+__attribute__((weak)) void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col, matrix_row_t row_shifter);
 
 static inline void setPinOutput_writeLow(pin_t pin) {
     ATOMIC_BLOCK_FORCEON {
@@ -129,7 +129,7 @@ static void unselect_cols(void) {
     }
 }
 
-void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row, matrix_row_t row_shifter) {
+__attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row, matrix_row_t row_shifter) {
     // Start with a clear matrix row
     matrix_row_t current_row_value = 0;
 
@@ -157,7 +157,7 @@ void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row,
 
 }
 
-void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col, matrix_row_t row_shifter) {
+__attribute__((weak)) void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col, matrix_row_t row_shifter) {
     bool key_pressed = false;
 
     // Select col
@@ -204,10 +204,6 @@ void matrix_init_pins(void) {
 
 
 void matrix_init_custom(void) {
-
-    // // For split keyboard
-    // thisHand = isLeftHand ? 0 : (MATRIX_ROWS);
-    // thatHand = MATRIX_ROWS - thisHand;
 
     // initialize key pins
     matrix_init_pins();
