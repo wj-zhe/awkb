@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
             LCTL_T(KC_1), KC_2, KC_3, KC_4, KC_5,          KC_6, KC_7, KC_8, KC_9, LCTL_T(KC_0),
             KC_LSFT, KC_GRV, KC_BSLS, KC_LBRC, KC_RBRC,    KC_EQL, KC_MINS, ___, ___, ___,
-                                              ___, ___,    ___, TG(1)
+                                              ___, ___,    ___, ___
 
             ),
 
@@ -51,6 +51,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                ___, ___,    ___, KC_BSPC
 
             ),
+
+#ifdef POINTING_DEVICE_ENABLE
+#   ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+    [4] = LAYOUT_34(
+            KC_NO, TO(0), TO(0), KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+            KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+            KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+                             MS_BTN1, MS_BTN2,    KC_NO, KC_NO
+
+            ),
+#   endif
+#endif
 
 };
 
@@ -103,4 +115,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     return true;
 };
+
+void keyboard_post_init_user(void) {
+#ifdef CONSOLE_ENABLE
+  // Customize these values to desired behavior
+  debug_enable=true;
+  // debug_matrix=true;
+  debug_keyboard=true;
+  debug_mouse=true;
+#endif
+}
+
+#ifdef POINTING_DEVICE_ENABLE
+#   ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+void pointing_device_init_user(void) {
+    set_auto_mouse_layer(4); // only required if AUTO_MOUSE_DEFAULT_LAYER is not set to index of <mouse_layer>
+    set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
+}
+#   endif
+#endif
 

@@ -2,6 +2,7 @@
 POINTING_DEVICE_ENABLE = yes
 ifeq ($(strip $(POINTING_DEVICE_ENABLE)), yes)
 	POINTING_DEVICE_DRIVER = cirque_pinnacle_spi
+	MOUSEKEY_ENABLE = yes
 endif
 
 # OLED config
@@ -23,3 +24,6 @@ COMBO_ENABLE = yes
 SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no
 MAGIC_ENABLE = no
+
+# Debug
+CONSOLE_ENABLE = no

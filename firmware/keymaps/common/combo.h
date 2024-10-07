@@ -18,6 +18,7 @@ const uint16_t PROGMEM td_md_ult_combo[] = { LALT_T(KC_SPC), TD(TD_L1), COMBO_EN
 
 // Layer 3 //
 const uint16_t PROGMEM qk_boot_combo[] = { KC_END, KC_PPLS, COMBO_END};
+const uint16_t PROGMEM qk_reboot_combo[] = { KC_PGDN, KC_PAST, COMBO_END}; // Resets the keyboard. Does not load the bootloader
 
 // Layer 0 + 2 //
 const uint16_t PROGMEM tg2_combo_l0[] = { KC_J, KC_K, KC_L, COMBO_END};
@@ -57,6 +58,7 @@ combo_t key_combos[] = {
     COMBO(td_md_ult_combo, TD(TD_MD_ULT)),
 
     COMBO(qk_boot_combo, QK_BOOT),
+    COMBO(qk_reboot_combo, QK_RBT),
 
     COMBO(tg2_combo_l0, TG(2)),
     COMBO(tg2_combo_l2, TG(2)),

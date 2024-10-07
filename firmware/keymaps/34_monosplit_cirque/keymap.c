@@ -6,6 +6,10 @@
 #   include "../common/oled_custom.c"
 #endif // #ifdef OLED_ENABLE
 
+#ifdef POINTING_DEVICE_ENABLE
+#   include "../common/cirque_trackpad.c"
+#endif // #ifdef POINTING_DEVICE_ENABLE
+
 #include "../common/keymap_34.c"
 
 // Tapping-term per key
@@ -15,17 +19,17 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return 175;
         case LALT_T(KC_BSPC): case LALT_T(KC_SPC):
             return 150;
-        case LSFT_T(KC_Z): case LSFT_T(KC_F1):
-        case LSFT_T(KC_SLSH):
-            return 135;
+        case LSFT_T(KC_Z): case LSFT_T(KC_SLSH):
+        case LT(2,KC_TAB):
+            return 125;
         default:
             return TAPPING_TERM;
     }
 };
 
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LSFT_T(KC_Z): case LSFT_T(KC_F1): case LSFT_T(KC_SLSH):
+        case LSFT_T(KC_Z): case LSFT_T(KC_SLSH):
         case LT(2,KC_TAB):
             // Immediately select the hold action when another key is pressed.
             return true;
@@ -34,3 +38,16 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
             return false;
     }
 }
+
+// bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case LSFT_T(KC_Z): case LSFT_T(KC_SLSH):
+//         case LT(2,KC_TAB):
+//             // Immediately select the hold action when another key is pressed.
+//             return true;
+//         default:
+//             // Do not select the hold action when another key is pressed.
+//             return false;
+//     }
+// }
+

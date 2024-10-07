@@ -15,23 +15,11 @@ typedef struct {
     td_state_t state;
 } td_tap_t;
 
-/* Tap-Dance declarations */
+// Tap-Dance declarations
 enum {
-    /* QUOT_LAYR, // Our custom tap dance key; add any other tap dance keys to this enum */
     TD_L1,
-    // TD_MD_NX_PR,
     TD_MD_ULT,
 };
-
-// Declare the functions to be used with your tap dance key(s)
-
-// Function associated with all tap dances
-td_state_t cur_dance(tap_dance_state_t *state);
-
-// Functions associated with individual tap dances
-/* void ql_finished(tap_dance_state_t *state, void *user_data); */
-/* void ql_reset(tap_dance_state_t *state, void *user_data); */
-
 
 // Determine the current tap dance state
 td_state_t cur_dance(tap_dance_state_t *state) {
@@ -69,8 +57,7 @@ void ql_l1_finished(tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_TAP:
             set_oneshot_layer(1, ONESHOT_START);
             break;
-        case TD_SINGLE_HOLD:
-        case TD_DOUBLE_TAP:
+        case TD_SINGLE_HOLD: case TD_DOUBLE_TAP:
             layer_on(1);
             break;
         /* case TD_DOUBLE_TAP: */
@@ -93,9 +80,6 @@ void ql_l1_reset(tap_dance_state_t *state, void *user_data) {
     switch (ql_tap_state.state) {
         case TD_SINGLE_TAP:
             clear_oneshot_layer_state(ONESHOT_PRESSED);
-            break;
-        case TD_SINGLE_HOLD:
-            layer_off(1);
             break;
         case TD_DOUBLE_TAP:
             break;

@@ -7,3 +7,5 @@
 #   define POINTING_DEVICE_CS_PIN D2
 #endif
 
+// Firmware squeezing
+#define LAYER_STATE_8BIT

@@ -14,7 +14,7 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 static void render_status(void) {
     // Host Keyboard LED Status
     led_t led_state = host_keyboard_led_state();
-    oled_write_P(PSTR("LOCK: "), false);
+    oled_write_P(PSTR("Lock: "), false);
     oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
     oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
     oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
@@ -36,6 +36,9 @@ static void render_status(void) {
             break;
         case 3:
             oled_write_P(PSTR("3\n"), false);
+            break;
+        case 4:
+            oled_write_P(PSTR("Auto Mouse\n"), false);
             break;
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
