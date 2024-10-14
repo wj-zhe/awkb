@@ -1,4 +1,4 @@
-// 34-key custom keymap
+// 34-split custom keymap
 
 #include "../common/keymap_34.c"
 
@@ -14,20 +14,18 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return 175;
         case LALT_T(KC_BSPC): case LALT_T(KC_SPC):
             return 150;
-        case LSFT_T(KC_SLSH):
         case LSFT_T(KC_Z): // case LSFT_T(KC_F1):
+        case LSFT_T(KC_SLSH):
             return 135;
         default:
             return TAPPING_TERM;
     }
 };
 
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LSFT_T(KC_Z): // case LSFT_T(KC_F1):
-        case LSFT_T(KC_SLSH):
+        case LSFT_T(KC_Z): case LSFT_T(KC_SLSH):
         case LT(2,KC_TAB):
-        case LALT_T(KC_BSPC): case LALT_T(KC_SPC):
             // Immediately select the hold action when another key is pressed.
             return true;
         default:
@@ -35,7 +33,6 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
             return false;
     }
 }
-
 
 // Layer state related ..
 layer_state_t layer_state_set_user(layer_state_t state) {

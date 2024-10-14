@@ -1,4 +1,4 @@
-// 34-key keymap
+// 34-monosplit keymap
 
 #include QMK_KEYBOARD_H
 
@@ -15,13 +15,15 @@
 // Tapping-term per key
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case TD(TD_L1):
+            return 255;
         case LCTL_T(KC_A): case LCTL_T(KC_SCLN):
             return 175;
-        case LALT_T(KC_BSPC): case LALT_T(KC_SPC):
+        case LALT_T(KC_SPC):
             return 150;
+        case LALT_T(KC_BSPC):
         case LSFT_T(KC_Z): case LSFT_T(KC_SLSH):
-        case LT(2,KC_TAB):
-            return 125;
+            return 135;
         default:
             return TAPPING_TERM;
     }
@@ -30,7 +32,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LSFT_T(KC_Z): case LSFT_T(KC_SLSH):
-        case LT(2,KC_TAB):
+        case LT(2,KC_TAB): case LALT_T(KC_BSPC):
             // Immediately select the hold action when another key is pressed.
             return true;
         default:

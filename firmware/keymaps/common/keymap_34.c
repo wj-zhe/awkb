@@ -14,7 +14,6 @@
 #   include "combo.h"
 #endif
 
-
 // Key code alias
 #define ___ KC_TRNS
 
@@ -32,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
             LCTL_T(KC_1), KC_2, KC_3, KC_4, KC_5,          KC_6, KC_7, KC_8, KC_9, LCTL_T(KC_0),
             KC_LSFT, KC_GRV, KC_BSLS, KC_LBRC, KC_RBRC,    KC_EQL, KC_MINS, ___, ___, ___,
-                                              ___, ___,    ___, ___
+                                              ___, ___,    ___, TG(1)
 
             ),
 
@@ -55,10 +54,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef POINTING_DEVICE_ENABLE
 #   ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
     [4] = LAYOUT_34(
-            KC_NO, TO(0), TO(0), KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-            KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-            KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-                             MS_BTN1, MS_BTN2,    KC_NO, KC_NO
+            KC_LGUI, TO(0), TO(0), KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+            KC_LCTL, KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+            KC_LSFT, KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+                               MS_BTN1, MS_BTN2,    KC_LALT, KC_NO
 
             ),
 #   endif
@@ -66,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-/* Custom keycode */
+// Custom keycode
 uint8_t mod_state;
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     mod_state = get_mods();
@@ -116,15 +115,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 };
 
-void keyboard_post_init_user(void) {
 #ifdef CONSOLE_ENABLE
+void keyboard_post_init_user(void) {
   // Customize these values to desired behavior
   debug_enable=true;
   // debug_matrix=true;
   debug_keyboard=true;
   debug_mouse=true;
-#endif
 }
+#endif
 
 #ifdef POINTING_DEVICE_ENABLE
 #   ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
