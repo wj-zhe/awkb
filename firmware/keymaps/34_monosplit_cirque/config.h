@@ -12,7 +12,7 @@
 #   define CIRQUE_PINNACLE_ATTENUATION EXTREG__TRACK_ADCCONFIG__ADC_ATTENUATE_3X
 //
 #   define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-#   define AUTO_MOUSE_TIME 125
+#   define AUTO_MOUSE_TIME 150
 #   define AUTO_MOUSE_DELAY 100
 //
 // #   define CIRQUE_PINNACLE_TAP_ENABLE
@@ -29,7 +29,7 @@
 
 /* OLED config */
 #ifdef OLED_ENABLE
-// #   define OLED_BRIGHTNESS 128
+#   define OLED_BRIGHTNESS 128
 #   define OLED_TIMEOUT 10000
 #endif
 
@@ -52,3 +52,5 @@
 // one-shot key/layer
 #define ONESHOT_TIMEOUT 1000
 
+// Manual OS switch
+// #define OS_SWITCH_ENABLE
