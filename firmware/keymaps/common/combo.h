@@ -12,6 +12,7 @@ const uint16_t PROGMEM caps_combo[]      = { KC_S, KC_D, COMBO_END};
 const uint16_t PROGMEM dquo_combo[]      = { KC_L, LCTL_T(KC_SCLN), COMBO_END};
 const uint16_t PROGMEM tild_combo[]      = { LSFT_T(KC_Z), KC_X, COMBO_END};
 const uint16_t PROGMEM grv_combo[]       = { KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM del_combo[]       = { LT(2,KC_TAB), LALT_T(KC_BSPC), COMBO_END};
 const uint16_t PROGMEM bsls_combo[]      = { KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM pipe_combo[]      = { KC_DOT, LSFT_T(KC_SLSH), COMBO_END};
 const uint16_t PROGMEM td_md_ult_combo[] = { LALT_T(KC_SPC), TD(TD_L1), COMBO_END};
@@ -54,6 +55,7 @@ combo_t key_combos[] = {
     COMBO(dquo_combo, KC_DQUO),
     COMBO(tild_combo, KC_TILD),
     COMBO(grv_combo, KC_GRV),
+    COMBO(del_combo, KC_DEL),
     COMBO(bsls_combo, KC_BSLS),
     COMBO(pipe_combo, KC_PIPE),
     COMBO(td_md_ult_combo, TD(TD_MD_ULT)),
