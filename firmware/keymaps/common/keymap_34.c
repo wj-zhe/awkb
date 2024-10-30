@@ -165,13 +165,22 @@ void pointing_device_init_user(void) {
     set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
 }
 #   endif
+
 #endif
 
 // Layer based functions
 layer_state_t layer_state_set_user(layer_state_t state) {
+#ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
     switch (get_highest_layer(remove_auto_mouse_layer(state, true))) {
+#else
+    switch (get_highest_layer(state)) {
+#endif
 
-        case 3:  // Enable scrolling mode
+        case 3:  // Enable scrolling mode, diable auto mouse layer
+#ifdef POINTING_DEVICE_GESTURES_CUSTOM_SCROLL_ENABLE
+            scrolling_mode = true;
+#endif
+
 #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
             state = remove_auto_mouse_layer(state, false);
             set_auto_mouse_enable(false);
@@ -180,6 +189,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             break;
 
         default:
+
+#ifdef POINTING_DEVICE_GESTURES_CUSTOM_SCROLL_ENABLE
+            if (scrolling_mode) {  // Disable scrolling mode
+                scrolling_mode = false;
+            };
+#endif
+
 #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
             set_auto_mouse_enable(true);
 #endif
