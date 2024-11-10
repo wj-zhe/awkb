@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_34(
             LGUI_T(KC_Q), KC_W, KC_E, KC_R, KC_T,          KC_Y, KC_U, KC_I, KC_O, LGUI_T(KC_P),
             LCTL_T(KC_A), KC_S, KC_D, KC_F, KC_G,          KC_H, KC_J, KC_K, KC_L, LCTL_T(KC_SCLN),
-            LSFT_T(KC_Z), KC_X, KC_C, KC_V, LT(3,KC_B),    LSG_T(KC_N), KC_M, KC_COMM, KC_DOT, LSFT_T(KC_SLSH),
+            LSFT_T(KC_Z), KC_X, KC_C, KC_V, LT(3,KC_B),    KC_N, KC_M, KC_COMM, KC_DOT, LSFT_T(KC_SLSH),
                          LT(2,KC_TAB), LALT_T(KC_BSPC),    LALT_T(KC_SPC), TD(TD_L1)
 
             ),
@@ -158,50 +158,3 @@ void keyboard_post_init_user(void) {
 }
 #endif
 
-#ifdef POINTING_DEVICE_ENABLE
-#   ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
-void pointing_device_init_user(void) {
-    set_auto_mouse_layer(4); // only required if AUTO_MOUSE_DEFAULT_LAYER is not set to index of <mouse_layer>
-    set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
-}
-#   endif
-
-#endif
-
-// Layer based functions
-layer_state_t layer_state_set_user(layer_state_t state) {
-#ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
-    switch (get_highest_layer(remove_auto_mouse_layer(state, true))) {
-#else
-    switch (get_highest_layer(state)) {
-#endif
-
-        case 3:  // Enable scrolling mode, diable auto mouse layer
-#ifdef POINTING_DEVICE_GESTURES_CUSTOM_SCROLL_ENABLE
-            scrolling_mode = true;
-#endif
-
-#ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
-            state = remove_auto_mouse_layer(state, false);
-            set_auto_mouse_enable(false);
-#endif
-
-            break;
-
-        default:
-
-#ifdef POINTING_DEVICE_GESTURES_CUSTOM_SCROLL_ENABLE
-            if (scrolling_mode) {  // Disable scrolling mode
-                scrolling_mode = false;
-            };
-#endif
-
-#ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
-            set_auto_mouse_enable(true);
-#endif
-
-            break;
-    }
-
-    return state;
-}
