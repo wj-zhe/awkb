@@ -21,9 +21,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Pointing Device */
 #ifdef POINTING_DEVICE_ENABLE
 #   define POINTING_DEVICE_RIGHT
-#   define PMW33XX_CPI 700
+#   define PMW33XX_CPI 600
 #   define POINTING_DEVICE_ROTATION_90
 #   define POINTING_DEVICE_INVERT_X
+//
+// #   define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+// #   define AUTO_MOUSE_TIME 200
+// #   define AUTO_MOUSE_DELAY 100
+// #   define AUTO_MOUSE_THRESHOLD 2
+//
 #endif
 
 /* Indicator light sync for split keyboard */
@@ -35,7 +41,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #   define RGBLIGHT_SPLIT
 #   define RGBLIGHT_LIMIT_VAL 100
 #endif
-
 
 /* tap-hold option */
 /* #define TAPPING_TERM 175 */

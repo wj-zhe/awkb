@@ -1,14 +1,12 @@
-static bool precise_move = false;
-
-static bool scrolling_mode = false;
-uint8_t x_sum = 0;
-uint8_t y_sum = 0;
-
 uint16_t default_cpi;
 
 void pointing_device_init_user(void) {
     default_cpi = pointing_device_get_cpi();
 }
+
+static bool scrolling_mode = false;
+static float scroll_accumulated_h = 0;
+static float scroll_accumulated_v = 0;
 
 static void pointing_device_task_layer(layer_state_t state) {
     switch (get_highest_layer(state)) {
@@ -17,17 +15,9 @@ static void pointing_device_task_layer(layer_state_t state) {
             pointing_device_set_cpi(100);
             break;
 
-        case 2:  // Enable precise movement
-            precise_move = true;
-            pointing_device_set_cpi(200);
-            break;
-
         default:
             if (scrolling_mode) {  // Disable scrolling mode
                 scrolling_mode = false;
-            };
-            if (precise_move) {  // Disable scrolling mode
-                precise_move = false;
             };
             pointing_device_set_cpi(default_cpi);
             break;
@@ -37,35 +27,29 @@ static void pointing_device_task_layer(layer_state_t state) {
 
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
     if (scrolling_mode) {
-        // sum x and y movements
-        x_sum += mouse_report.x;
-        y_sum += mouse_report.y;
+        // Calculate and accumulate scroll values based on mouse movement and divisors
+        scroll_accumulated_h += (float)mouse_report.x / 8;
+        scroll_accumulated_v += (float)mouse_report.y / 8;
 
-        // set h/v movements only on consecutive x/y movements
-        if (abs(x_sum) >=5 || abs(y_sum) >=5) {
+        // Assign integer parts of accumulated scroll values to the mouse report
+        mouse_report.h =  (int8_t)scroll_accumulated_h;
+        if (mouse_report.h>2 || mouse_report.h <-2)
+            mouse_report.h = 2 * ( (mouse_report.h >0) ? 1: -1 );
 
-            if ( abs(x_sum) / abs(y_sum) >2 ) {
-                mouse_report.h = mouse_report.x;
-                mouse_report.v = 0;
-            } else if ( abs(y_sum) / abs(x_sum) >2 ) {
-                mouse_report.v = mouse_report.y;
-                mouse_report.h = 0;
-            } else {
-                // set h/v to zero to avoid simultaneous scroll movements
-                mouse_report.h = 0;
-                mouse_report.v = 0;
-            };
+        mouse_report.v = -(int8_t)scroll_accumulated_v;
+        if (mouse_report.v>2 || mouse_report.v <-2)
+            mouse_report.v = 2 * ( (mouse_report.v >0) ? 1: -1 );
 
-            // reset x_sum and y_sum
-            x_sum = 0;
-            y_sum = 0;
-        }
+        // Update accumulated scroll values by subtracting the integer parts
+        scroll_accumulated_h -= mouse_report.h;
+        scroll_accumulated_v += mouse_report.v;
 
-        // set x/y to zero to avoid mouse movements
+        // Clear the X and Y values of the mouse report
         mouse_report.x = 0;
         mouse_report.y = 0;
 
     }
+
     return mouse_report;
 }
 

@@ -52,6 +52,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
             ),
 
+#ifdef POINTING_DEVICE_ENABLE
+#   ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+    [4] = LAYOUT_36(
+            KC_LGUI, KC_NO, KC_NO, KC_NO, KC_NO,      KC_NO, KC_NO, KC_NO, KC_NO, EE_CLR,
+            KC_LCTL, KC_NO, KC_NO, KC_LALT, KC_NO,    KC_NO, KC_LALT, KC_NO, KC_NO, KC_LCTL,
+            KC_LSFT, KC_NO, KC_NO, KC_NO, KC_NO,      KC_NO, KC_NO, KC_NO, KC_NO, KC_LSFT,
+                          MS_BTN1, MS_BTN2, KC_NO,    KC_BTN1, KC_NO, KC_NO
+
+            ),
+#   endif
+#endif
+
 };
 
 /* Custom keycode */
