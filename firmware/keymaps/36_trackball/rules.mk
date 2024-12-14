@@ -7,9 +7,6 @@ endif
 
 # Encoder
 ENCODER_ENABLE = yes
-ifeq ($(strip $(ENCODER_ENABLE)), yes)
-	ENCODER_MAP_ENABLE = no
-endif
 
 # RGBLIGHT
 RGBLIGHT_ENABLE = yes       # keyboard RGB underglow

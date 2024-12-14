@@ -20,6 +20,9 @@ TAP_DANCE_ENABLE = yes
 # Combo config
 COMBO_ENABLE = yes
 
+# WPM
+WPM_ENABLE = no
+
 # Firmware squeezing
 SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no

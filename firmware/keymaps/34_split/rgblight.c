@@ -4,22 +4,18 @@ const rgblight_segment_t PROGMEM layer_1[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV
 const rgblight_segment_t PROGMEM layer_2[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_MAGENTA} );
 const rgblight_segment_t PROGMEM layer_3[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_CYAN} );
 
-#ifdef POINTING_DEVICE_ENABLE
-#   ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+#ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
 const rgblight_segment_t PROGMEM layer_4[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_AZURE} );
-#   endif
 #endif
 
 const rgblight_segment_t* const PROGMEM rgb_layers[] = RGBLIGHT_LAYERS_LIST(
         layer_1,
         layer_2,
-#ifdef POINTING_DEVICE_ENABLE
-#   ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+#ifndef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+        layer_3
+#else
         layer_3,
         layer_4
-#else
-        layer_3
-#   endif
 #endif
         );
 
@@ -28,12 +24,10 @@ void keyboard_post_init_user(void) {
 }
 
 void rgblight_set_layer_state_user(layer_state_t state) {
-#ifdef POINTING_DEVICE_ENABLE
-#   ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
-    for (uint8_t i=0; i<4; i++) {
-#else
+#ifndef POINTING_DEVICE_AUTO_MOUSE_ENABLE
     for (uint8_t i=0; i<3; i++) {
-#   endif
+#else
+    for (uint8_t i=0; i<4; i++) {
 #endif
         rgblight_set_layer_state(i, layer_state_cmp(state, i+1));
     };

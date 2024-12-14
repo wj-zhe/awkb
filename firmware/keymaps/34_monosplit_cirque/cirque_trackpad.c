@@ -1,6 +1,5 @@
-static bool scrolling_mode = false;
-
 #ifdef POINTING_DEVICE_GESTURES_CUSTOM_SCROLL_ENABLE
+static bool scrolling_mode = false;
 static float scroll_accumulated_h = 0;
 static float scroll_accumulated_v = 0;
 #endif
@@ -16,9 +15,9 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
 
 #endif
 
-    if (scrolling_mode) {
 // Custom scroll mode
 #ifdef POINTING_DEVICE_GESTURES_CUSTOM_SCROLL_ENABLE
+    if (scrolling_mode) {
         // Calculate and accumulate scroll values based on mouse movement and divisors
         scroll_accumulated_h += (float)mouse_report.x / 50;
         scroll_accumulated_v += (float)mouse_report.y / 50;
@@ -39,13 +38,12 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
         // Clear the X and Y values of the mouse report
         mouse_report.x = 0;
         mouse_report.y = 0;
+    };
 #endif
-    } else {
-        // Scale down x/y movements
-        mouse_report.x = (int8_t) mouse_report.x / 2;
-        mouse_report.y = (int8_t) mouse_report.y / 2;
 
-    }
+    // Scale down x/y movements
+    mouse_report.x = (int8_t) mouse_report.x / 2;
+    mouse_report.y = (int8_t) mouse_report.y / 2;
 
 #ifdef CONSOLE_ENABLE
     pd_dprintf(

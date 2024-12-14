@@ -15,8 +15,8 @@ static void render_status(void) {
     // Host Keyboard LED Status
     led_t led_state = host_keyboard_led_state();
     oled_write_P(PSTR("Lock: "), false);
-    oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
-    oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
+    oled_write_P(led_state.caps_lock   ? PSTR("CAP ") : PSTR("    "), false);
+    oled_write_P(led_state.num_lock    ? PSTR("NUM ") : PSTR("    "), false);
     oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
 
     // Separator
@@ -49,12 +49,14 @@ static void render_status(void) {
 
 // render different content on two displays
 bool oled_task_user(void) {
-    if (is_keyboard_master()) {
-        render_status();  // Renders the current keyboard state (layer, lock, caps, scroll, etc)
-    } else {
-        // render_qmk_logo();  // Renders a static logo
-        oled_scroll_left();  // Turns on scrolling
-    }
+    render_status();  // Renders the current keyboard state (layer, lock, caps, scroll, etc)
+
+    // if (is_keyboard_master()) {
+    //     render_status();  // Renders the current keyboard state (layer, lock, caps, scroll, etc)
+    // } else {
+    //     // render_qmk_logo();  // Renders a static logo
+    //     oled_scroll_left();  // Turns on scrolling
+    // }
 
     return false;
 }

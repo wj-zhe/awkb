@@ -4,8 +4,6 @@
 
 /* Cirque trackpad config */
 #ifdef POINTING_DEVICE_ENABLE
-// #   define CIRQUE_PINNACLE_SPI_CS_PIN D2
-// #   define CIRQUE_PINNACLE_SPI_DIVISOR 50
 //
 #   define CIRQUE_PINNACLE_DIAMETER_MM 23
 #   define POINTING_DEVICE_ROTATION_180
@@ -22,8 +20,6 @@
 #   define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
 // #   define POINTING_DEVICE_GESTURES_CUSTOM_SCROLL_ENABLE
 //
-// #   define POINTING_DEVICE_GESTURES_CURSOR_GLIDE_ENABLE
-//
 #   ifdef CONSOLE_ENABLE
 #       define POINTING_DEVICE_DEBUG
 #   endif
@@ -35,24 +31,24 @@
 #   define OLED_TIMEOUT 10000
 #endif
 
-// /* RGB underglow options */
-// #ifdef RGBLIGHT_ENABLE
-// #   define RGBLIGHT_SLEEP
-// /* #define RGBLIGHT_LIMIT_VAL 120 */
-// /* #define RGBLIGHT_HUE_STEP 10 */
-// /* #define RGBLIGHT_SAT_STEP 17 */
-// /* #define RGBLIGHT_VAL_STEP 17 */
-// #endif
+/* RGB underglow options */
+#ifdef RGBLIGHT_ENABLE
+#   define RGBLIGHT_SLEEP
+#   define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF
+#endif
 
 
 /* tap-hold option */
 // #define TAPPING_TERM 175
 #define TAPPING_TERM_PER_KEY
-// #define PERMISSIVE_HOLD_PER_KEY
-#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+#define PERMISSIVE_HOLD_PER_KEY
+// #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 
 // one-shot key/layer
 #define ONESHOT_TIMEOUT 1000
 
-// Manual OS switch
-// #define OS_SWITCH_ENABLE
+// Firmware squeezing
+#define LAYER_STATE_8BIT
+#undef LOCKING_SUPPORT_ENABLE
+#undef LOCKING_RESYNC_ENABLE
+#define NO_MUSIC_MODE

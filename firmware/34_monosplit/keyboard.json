@@ -22,15 +22,17 @@
         "led_count": 1,
         "layers": {
             "enabled": true,
-            "max": 4
+            "max": 5
         },
         "animations": {
-            "breathing": true,
-            "rainbow_mood": true
+            "rainbow_mood": true,
+            "breathing": true
         },
         "default": {
-            "on": false
-        }
+            "on": false,
+            "animation": "rainbow_mood"
+        },
+        "max_brightness": 127
     },
     "ws2812": {
         "pin": "D3"

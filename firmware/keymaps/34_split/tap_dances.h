@@ -17,8 +17,8 @@ typedef struct {
 
 // Tap-Dance declarations
 enum {
-    TD_L1,
-    TD_MD_ULT,
+    TD_L1,      // Layer 1 single-shot tap-dance
+    TD_MD_ULT,  // Multi media triple-tap control
 };
 
 // Determine the current tap dance state
@@ -99,10 +99,10 @@ void ql_md_ult_finished(tap_dance_state_t *state, void *user_data) {
             tap_code(KC_MPLY);
             break;
         case TD_DOUBLE_TAP:
-            tap_code(KC_MFFD);
+            tap_code(KC_MNXT);
             break;
         case TD_TRIPLE_TAP:
-            tap_code(KC_MRWD);
+            tap_code(KC_MPRV);
             break;
         default:
             break;
@@ -112,15 +112,6 @@ void ql_md_ult_finished(tap_dance_state_t *state, void *user_data) {
 void ql_md_ult_reset(tap_dance_state_t *state, void *user_data) {
     // If the key was held down and now is released then switch off the layer
     switch (ql_tap_state.state) {
-        // case TD_SINGLE_TAP:
-        //     unregister_code(KC_MPLY);
-        //     break;
-        // case TD_DOUBLE_TAP:
-        //     unregister_code(KC_MFFD);
-        //     break;
-        // case TD_TRIPLE_TAP:
-        //     unregister_code(KC_MRWD);
-        //     break;
         default:
             break;
     }
