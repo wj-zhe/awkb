@@ -4,13 +4,13 @@ enum custom_keycodes {
     ENC_TG = SAFE_RANGE,
 };
 
-#define NUM_ENC_MODES 3
+#define NUM_ENC_MODES 2
 enum encoder_modes {
     VOLUME,
     // VOLUME_PRECISE,
     // MEDIA_CONTROL,
     SCROLL_UD,
-    SCROLL_LR,
+    // SCROLL_LR,
     // ZOOM,
 };
 
@@ -51,13 +51,13 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
                 }
             break;
 
-            case SCROLL_LR:
-                if (clockwise) {
-                    tap_code(KC_WH_R);
-                } else {
-                    tap_code(KC_WH_L);
-                }
-            break;
+            // case SCROLL_LR:
+            //     if (clockwise) {
+            //         tap_code(KC_WH_R);
+            //     } else {
+            //         tap_code(KC_WH_L);
+            //     }
+            // break;
 
             // case ZOOM:
             //     if (clockwise) {

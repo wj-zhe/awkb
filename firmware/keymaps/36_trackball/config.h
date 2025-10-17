@@ -21,14 +21,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Pointing Device */
 #ifdef POINTING_DEVICE_ENABLE
 #   define POINTING_DEVICE_RIGHT
-#   define PMW33XX_CPI 600
+#   define PMW33XX_CPI 500
+// #   define PMW33XX_CPI_FAST 1000
 #   define POINTING_DEVICE_ROTATION_90
 #   define POINTING_DEVICE_INVERT_X
 //
-// #   define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-// #   define AUTO_MOUSE_TIME 200
+#   define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+#   define AUTO_MOUSE_TIME 500
 // #   define AUTO_MOUSE_DELAY 100
-// #   define AUTO_MOUSE_THRESHOLD 2
+#   define AUTO_MOUSE_THRESHOLD 3
 //
 #endif
 
@@ -48,10 +49,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PERMISSIVE_HOLD_PER_KEY
 // #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 
-/* Combo option */
-/* #define COMBO_TERM 40 */
-/* #define COMBO_STRICT_TIMER */
-/* #define COMBO_ONLY_FROM_LAYER 0 */
+// Combo option
+#define COMBO_TERM_PER_COMBO
 
 /* Auto-Shift option */
 #ifdef AUTO_SHIFT_ENABLE

@@ -18,7 +18,7 @@ const uint16_t PROGMEM pipe_combo[]      = { KC_DOT, LSFT_T(KC_SLSH), COMBO_END}
 const uint16_t PROGMEM td_md_ult_combo[] = { LALT_T(KC_SPC), TD(TD_L1), COMBO_END};
 
 // Layer 3 //
-const uint16_t PROGMEM qk_boot_combo[] = { KC_END, KC_PPLS, COMBO_END};
+const uint16_t PROGMEM qk_boot_combo[] = { LCTL_T(KC_END), LCTL_T(KC_PPLS), COMBO_END};
 const uint16_t PROGMEM qk_reboot_combo[] = { KC_PGDN, KC_PAST, COMBO_END}; // Resets the keyboard. Does not load the bootloader
 const uint16_t PROGMEM ee_clr_combo[] = { KC_DOWN, KC_P5, COMBO_END}; // Resets the keyboard. Does not load the bootloader
 
@@ -58,7 +58,7 @@ combo_t key_combos[] = {
     COMBO(del_combo, KC_DEL),
     COMBO(bsls_combo, KC_BSLS),
     COMBO(pipe_combo, KC_PIPE),
-    COMBO(td_md_ult_combo, TD(TD_MD_ULT)),
+    COMBO(td_md_ult_combo, TD(TD_MD)),
 
     COMBO(qk_boot_combo, QK_BOOT),
     COMBO(qk_reboot_combo, QK_RBT),
@@ -83,4 +83,17 @@ combo_t key_combos[] = {
 };
 
 
+#ifdef COMBO_TERM_PER_COMBO
+uint16_t get_combo_term(uint16_t combo_index, combo_t *combo) {
+    // decide by combo->keycode
+    switch (combo->keycode) {
+        case KC_CAPS:
+            return 75;
+        case KC_LBRC: case KC_LCBR: case KC_RCBR: case KC_RBRC:
+            return 40;
 
+    }
+
+    return COMBO_TERM;
+}
+#endif

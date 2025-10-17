@@ -18,4 +18,7 @@ TAP_DANCE_ENABLE = yes      # Enable Tap-Dance feature
 COMBO_ENABLE = yes          # Enable COMBO feature
 
 # Auto Shift
-AUTO_SHIFT_ENABLE = no
+AUTO_SHIFT_ENABLE = yes
+
+# Key Override
+KEY_OVERRIDE_ENABLE = yes
