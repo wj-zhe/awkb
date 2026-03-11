@@ -157,7 +157,7 @@ __attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[]
 
         // Populate the matrix row with the state of the col pin
         current_row_value |= pin_state ? 0 : row_shifter;
-
+                
     }
 
     // Unselect row
@@ -189,6 +189,7 @@ __attribute__((weak)) void matrix_read_rows_on_col(matrix_row_t current_matrix[]
             // Pin HI, clear col bit
             current_matrix[row_index] &= ~row_shifter;
         }
+
     }
 
     // Unselect col
@@ -228,7 +229,7 @@ void matrix_init_custom(void) {
     memset(matrix, 0, sizeof(matrix));
     memset(raw_matrix, 0, sizeof(raw_matrix));
 
-    debounce_init(ROWS_PER_HAND);
+    debounce_init();
 
     matrix_init_kb();
 }
@@ -258,9 +259,10 @@ uint8_t matrix_scan_custom(void) {
     }
 
     bool changed = memcmp(raw_matrix, curr_matrix, sizeof(curr_matrix)) != 0;
+
     if (changed) memcpy(raw_matrix, curr_matrix, sizeof(curr_matrix));
 
-    changed = debounce(raw_matrix, matrix + thisHand, ROWS_PER_HAND, changed) | matrix_post_scan();
+    changed = debounce(raw_matrix, matrix + thisHand, changed) | matrix_post_scan();
 
     return (uint8_t)changed;
 }

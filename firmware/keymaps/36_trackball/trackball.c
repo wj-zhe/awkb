@@ -51,6 +51,9 @@ static void pointing_device_task_layer(layer_state_t state) {
 
 }
 
+static uint16_t mouse_timer = 0xFFFF;
+static uint16_t mouse_timeElapsed;
+
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
     if (scrolling_mode) {
         // Calculate and accumulate scroll values based on mouse movement and divisors

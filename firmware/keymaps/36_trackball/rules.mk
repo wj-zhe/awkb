@@ -22,3 +22,6 @@ AUTO_SHIFT_ENABLE = yes
 
 # Key Override
 KEY_OVERRIDE_ENABLE = yes
+
+# Debug
+CONSOLE_ENABLE = yes
