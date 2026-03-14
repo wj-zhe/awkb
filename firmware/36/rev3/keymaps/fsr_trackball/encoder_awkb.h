@@ -6,6 +6,7 @@ enum encoder_modes {
     SCROLL_UD,
 };
 
+
 static uint8_t encoder_mode = VOLUME;
 
 bool encoder_update_user(uint8_t index, bool clockwise) {

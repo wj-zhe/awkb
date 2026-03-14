@@ -2,8 +2,8 @@
 // for more color options, see: https://github.com/qmk/qmk_firmware/blob/master/quantum/color.h
 const rgblight_segment_t PROGMEM layer_1[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_BLUE} );
 const rgblight_segment_t PROGMEM layer_2[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_SPRINGGREEN} );
-const rgblight_segment_t PROGMEM layer_3[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_GREEN} );
-const rgblight_segment_t PROGMEM layer_4[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_WHITE} );
+const rgblight_segment_t PROGMEM layer_3[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_YELLOW} );
+const rgblight_segment_t PROGMEM layer_4[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_PURPLE} );
 
 const rgblight_segment_t* const PROGMEM awkb_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
         layer_1,

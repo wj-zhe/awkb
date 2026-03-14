@@ -16,7 +16,6 @@ const uint16_t PROGMEM del_combo[]       = { LT(2,KC_TAB), LALT_T(KC_BSPC), COMB
 const uint16_t PROGMEM bsls_combo[]      = { KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM pipe_combo[]      = { KC_DOT, LSFT_T(KC_SLSH), COMBO_END};
 const uint16_t PROGMEM td_md_ult_combo[] = { LALT_T(KC_SPC), TD(TD_L1), COMBO_END};
-const uint16_t PROGMEM mo4_L0_comble[] = { KC_N, KC_M, KC_COMM, COMBO_END};
 
 // Layer 3 //
 const uint16_t PROGMEM qk_boot_combo[] = { LCTL_T(KC_END), LCTL_T(KC_PPLS), COMBO_END};
@@ -60,7 +59,6 @@ combo_t key_combos[] = {
     COMBO(bsls_combo, KC_BSLS),
     COMBO(pipe_combo, KC_PIPE),
     COMBO(td_md_ult_combo, TD(TD_MD)),
-    COMBO(mo4_L0_comble, MO(4)),
 
     COMBO(qk_boot_combo, QK_BOOT),
     // COMBO(qk_reboot_combo, QK_RBT),

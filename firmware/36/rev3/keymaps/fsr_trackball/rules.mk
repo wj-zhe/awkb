@@ -26,5 +26,8 @@ AUTO_SHIFT_ENABLE = yes
 # Key Override
 KEY_OVERRIDE_ENABLE = yes
 
+# Send string
+SEND_STRING_ENABLE = yes
+
 # Console debug
 CONSOLE_ENABLE = yes

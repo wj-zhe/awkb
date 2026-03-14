@@ -36,9 +36,11 @@ enum custom_keycodes {
     ENC_TG = SAFE_RANGE,
 #endif
 
-#ifdef FSR_ENABLE // Key for increase or decrease fsr threshold
-    FST_U,
-    FST_D
+#ifdef FSR_ENABLE // Key for FSR threshold related actions
+    FST_U, 
+    FST_D,
+    FST_O,
+    FST_P
 #endif
 
 };
@@ -58,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             LGUI_T(KC_Q), KC_W, KC_E, KC_R, KC_T,          KC_Y, KC_U, KC_I, KC_O, LGUI_T(KC_P),
             LCTL_T(KC_A), KC_S, KC_D, KC_F, KC_G,          KC_H, KC_J, KC_K, KC_L, LCTL_T(KC_SCLN),
             LSFT_T(KC_Z), KC_X, KC_C, KC_V, LT(3,KC_B),    KC_N, KC_M, KC_COMM, KC_DOT, LSFT_T(KC_SLSH),
-                 ENC_TG, LT(2,KC_TAB), LALT_T(KC_BSPC),    LALT_T(KC_SPC), TD(TD_L1), MS_BTN1
+                 ENC_TG, LT(2,KC_TAB), LALT_T(KC_BSPC),    LALT_T(KC_SPC), TD(TD_L1), KC_APP
 
             ),
 
@@ -86,10 +88,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             ),
 
     [4] = LAYOUT_36(
-            KC_LGUI, KC_NO, FST_U, KC_NO, MS_BTN3,    KC_NO, KC_NO, KC_NO, KC_NO, KC_RGUI,
-            KC_LCTL, KC_NO, FST_D, KC_NO, KC_NO,      KC_NO, KC_NO, KC_NO, KC_NO, KC_RCTL,
-            KC_LSFT, KC_NO, KC_NO, KC_NO, MO(3),      KC_NO, KC_NO, KC_NO, KC_NO, KC_RSFT,
-                          KC_NO, MS_BTN1, MS_BTN2,    KC_NO, KC_NO, KC_NO
+            KC_LGUI, KC_NO, FST_U, KC_NO, FST_P,      MS_BTN1, MS_BTN2, KC_NO, KC_NO, KC_RGUI,
+            KC_LCTL, KC_NO, FST_D, KC_NO, FST_O,      KC_NO, KC_NO, KC_NO, KC_NO, KC_RCTL,
+            KC_LSFT, KC_NO, KC_NO, KC_LALT, MO(3),    KC_NO, KC_NO, KC_NO, KC_NO, KC_RSFT,
+                          KC_NO, MS_BTN1, MS_BTN2,    KC_RALT, KC_NO, KC_NO
 
             ),
 
@@ -191,6 +193,7 @@ const key_override_t *key_overrides[] = {
 #endif
 
 static uint8_t keypress_count = 0;
+static uint8_t mod_state;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // Key press count used to determine how many keys are active
@@ -199,7 +202,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     } else {
         keypress_count -= (keypress_count > 0) ? 1 : 0;
     }
-    
+
+    mod_state = get_mods();
+
     // Custom key actions and key_overrides
     switch (keycode) {
         case ENC_TG: 
@@ -210,12 +215,50 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
 
 #ifdef FSR_ENABLE
-        case FST_U:
-            if (record->event.pressed) thres_actual += 10; // Increase fsr actual threshold.
+        case FST_O: 
+            if (record->event.pressed) {
+                // Go to the next fsr thres pre-set, looping around to the start.
+                thres_id = (thres_id + 1) % NUM_FSR_THRES;
+                thres_actual = fsr_thres_options[thres_id];
+            }
             return false;
 
-        case FST_D:
-            if (record->event.pressed) thres_actual -= 10; // Decrease fsr actual threshold.
+        case FST_P:
+            if (record->event.pressed) {
+                char tv[32]; // thres_actual value string
+                sprintf(tv, "FSR: thres %u reading %u", thres_actual, fsr_reading);
+                SEND_STRING(tv);
+            }
+            return false;
+
+        case FST_U: // Increase fsr actual threshold.
+            if (record->event.pressed) {
+                if (mod_state & MOD_MASK_SHIFT) {
+                    del_mods(MOD_MASK_SHIFT);
+                    thres_actual += 20;
+                    
+                    set_mods(mod_state);   
+                } else if (mod_state & MOD_MASK_CTRL) {
+                    thres_actual += 5;
+                } else {
+                    thres_actual += 10;
+                }
+            }
+            return false;
+
+        case FST_D: // Decrease fsr actual threshold.
+            if (record->event.pressed) {
+                if (mod_state & MOD_MASK_SHIFT) {
+                    del_mods(MOD_MASK_SHIFT);
+                    thres_actual -= 20;
+                    
+                    set_mods(mod_state);   
+                } else if (mod_state & MOD_MASK_CTRL) {
+                    thres_actual -= 5;
+                } else {
+                    thres_actual -= 10;
+                }
+            }
             return false;
         
 #endif
@@ -239,41 +282,41 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 };
 
 static uint8_t kc_count = 0;
-static uint8_t prev_layer = 0;
+static uint16_t timer = 0xFFFF;
+static uint16_t timeElapsed;
 
 void housekeeping_task_user(void) {
 
 #if defined(POINTING_DEVICE_ENABLE) && defined (FSR_ENABLE)
 
     if (keypress_count > 0) {
-        if (kc_count < FSR_INPUT_C) kc_count += 1;
+        if (kc_count < KEYPRESS_COUNT_THRES) kc_count += 1;
     } else {
         if (kc_count > 0) kc_count -= 1;
     }
 
-    fsr_sense();
-
-    dprintf("x: %d %u %u %d \n", kc_count, fsr_stack, fsr_reading, thres_actual);
+    bool sense_return = fsr_sense();
     
-    if (fsr_stack >= FSR_INPUT_C) {
-                
-        if (active_layer != 4 && active_layer != 3 && kc_count == 0) {    
-            uint32_t keypress_idle = last_matrix_activity_elapsed();
-            if (keypress_idle >= FSR_INPUT_C) {
-                prev_layer = active_layer;
-                layer_move(4);   
-            }
-        }
+    if (active_layer != 4 && active_layer != 3 && fsr_stack >= FSR_STACK_THRES && kc_count ==0 ) {    
+        uint32_t keypress_idle = last_matrix_activity_elapsed();
+        timeElapsed = timer_elapsed(timer);
 
-        if (active_layer == 4) {
-            uint32_t mouse_idle = last_pointing_device_activity_elapsed();
-            if (mouse_idle > FSR_INPUT_C * 5) {
-                layer_move(prev_layer);
-            }
-        }
+#ifdef CONSOLE_ENABLE
+        dprintf("x: %u %u \n", thres_actual, fsr_reading);
+#endif
 
-    } else if (fsr_stack < FSR_INPUT_C - 50) {
-        if (active_layer == 4 ) layer_move(prev_layer);
+        if (keypress_idle >= TAPPING_TERM + 50 && timeElapsed >= LAYER_OFF_TIMING) {
+            layer_on(4);
+        }
+    }       
+
+    if (active_layer == 4) {
+        uint32_t mouse_idle = last_pointing_device_activity_elapsed();
+
+        if (!sense_return || mouse_idle >= MOUSE_IDLE_TIMING) {
+            timer = timer_read();
+            layer_off(4);
+        }
     }
 
 #endif
