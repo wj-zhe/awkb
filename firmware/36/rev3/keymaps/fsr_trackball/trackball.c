@@ -1,3 +1,6 @@
+// #ifdef FSR_ENABLE
+// #   include "fsr.c"
+// #endif // #ifdef FSR_ENABLE
 
 uint16_t default_cpi;
 
@@ -15,13 +18,33 @@ void pointing_device_task_layer(void) {
     }
 }
 
-static uint16_t mouse_timer = 0xFFFF;
-static uint16_t mouse_idle = 0;
-
 static float scroll_accumulated_h = 0;
 static float scroll_accumulated_v = 0;
 
+#ifdef FSR_ENABLE
+    #ifndef TRACKBALL_MC_THRES
+    #   define TRACKBALL_MC_THRES 50 /* Trackball movements counter threshold */
+    #endif
+
+    static uint8_t trackball_mc = 0; // trackball movement counter
+    // static bool trackball_moved = false;
+#endif // #ifdef FSR_ENABLE
+
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
+
+    
+#ifdef FSR_ENABLE
+    if ( mouse_report.x != 0 || mouse_report.y !=0 ) {
+        if (trackball_mc < TRACKBALL_MC_THRES) trackball_mc += 1;
+        // trackball_moved = true;
+    } 
+    else {
+        if (trackball_mc > 0) trackball_mc -= 1;
+        // trackball_moved = false;
+    }
+    // dprintf("%u \n", trackball_mc);
+
+#endif
 
     if (scroll_mode) {
         // Calculate and accumulate scroll values based on mouse movement and divisors
@@ -46,12 +69,6 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
         mouse_report.y = 0;
 
     }
-
-    if ( mouse_report.x == 0 || mouse_report.y == 0 || 
-        mouse_report.h == 0 || mouse_report.v == 0 ) {
-            mouse_timer = timer_read();
-        }
-    mouse_idle = timer_elapsed(mouse_timer);
 
     return mouse_report;
 }

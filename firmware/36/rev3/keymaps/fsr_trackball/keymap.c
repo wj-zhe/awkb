@@ -37,10 +37,9 @@ enum custom_keycodes {
 #endif
 
 #ifdef FSR_ENABLE // Key for FSR threshold related actions
-    FST_U, 
-    FST_D,
-    FST_O,
-    FST_P
+    // FSB_U, // fsr_baseline upward
+    // FSB_D, // fsr_baseline downward
+    FSR_P  // print out fsr reading etc
 #endif
 
 };
@@ -88,10 +87,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             ),
 
     [4] = LAYOUT_36(
-            KC_LGUI, KC_NO, FST_U, KC_NO, FST_P,      MS_BTN1, MS_BTN2, KC_NO, KC_NO, KC_RGUI,
-            KC_LCTL, KC_NO, FST_D, KC_NO, FST_O,      KC_NO, KC_NO, KC_NO, KC_NO, KC_RCTL,
-            KC_LSFT, KC_NO, KC_NO, KC_LALT, MO(3),    KC_NO, KC_NO, KC_NO, KC_NO, KC_RSFT,
-                          KC_NO, MS_BTN1, MS_BTN2,    KC_RALT, KC_NO, KC_NO
+            KC_LGUI, KC_NO, KC_NO, KC_NO, FSR_P,      MS_BTN1, MS_BTN2, KC_NO, KC_NO, KC_RGUI,
+            KC_LCTL, KC_NO, KC_NO, KC_LALT, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO, KC_RCTL,
+            KC_LSFT, KC_NO, KC_NO, KC_NO, MO(3),      KC_NO, KC_NO, KC_RALT, KC_NO, KC_RSFT,
+                          KC_NO, MS_BTN1, MS_BTN2,    KC_NO, KC_NO, KC_NO
 
             ),
 
@@ -119,8 +118,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return 200;
         case LCTL_T(KC_A): case LCTL_T(KC_SCLN):
             return 175;
-        // case LALT_T(KC_BSPC): case LALT_T(KC_SPC):
-        //     return 150;
+        case LALT_T(KC_BSPC): case LALT_T(KC_SPC):
+            return 150;
         case LSFT_T(KC_Z): // case LSFT_T(KC_F1):
         case LSFT_T(KC_SLSH):
             return 125;
@@ -167,9 +166,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
         default:
 #ifdef POINTING_DEVICE_ENABLE
-            if (scroll_mode) { // Disable scrolling mode
-                scroll_mode = false;
-            };
+            if (scroll_mode) scroll_mode = false; // Disable scrolling mode
 #endif
             break;
     }
@@ -193,17 +190,17 @@ const key_override_t *key_overrides[] = {
 #endif
 
 static uint8_t keypress_count = 0;
-static uint8_t mod_state;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+
+#if defined(POINTING_DEVICE_ENABLE) && defined (FSR_ENABLE)
     // Key press count used to determine how many keys are active
     if (record->event.pressed) {
         keypress_count += 1;
     } else {
         keypress_count -= (keypress_count > 0) ? 1 : 0;
     }
-
-    mod_state = get_mods();
+#endif
 
     // Custom key actions and key_overrides
     switch (keycode) {
@@ -214,51 +211,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
-#ifdef FSR_ENABLE
-        case FST_O: 
-            if (record->event.pressed) {
-                // Go to the next fsr thres pre-set, looping around to the start.
-                thres_id = (thres_id + 1) % NUM_FSR_THRES;
-                thres_actual = fsr_thres_options[thres_id];
-            }
-            return false;
+#if defined(POINTING_DEVICE_ENABLE) && defined (FSR_ENABLE)
 
-        case FST_P:
-            if (record->event.pressed) {
-                char tv[32]; // thres_actual value string
-                sprintf(tv, "FSR: thres %u reading %u", thres_actual, fsr_reading);
-                SEND_STRING(tv);
-            }
-            return false;
+        // case FSB_U: // Increase fsr base level
+        //     if (record->event.pressed) fsr.base_actual += 10;
+        //     return false;
 
-        case FST_U: // Increase fsr actual threshold.
-            if (record->event.pressed) {
-                if (mod_state & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    thres_actual += 20;
-                    
-                    set_mods(mod_state);   
-                } else if (mod_state & MOD_MASK_CTRL) {
-                    thres_actual += 5;
-                } else {
-                    thres_actual += 10;
-                }
-            }
-            return false;
+        // case FSB_D: // Decrease fsr base level
+        //     if (record->event.pressed) fsr.base_actual -= 10;
+        //     return false;
 
-        case FST_D: // Decrease fsr actual threshold.
-            if (record->event.pressed) {
-                if (mod_state & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    thres_actual -= 20;
-                    
-                    set_mods(mod_state);   
-                } else if (mod_state & MOD_MASK_CTRL) {
-                    thres_actual -= 5;
-                } else {
-                    thres_actual -= 10;
-                }
-            }
+        case FSR_P:
+            if (record->event.pressed) fsr_send_string();
             return false;
         
 #endif
@@ -281,44 +245,55 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 };
 
-static uint8_t kc_count = 0;
-static uint16_t timer = 0xFFFF;
-static uint16_t timeElapsed;
+#if defined(POINTING_DEVICE_ENABLE) && defined (FSR_ENABLE)
+    static uint8_t kc_count = 0;
+
+    struct idle_t {
+        uint32_t k; // keypress idle time
+        uint32_t m; // mouse idel time
+    };
+
+#endif
 
 void housekeeping_task_user(void) {
 
 #if defined(POINTING_DEVICE_ENABLE) && defined (FSR_ENABLE)
 
     if (keypress_count > 0) {
-        if (kc_count < KEYPRESS_COUNT_THRES) kc_count += 1;
+        if (kc_count < COUNT_STACK_THRES) kc_count += 1;
     } else {
         if (kc_count > 0) kc_count -= 1;
     }
+    
+    struct idle_t idle = { 
+        .k = last_matrix_activity_elapsed(), 
+        .m = last_pointing_device_activity_elapsed(),
+    };
+    
+    if (idle.k >= TAPPING_TERM + 100 && kc_count == 0 && trackball_mc >= TRACKBALL_MC_THRES) {
+        fsr.reset = true;
+        // dprintf("fbr %d \n", fsr.reset);
+    }
+    else {
+        fsr.reset = false;
+    }
 
     bool sense_return = fsr_sense();
-    
-    if (active_layer != 4 && active_layer != 3 && fsr_stack >= FSR_STACK_THRES && kc_count ==0 ) {    
-        uint32_t keypress_idle = last_matrix_activity_elapsed();
-        timeElapsed = timer_elapsed(timer);
-
-#ifdef CONSOLE_ENABLE
-        dprintf("x: %u %u \n", thres_actual, fsr_reading);
-#endif
-
-        if (keypress_idle >= TAPPING_TERM + 50 && timeElapsed >= LAYER_OFF_TIMING) {
-            layer_on(4);
-        }
-    }       
 
     if (active_layer == 4) {
-        uint32_t mouse_idle = last_pointing_device_activity_elapsed();
-
-        if (!sense_return || mouse_idle >= MOUSE_IDLE_TIMING) {
-            timer = timer_read();
+        if (!sense_return || idle.m >= MOUSE_IDLE_TIMING) {
             layer_off(4);
         }
     }
-
+    else if (active_layer == 3) { // Prevent from entering into mouse layer from Layer 3
+        return;
+    }
+    else {
+        if (sense_return && idle.k >= TAPPING_TERM + 50 && kc_count == 0) {
+            layer_on(4);
+        } 
+    }
+        
 #endif
 
 };

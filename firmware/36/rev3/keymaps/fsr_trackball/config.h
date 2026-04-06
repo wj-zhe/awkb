@@ -29,7 +29,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // FSR Sensor
 #define FSR_ENABLE
-#define FSR_THRES {500, 550, 600, 650, 700} /* Array of available fsr pre-sets */
 
 /* Indicator light sync for split keyboard */
 #define SPLIT_LED_STATE_ENABLE
