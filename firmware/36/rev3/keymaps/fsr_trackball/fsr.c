@@ -1,92 +1,105 @@
 
 #include "analog.h"
 
-#ifndef FSR_THRES_LOW
-#   define FSR_THRES_LOW 357
+#ifndef FSR_PIN
+#   define FSR_PIN GP26
 #endif
 
-#ifndef FSR_BASE_RESET_TIMING
-#   define FSR_BASE_RESET_TIMING 500
+#ifndef BASE_INIT
+#   define BASE_INIT 500
 #endif
-        
+
 #ifndef COUNT_STACK_THRES
-#   define COUNT_STACK_THRES 30 /* keypress count counter as low pass filter */
+#   define COUNT_STACK_THRES 50
 #endif
 
-#ifndef MOUSE_IDLE_TIMING
-#   define MOUSE_IDLE_TIMING 2000 /* Time (in ms) before mouse layer if turned off */
+#ifndef FSR_RESET_TIMING
+#   define FSR_RESET_TIMING 195
 #endif
 
-typedef struct fsr_struct {
+struct adj_t {
+    const uint8_t a;
+    const uint8_t b;
+}; 
+
+struct fsr_t {
     uint16_t reading;
     uint16_t base;
-    uint8_t thres;
+    struct adj_t adj;
     uint8_t stack; // counter
-    uint16_t acc;
-    uint16_t timer;
-    bool reset;
-} fsr_t;
-
-fsr_t fsr = {
+    uint8_t r;
+} fsr = {
     .reading = 0,
-    .base = 500,
-    .thres = 50,
-    .reset = false,
+    .base = BASE_INIT,
+    .adj = {.a=10, .b=50},
+    .r = 0 /* 0 for idle, 1 for move, 2 for no reset */
 };
 
-uint16_t time_passed = 0;
-bool flip_switch = false;
+static uint16_t acc[2] = {BASE_INIT}; // sum result
+static uint16_t timer[2];
+static bool _return = false;
+
+void base_set_f(uint8_t f_id); // base line setting function
 
 bool fsr_sense(void) {
+    // Calculate FSR reading value
+    fsr.reading = (fsr.reading + analogReadPin(FSR_PIN)) /2;
 
-    fsr.reading = (fsr.reading + analogReadPin(FSR_PIN)) / 2;
-
-    if (fsr.reset) {
-        if ( fsr.reading < fsr.base || fsr.reading > (fsr.base + fsr.thres) ) {
-            if (!flip_switch) {
-                flip_switch = true;
-                fsr.timer = timer_read();
-                fsr.acc = FSR_THRES_LOW;
-            }
-        }
-    }
-    
-    if (fsr.acc > 0) {
-        time_passed = timer_elapsed(fsr.timer);
-        
-        if (time_passed < FSR_BASE_RESET_TIMING ) {
-            if (fsr.reset && fsr.reading > fsr.acc && fsr.reading > FSR_THRES_LOW) {
-                fsr.acc = (fsr.acc + fsr.reading) / 2;
-                dprintf("%u %u \n", fsr.reading, fsr.acc);
-            }
-        }
-        else {
-            fsr.base = (uint16_t) (fsr.acc / 10) * 10;
-            dprintf("a %u b %u : r %u \n", fsr.acc, fsr.base, fsr.reading);
-        
-            // Reset
-            fsr.acc = 0;
-            flip_switch = false;
-        }
-    }
-
-    if (fsr.reading >= fsr.base) {
-        if (fsr.stack < COUNT_STACK_THRES) {
-            fsr.stack += 1;
-        } else {
-            return true;
-        }
+    // Fetch fsr reading and calculate base line
+    if (timer[fsr.r] ==0) {
+        timer[fsr.r] = timer_read();
     } else {
-        if (fsr.stack > 0) fsr.stack -= 1;
+        if (fsr.r <=1) base_set_f(fsr.r);
+    }
+
+    // Decide return value
+    if (fsr.reading > fsr.base) {
+        if (fsr.stack < COUNT_STACK_THRES) ++fsr.stack;
+    } else {
+        if (fsr.stack > 0) fsr.stack--;
+    }
+
+    if (fsr.stack >= COUNT_STACK_THRES) {
+        _return = true;
+    } else if (fsr.stack ==0) {
+        _return = false;
     }
     
-    return false;
-    
+    return _return;
 }
 
-void fsr_send_string(void) {
-    char tv[32]; // thres_actual value string
-    sprintf(tv, "b %u r %u", fsr.base, fsr.reading);
-    SEND_STRING(tv);
+void base_set_f (uint8_t id) {
+    // Calculate time
+    uint16_t time_passed = timer_elapsed(timer[id]);
 
+    if (time_passed < FSR_RESET_TIMING) {
+        if ( id ==0 || (id ==1 && fsr.reading > acc[1] - fsr.adj.b ) ) {
+            acc[id] = acc[id] * 1/2 + fsr.reading * 1/2;
+        }
+    }    
+    else if (time_passed < FSR_RESET_TIMING + 5){
+        if (acc[0] > acc[1] && acc[1] >0 ) acc[0] = acc[1] - fsr.adj.b;
+        
+        if (acc[1] > 0 && acc[0] >0) {
+            fsr.base = (uint16_t) ((acc[0] * 1/2 + acc[1] * 1/2) /10) * 10 + fsr.adj.a;
+        }
+    }
+    else {
+        // Display data
+        dprintf("%3d | %4u %4u > %4u | %5u \n", 
+            id,
+            acc[0], acc[1], 
+            fsr.base,
+            time_passed
+        );
+
+        // Reset
+        timer[id] = 0;
+    }
+}
+
+void fsr_info_string(void) {
+    char ch[64];
+    sprintf(ch, "b %u r %u", fsr.base, fsr.reading );
+    SEND_STRING(ch);
 }

@@ -12,7 +12,7 @@ ANALOG_DRIVER_REQUIRED = yes
 ENCODER_ENABLE = yes
 
 # RGBLIGHT
-RGBLIGHT_ENABLE = yes       # keyboard RGB underglow
+RGBLIGHT_ENABLE = no       # keyboard RGB underglow
 
 # Tap-Dance config
 TAP_DANCE_ENABLE = yes      # Enable Tap-Dance feature

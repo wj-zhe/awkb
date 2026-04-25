@@ -1,9 +1,9 @@
 // Light LEDs 0 when keyboard layer X is active;
 // for more color options, see: https://github.com/qmk/qmk_firmware/blob/master/quantum/color.h
-const rgblight_segment_t PROGMEM layer_1[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_BLUE} );
+const rgblight_segment_t PROGMEM layer_1[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_AZURE} );
 const rgblight_segment_t PROGMEM layer_2[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_SPRINGGREEN} );
 const rgblight_segment_t PROGMEM layer_3[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_YELLOW} );
-const rgblight_segment_t PROGMEM layer_4[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_PURPLE} );
+const rgblight_segment_t PROGMEM layer_4[] = RGBLIGHT_LAYER_SEGMENTS( {0, 1, HSV_WHITE} );
 
 const rgblight_segment_t* const PROGMEM awkb_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
         layer_1,
@@ -13,7 +13,7 @@ const rgblight_segment_t* const PROGMEM awkb_rgb_layers[] = RGBLIGHT_LAYERS_LIST
         );
 
 void rgblight_set_layer_state_user(layer_state_t state) {
-    for (uint8_t i=0; i<4; i++) {
+    for (unsigned int i=0; i<4; i++) {
         rgblight_set_layer_state(i, layer_state_cmp(state, i+1));
     };
 }
